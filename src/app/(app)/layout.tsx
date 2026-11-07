@@ -1,5 +1,6 @@
 export const instant = false;
 
+import { Analytics } from "@vercel/analytics/next";
 import Sidebar from "@/components/Sidebar";
 import Header from "@/components/Header";
 import AppLockWrapper from "@/components/AppLockWrapper";
