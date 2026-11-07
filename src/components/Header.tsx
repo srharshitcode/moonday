@@ -53,6 +53,7 @@ export default function Header() {
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [pathname]);
+  //
 
   const mainLinks = [
     { name: "Dashboard", href: "/", icon: Home },
