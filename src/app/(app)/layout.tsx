@@ -1,5 +1,6 @@
 export const instant = false;
 
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 import Sidebar from "@/components/Sidebar";
 import Header from "@/components/Header";
@@ -44,6 +45,9 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           </span>
         </div>
       </div>
+      {/* VERCEL TRACKING COMPONENTS */}
+      <Analytics />
+      <SpeedInsights />
     </AppLockWrapper>
   );
 }
