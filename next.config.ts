@@ -8,12 +8,14 @@ const withPWA = withPWAInit({
   scope: "/",
   cacheOnFrontEndNav: true,
   aggressiveFrontEndNavCaching: true,
-  reloadOnOnline: false, // Prevents wiping active form state when Wi-Fi reconnects
+  reloadOnOnline: false,
 });
 
 const nextConfig: NextConfig = {
-  cacheComponents: true,
-  partialPrefetching: true,
+  // Added: Catches unsafe lifecycle methods and legacy API usage
+  reactStrictMode: true,
+
+  // Kept: Safe to leave here as it only runs during local `next dev --turbo`
   turbopack: {
     rules: {
       "*.css": {

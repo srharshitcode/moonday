@@ -29,6 +29,39 @@ import {
   CheckCircle2,
 } from "lucide-react";
 
+const LOCAL_NOTES_KEY = "moonday_partner_notes";
+
+function saveLocalPartnerNote(
+  userId: string,
+  dateStr: string,
+  content: string,
+) {
+  if (typeof window === "undefined" || !userId || !dateStr) return;
+  try {
+    const key = `${LOCAL_NOTES_KEY}_${userId}`;
+    const existing = JSON.parse(localStorage.getItem(key) || "{}");
+    if (content.trim()) {
+      existing[dateStr] = content.trim();
+    } else {
+      delete existing[dateStr];
+    }
+    localStorage.setItem(key, JSON.stringify(existing));
+  } catch {
+    // Ignore storage errors
+  }
+}
+
+function getLocalPartnerNote(userId: string, dateStr: string): string {
+  if (typeof window === "undefined" || !userId || !dateStr) return "";
+  try {
+    const key = `${LOCAL_NOTES_KEY}_${userId}`;
+    const existing = JSON.parse(localStorage.getItem(key) || "{}");
+    return existing[dateStr] || "";
+  } catch {
+    return "";
+  }
+}
+
 const COLORS = [
   { name: "Barn Red", hex: "#7C1D2D" },
   { name: "Nationals Red", hex: "#AB0003" },
@@ -315,7 +348,6 @@ const CRAVINGS = [
   "Chips",
   "Candy",
   "Noodles",
-  
   "Hydra",
 ];
 
@@ -344,7 +376,6 @@ const DISCHARGE_TYPES = [
   "Jelly-like",
   "Stretchy",
   "Dry",
-  
 ];
 
 const INTIMACY_ACTS = [
@@ -482,6 +513,7 @@ export default function LogPage() {
     string | null
   >(null);
   const userEditedRef = useRef(false);
+  const partnerNoteTimerRef = useRef<NodeJS.Timeout | null>(null);
 
   const [openSections, setOpenSections] = useState<Record<string, boolean>>({
     period: true,
@@ -523,6 +555,55 @@ export default function LogPage() {
   const [whatYouNeed, setWhatYouNeed] = useState("");
   const [generalNote, setGeneralNote] = useState("");
 
+  // Save partner note to both localStorage and Supabase (supporting either 'date' or 'entry_date' schema)
+  const syncPartnerNoteToDb = useCallback(
+    async (dateStr: string, noteContent: string) => {
+      if (!dateStr) return;
+      const trimmed = noteContent.trim();
+
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+      if (!user) return;
+
+      saveLocalPartnerNote(user.id, dateStr, trimmed);
+
+      const { data: userNotes } = await supabase
+        .from("husband_notes")
+        .select("*")
+        .eq("user_id", user.id);
+
+      const existingRow = (userNotes || []).find(
+        (n: any) => (n.date || n.entry_date || n.log_date) === dateStr,
+      );
+
+      if (trimmed) {
+        if (existingRow?.id) {
+          await supabase
+            .from("husband_notes")
+            .update({ content: trimmed })
+            .eq("id", existingRow.id);
+        } else {
+          // Try 'date' column first (matches NotesClient), then fallback to 'entry_date'
+          const { error: errDate } = await supabase
+            .from("husband_notes")
+            .insert([{ user_id: user.id, date: dateStr, content: trimmed }]);
+
+          if (errDate) {
+            await supabase
+              .from("husband_notes")
+              .insert([
+                { user_id: user.id, entry_date: dateStr, content: trimmed },
+              ]);
+          }
+        }
+      } else if (existingRow?.id) {
+        await supabase.from("husband_notes").delete().eq("id", existingRow.id);
+      }
+    },
+    [supabase],
+  );
+
   const applyRecordToState = useCallback((record: Record<string, any>) => {
     setIsPeriodStart(record.is_period_start || false);
     setIsPeriodEnd(record.is_period_end || false);
@@ -547,6 +628,9 @@ export default function LogPage() {
     setDischargeOdor(record.discharge_odor || "");
     setWhatYouNeed(record.what_you_need_note || "");
     setGeneralNote(record.note || "");
+    if (typeof record.husband_note === "string") {
+      setHusbandNote(record.husband_note);
+    }
     if (record.updated_at) {
       setCurrentRecordUpdatedAt(record.updated_at);
     }
@@ -612,7 +696,6 @@ export default function LogPage() {
     generalNote,
   ]);
 
-  // Automatically autosave whenever any tracked field changes due to user interaction
   useEffect(() => {
     if (!userEditedRef.current || !selectedDate) return;
     triggerAutosave(generatePayload(), true);
@@ -620,6 +703,19 @@ export default function LogPage() {
 
   const markEdited = () => {
     userEditedRef.current = true;
+  };
+
+  const handleHusbandNoteChange = (val: string) => {
+    setHusbandNote(val);
+    if (activeUserId && selectedDate) {
+      saveLocalPartnerNote(activeUserId, selectedDate, val);
+    }
+    if (partnerNoteTimerRef.current) {
+      clearTimeout(partnerNoteTimerRef.current);
+    }
+    partnerNoteTimerRef.current = setTimeout(() => {
+      syncPartnerNoteToDb(selectedDate, val);
+    }, 600);
   };
 
   const resetForm = () => {
@@ -656,11 +752,52 @@ export default function LogPage() {
       data: { user },
     } = await supabase.auth.getUser();
 
+    let foundSideData = false;
+
     if (user) {
       setActiveUserId(user.id);
+
+      // Load intimacy_entries and husband_notes FIRST so local drafts never block them
+      const { data: allIntimacy } = await supabase
+        .from("intimacy_entries")
+        .select("*")
+        .eq("user_id", user.id);
+
+      const intimacy = (allIntimacy || []).find(
+        (row: any) => (row.entry_date || row.date) === dateToFetch,
+      );
+
+      if (intimacy) {
+        foundSideData = true;
+        setIntimacyActs(intimacy.activities || []);
+        setLibido(intimacy.libido_level || "");
+        setOrgasm(intimacy.orgasm_reached);
+      } else {
+        setIntimacyActs([]);
+        setLibido("");
+        setOrgasm(null);
+      }
+
+      const { data: allHNotes } = await supabase
+        .from("husband_notes")
+        .select("*")
+        .eq("user_id", user.id);
+
+      const hNote = (allHNotes || []).find(
+        (row: any) =>
+          (row.date || row.entry_date || row.log_date) === dateToFetch,
+      );
+
+      const localPartnerText = getLocalPartnerNote(user.id, dateToFetch);
+      const resolvedPartnerNote = hNote?.content || localPartnerText || "";
+      setHusbandNote(resolvedPartnerNote);
+      if (resolvedPartnerNote) {
+        foundSideData = true;
+        saveLocalPartnerNote(user.id, dateToFetch, resolvedPartnerNote);
+      }
     }
 
-    // 1. Check if there is an unsynced local draft for this date first
+    // 1. Check if there is an unsynced local draft for daily_logs
     try {
       const localDraft = await getLocalDraft(`daily_logs_${dateToFetch}`);
       if (localDraft && !localDraft.synced && localDraft.payload) {
@@ -678,41 +815,21 @@ export default function LogPage() {
       return;
     }
 
-    // 2. Otherwise load from Supabase
-    const { data: log } = await supabase
+    // 2. Otherwise load daily_logs from Supabase
+    const { data: logRows } = await supabase
       .from("daily_logs")
       .select("*")
       .eq("user_id", user.id)
       .eq("log_date", dateToFetch)
-      .maybeSingle();
+      .limit(1);
 
-    const { data: intimacy } = await supabase
-      .from("intimacy_entries")
-      .select("*")
-      .eq("user_id", user.id)
-      .eq("entry_date", dateToFetch)
-      .maybeSingle();
+    const log = logRows?.[0];
 
-    const { data: hNote } = await supabase
-      .from("husband_notes")
-      .select("*")
-      .eq("user_id", user.id)
-      .eq("entry_date", dateToFetch)
-      .maybeSingle();
-
-    if (log || intimacy || hNote) {
+    if (log || foundSideData) {
       setIsExistingLog(true);
       if (log) {
         applyRecordToState(log);
-      } else {
-        resetForm();
       }
-      if (intimacy) {
-        setIntimacyActs(intimacy.activities || []);
-        setLibido(intimacy.libido_level || "");
-        setOrgasm(intimacy.orgasm_reached);
-      }
-      if (hNote) setHusbandNote(hNote.content || "");
     } else {
       setIsExistingLog(false);
       resetForm();
@@ -742,7 +859,7 @@ export default function LogPage() {
       fetchExistingLog(targetDate);
     }
     init();
-  }, []);   
+  }, []);
 
   const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newDate = e.target.value;
@@ -843,6 +960,7 @@ export default function LogPage() {
       data: { user },
     } = await supabase.auth.getUser();
     if (user) {
+      saveLocalPartnerNote(user.id, selectedDate, "");
       await supabase
         .from("daily_logs")
         .delete()
@@ -853,11 +971,18 @@ export default function LogPage() {
         .delete()
         .eq("user_id", user.id)
         .eq("entry_date", selectedDate);
-      await supabase
+
+      const { data: userNotes } = await supabase
         .from("husband_notes")
-        .delete()
-        .eq("user_id", user.id)
-        .eq("entry_date", selectedDate);
+        .select("*")
+        .eq("user_id", user.id);
+      const match = (userNotes || []).find(
+        (n: any) => (n.date || n.entry_date || n.log_date) === selectedDate,
+      );
+      if (match?.id) {
+        await supabase.from("husband_notes").delete().eq("id", match.id);
+      }
+
       setMessage("Log deleted successfully. ✨");
       setIsExistingLog(false);
       resetForm();
@@ -872,36 +997,42 @@ export default function LogPage() {
     setLoading(true);
     setMessage("");
 
+    if (partnerNoteTimerRef.current) {
+      clearTimeout(partnerNoteTimerRef.current);
+    }
+
     const success = await saveEntry(generatePayload(), true);
+    await syncPartnerNoteToDb(selectedDate, husbandNote);
 
     if (isOnline) {
       const {
         data: { user },
       } = await supabase.auth.getUser();
-      if (user) {
-        if (intimacyActs.length > 0 || libido || orgasm !== null) {
-          await supabase.from("intimacy_entries").upsert(
-            {
-              user_id: user.id,
-              entry_date: selectedDate,
-              activities: intimacyActs,
-              libido_level: libido || null,
-              orgasm_reached: orgasm,
-              created_at: new Date().toISOString(),
-            },
-            { onConflict: "user_id,entry_date" },
-          );
-        }
-        if (husbandNote.trim()) {
-          await supabase.from("husband_notes").upsert(
-            {
-              user_id: user.id,
-              entry_date: selectedDate,
-              content: husbandNote.trim(),
-              updated_at: new Date().toISOString(),
-            },
-            { onConflict: "user_id,entry_date" },
-          );
+      if (user && (intimacyActs.length > 0 || libido || orgasm !== null)) {
+        const { data: allIntimacy } = await supabase
+          .from("intimacy_entries")
+          .select("*")
+          .eq("user_id", user.id);
+
+        const existingIntimacy = (allIntimacy || []).find(
+          (row: any) => (row.entry_date || row.date) === selectedDate,
+        );
+
+        const intimacyPayload = {
+          user_id: user.id,
+          entry_date: selectedDate,
+          activities: intimacyActs,
+          libido_level: libido || null,
+          orgasm_reached: orgasm,
+        };
+
+        if (existingIntimacy?.id) {
+          await supabase
+            .from("intimacy_entries")
+            .update(intimacyPayload)
+            .eq("id", existingIntimacy.id);
+        } else {
+          await supabase.from("intimacy_entries").insert([intimacyPayload]);
         }
       }
     }
@@ -1478,7 +1609,7 @@ export default function LogPage() {
                 </p>
                 <textarea
                   value={husbandNote}
-                  onChange={(e) => setHusbandNote(e.target.value)}
+                  onChange={(e) => handleHusbandNoteChange(e.target.value)}
                   className="w-full min-h-[60px] p-3 border border-[#f4c2c2] bg-[#fff8fa] rounded-[11px] text-[13px] outline-none focus:border-[#d990a8]"
                 />
               </div>

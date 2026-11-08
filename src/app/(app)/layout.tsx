@@ -1,5 +1,3 @@
-export const instant = false;
-
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 import Sidebar from "@/components/Sidebar";

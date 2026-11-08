@@ -1,39 +1,116 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { createClient } from "@/utils/supabase/client";
 import { format, parseISO } from "date-fns";
 import { HeartHandshake, ShieldAlert, Trash2, Pencil } from "lucide-react";
+
+const LOCAL_NOTES_KEY = "moonday_partner_notes";
+
+function getLocalNotesMap(userId: string): Record<string, string> {
+  if (typeof window === "undefined") return {};
+  try {
+    const raw = localStorage.getItem(`${LOCAL_NOTES_KEY}_${userId}`);
+    return raw ? JSON.parse(raw) : {};
+  } catch {
+    return {};
+  }
+}
+
+function removeLocalNote(userId: string, dateStr: string) {
+  if (typeof window === "undefined") return;
+  try {
+    const map = getLocalNotesMap(userId);
+    delete map[dateStr];
+    localStorage.setItem(`${LOCAL_NOTES_KEY}_${userId}`, JSON.stringify(map));
+  } catch {
+    // Ignore storage errors
+  }
+}
 
 export default function HusbandNotesPage() {
   const [notes, setNotes] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const supabase = createClient();
 
-  useEffect(() => {
-    fetchNotes();
-  }, []);
-
-  const fetchNotes = async () => {
+  const fetchNotes = useCallback(async () => {
+    setLoading(true);
     const {
       data: { user },
     } = await supabase.auth.getUser();
-    if (!user) return;
 
+    if (!user) {
+      setLoading(false);
+      return;
+    }
+
+    // Fetch all rows for user without a fragile column-specific .order()
     const { data } = await supabase
       .from("husband_notes")
       .select("*")
-      .eq("user_id", user.id)
-      .order("date", { ascending: false });
+      .eq("user_id", user.id);
 
-    if (data) setNotes(data);
+    const localMap = getLocalNotesMap(user.id);
+    const mergedByDate = new Map<string, any>();
+
+    if (Array.isArray(data)) {
+      data.forEach((row: any) => {
+        const d =
+          row.date ||
+          row.entry_date ||
+          row.log_date ||
+          (row.created_at ? String(row.created_at).slice(0, 10) : "");
+        const content = (row.content || row.note || "").trim();
+        if (d && content) {
+          mergedByDate.set(d, {
+            id: row.id,
+            noteDate: d,
+            content,
+          });
+        }
+      });
+    }
+
+    // Merge any locally cached notes so autosaved or offline notes always appear
+    Object.entries(localMap).forEach(([dateStr, content]) => {
+      const trimmed = (content || "").trim();
+      if (trimmed && !mergedByDate.has(dateStr)) {
+        mergedByDate.set(dateStr, {
+          id: `local-${dateStr}`,
+          noteDate: dateStr,
+          content: trimmed,
+        });
+      } else if (trimmed && mergedByDate.has(dateStr)) {
+        const existing = mergedByDate.get(dateStr);
+        mergedByDate.set(dateStr, { ...existing, content: trimmed });
+      }
+    });
+
+    const sorted = Array.from(mergedByDate.values()).sort((a, b) =>
+      b.noteDate.localeCompare(a.noteDate),
+    );
+
+    setNotes(sorted);
     setLoading(false);
-  };
+  }, [supabase]);
 
-  const handleDelete = async (id: string) => {
+  useEffect(() => {
+    fetchNotes();
+  }, [fetchNotes]);
+
+  const handleDelete = async (note: any) => {
     if (!confirm("Are you sure you want to delete this note?")) return;
-    await supabase.from("husband_notes").delete().eq("id", id);
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
+
+    if (user) {
+      removeLocalNote(user.id, note.noteDate);
+      if (note.id && !String(note.id).startsWith("local-")) {
+        await supabase.from("husband_notes").delete().eq("id", note.id);
+      }
+    }
     fetchNotes();
   };
 
@@ -71,28 +148,27 @@ export default function HusbandNotesPage() {
         <div className="space-y-4">
           {notes.map((note) => (
             <div
-              key={note.id}
+              key={note.id || note.noteDate}
               className="bg-white border border-[#f4c2c2] rounded-xl p-[20px] shadow-sm hover:shadow-md transition-all group"
             >
               <div className="flex justify-between items-center mb-3 pb-3 border-b border-[#fff0f3]">
                 <div className="flex items-center gap-2">
                   <HeartHandshake className="w-4 h-4 text-[#d990a8]" />
                   <h3 className="text-[14px] font-bold text-ink">
-                    {format(parseISO(note.date), "EEEE, MMMM d, yyyy")}
+                    {format(parseISO(note.noteDate), "EEEE, MMMM d, yyyy")}
                   </h3>
                 </div>
 
-                {/* Action Buttons Container */}
-                <div className="flex items-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="flex items-center gap-3 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity">
                   <Link
-                    href={`/log?date=${note.date}`}
+                    href={`/log?date=${note.noteDate}`}
                     className="text-muted hover:text-[#d990a8] transition-colors"
                     title="Edit Note"
                   >
                     <Pencil className="w-4 h-4" />
                   </Link>
                   <button
-                    onClick={() => handleDelete(note.id)}
+                    onClick={() => handleDelete(note)}
                     className="text-muted hover:text-red-500 transition-colors"
                     title="Delete Note"
                   >
@@ -115,4 +191,3 @@ export default function HusbandNotesPage() {
     </div>
   );
 }
-  
