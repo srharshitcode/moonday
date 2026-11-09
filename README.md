@@ -2,20 +2,21 @@
 
 **A private, offline first web application built for menstrual cycle intelligence, daily symptom tracking, doctor ready reporting, and honest self care.**
 
-Created, designed, and engineered by **srharshitcode** & **porcupine**.
+Created, designed, and engineered by **srharshitcode** and **porcupine**.
 
 ## Table of Contents
 
 ### Part I: The Story Every Woman Knows (Vision, Empathy, and Real Life)
-1. [The Story Nobody Writes Down: From the School Hallway to Late Night Quiet](#1-the-story-nobody-writes-down-from-the-school-hallway-to-late-night-quiet)
-2. [Growing Up Whispering: How Young Girls Learn to Hide Their Pain](#2-growing-up-whispering-how-young-girls-learn-to-hide-their-pain)
-3. [The College and Early Career Years: Carrying Cramps Through Exams and Shifts](#3-the-college-and-early-career-years-carrying-cramps-through-exams-and-shifts)
-4. [The 2:30 AM Question: Why Do I Feel Like a Different Person Tonight?](#4-the-230-am-question-why-do-i-feel-like-a-different-person-tonight)
-5. [The Exhaustion of Living in a 24 Hour World With a Monthly Body](#5-the-exhaustion-of-living-in-a-24-hour-world-with-a-monthly-body)
-6. [How the Male Circadian Clock Shaped Modern Work and Fitness](#6-how-the-male-circadian-clock-shaped-modern-work-and-fitness)
-7. [Understanding the Infradian Rhythm: Your Second Internal Clock](#7-understanding-the-infradian-rhythm-your-second-internal-clock)
-8. [Why Most Period Apps Feel Like Strangers Watching You](#8-why-most-period-apps-feel-like-strangers-watching-you)
-9. [The Hidden Economy of Menstrual Surveillance and Ad Brokers](#9-the-hidden-economy-of-menstrual-surveillance-and-ad-brokers)
+
+ 1. [The Story Nobody Writes Down: From the School Hallway to Late Night Quiet](#1-the-story-nobody-writes-down-from-the-school-hallway-to-late-night-quiet)
+ 2. [Growing Up Whispering: How Young Girls Learn to Hide Their Pain](#2-growing-up-whispering-how-young-girls-learn-to-hide-their-pain)
+ 3. [The College and Early Career Years: Carrying Cramps Through Exams and Shifts](#3-the-college-and-early-career-years-carrying-cramps-through-exams-and-shifts)
+ 4. [The 2:30 AM Question: Why Do I Feel Like a Different Person Tonight?](#4-the-230-am-question-why-do-i-feel-like-a-different-person-tonight)
+ 5. [The Exhaustion of Living in a 24 Hour World With a Monthly Body](#5-the-exhaustion-of-living-in-a-24-hour-world-with-a-monthly-body)
+ 6. [How the Male Circadian Clock Shaped Modern Work and Fitness](#6-how-the-male-circadian-clock-shaped-modern-work-and-fitness)
+ 7. [Understanding the Infradian Rhythm: Your Second Internal Clock](#7-understanding-the-infradian-rhythm-your-second-internal-clock)
+ 8. [Why Most Period Apps Feel Like Strangers Watching You](#8-why-most-period-apps-feel-like-strangers-watching-you)
+ 9. [The Hidden Economy of Menstrual Surveillance and Ad Brokers](#9-the-hidden-economy-of-menstrual-surveillance-and-ad-brokers)
 10. [The Paywall Trap: Why Comfort Should Never Be Locked Behind a Subscription](#10-the-paywall-trap-why-comfort-should-never-be-locked-behind-a-subscription)
 11. [What MoonDay Stands For: Four Promises We Refused to Compromise On](#11-what-moonday-stands-for-four-promises-we-refused-to-compromise-on)
 12. [Why Your Cycle Is the Fifth Vital Sign of Your Health](#12-why-your-cycle-is-the-fifth-vital-sign-of-your-health)
@@ -23,6 +24,7 @@ Created, designed, and engineered by **srharshitcode** & **porcupine**.
 14. [Four Days in Her Life: How MoonDay Actually Helps When It Matters](#14-four-days-in-her-life-how-moonday-actually-helps-when-it-matters)
 
 ### Part II: Your Four Inner Seasons (Living in Harmony With Your Biology)
+
 15. [Your Four Inner Seasons: Learning to Stop Fighting Yourself](#15-your-four-inner-seasons-learning-to-stop-fighting-yourself)
 16. [Season One: The Menstrual Phase (Inner Winter, Letting Go and Resting)](#16-season-one-the-menstrual-phase-inner-winter-letting-go-and-resting)
 17. [How Prostaglandins and Iron Shifts Shape Your Period Days](#17-how-prostaglandins-and-iron-shifts-shape-your-period-days)
@@ -35,6 +37,7 @@ Created, designed, and engineered by **srharshitcode** & **porcupine**.
 24. [Why Premenstrual Days Demand Extra Kindness and Steady Blood Sugar](#24-why-premenstrual-days-demand-extra-kindness-and-steady-blood-sugar)
 
 ### Part III: Inside MoonDay (Navigation, Daily Logging, and Cycle Precision)
+
 25. [How MoonDay Compares to Ordinary Trackers](#25-how-moonday-compares-to-ordinary-trackers)
 26. [A Tour of the App: How Your Space and Personal Space Work Together](#26-a-tour-of-the-app-how-your-space-and-personal-space-work-together)
 27. [The Dashboard: A Calm Morning Check In Without the Clutter](#27-the-dashboard-a-calm-morning-check-in-without-the-clutter)
@@ -55,6 +58,7 @@ Created, designed, and engineered by **srharshitcode** & **porcupine**.
 42. [Using the Custom Color Wheel for Personal Baseline Tracking](#42-using-the-custom-color-wheel-for-personal-baseline-tracking)
 
 ### Part IV: The 104 Symptom Matrix and 61 Mood Spectrum
+
 43. [The 104 Symptom Matrix: Giving a Name to Everything You Feel](#43-the-104-symptom-matrix-giving-a-name-to-everything-you-feel)
 44. [Menstrual and Pelvic Pain: Tracking 13 Distinct Local Signals](#44-menstrual-and-pelvic-pain-tracking-13-distinct-local-signals)
 45. [General Body Pain: Headaches, Migraines, Joints, and Breast Tenderness](#45-general-body-pain-headaches-migraines-joints-and-breast-tenderness)
@@ -71,6 +75,7 @@ Created, designed, and engineered by **srharshitcode** & **porcupine**.
 56. [The 61 Mood Spectrum: Room for Every Emotion at Once](#56-the-61-mood-spectrum-room-for-every-emotion-at-once)
 
 ### Part V: Cervical Fluid, Cravings, Movement, and the 1 to 1 Self Care Engine
+
 57. [Tracking Cervical Fluid: Reading Your Body's Own Fertility Signals](#57-tracking-cervical-fluid-reading-your-bodys-own-fertility-signals)
 58. [Understanding Consistency, Amount, and Odor Without Shame](#58-understanding-consistency-amount-and-odor-without-shame)
 59. [Food Cravings: Why Your Body Asks for Chocolate, Salt, and Carbs](#59-food-cravings-why-your-body-asks-for-chocolate-salt-and-carbs)
@@ -84,6 +89,7 @@ Created, designed, and engineered by **srharshitcode** & **porcupine**.
 67. [The 230 Plus Care Directory: A Pocket Guide for You and Your Friends](#67-the-230-plus-care-directory-a-pocket-guide-for-you-and-your-friends)
 
 ### Part VI: Cycle Mathematics, Clinical Reports, Education, and Privacy
+
 68. [How MoonDay Calculates Your Cycle Without Guessing](#68-how-moonday-calculates-your-cycle-without-guessing)
 69. [Why Luteal Phase Math Beats the Old Day 14 Myth](#69-why-luteal-phase-math-beats-the-old-day-14-myth)
 70. [The Interactive MoonDay Calendar: Seeing Your Month Clearly](#70-the-interactive-moonday-calendar-seeing-your-month-clearly)
@@ -96,6 +102,7 @@ Created, designed, and engineered by **srharshitcode** & **porcupine**.
 77. [Custom Reminders, 4 Digit PIN Lock, Private Mode, and Raw JSON Backups](#77-custom-reminders-4-digit-pin-lock-private-mode-and-raw-json-backups)
 
 ### Part VII: Visual Craft, Full Stack Engineering, Offline Sync, and Co Creator Story
+
 78. [Daylight Design: Why We Chose Warm Ivory and Rose Ink Over Hospital White](#78-daylight-design-why-we-chose-warm-ivory-and-rose-ink-over-hospital-white)
 79. [Nighttime Design: Crafting the Soft Aubergine Dark Mode](#79-nighttime-design-crafting-the-soft-aubergine-dark-mode)
 80. [Under the Hood: Full Stack Architecture Overview](#80-under-the-hood-full-stack-architecture-overview)
@@ -180,6 +187,7 @@ When a woman follows a training plan or work schedule built solely for a $24\tex
 Women have two biological clocks running at the same time. The first is the $24\text{ hour}$ circadian clock that governs waking and sleeping. The second is the **infradian rhythm**, a monthly biological cycle lasting roughly $25$ to $35\text{ days}$ that governs reproduction, metabolism, immunity, brain chemistry, and stress response.
 
 Across this monthly rhythm, four key hormones rise and fall in a coordinated sequence:
+
 * **Follicle Stimulating Hormone ($\text{FSH}$)** secreted by the anterior pituitary gland to mature ovarian follicles.
 * **Luteinizing Hormone ($\text{LH}$)** secreted in a sharp mid cycle surge to trigger ovulation.
 * **Estradiol ($E_2$)**, the primary form of estrogen, which builds the uterine lining and energizes the brain, muscles, and metabolism.
@@ -207,7 +215,7 @@ Health data is the most intimate information a human being generates. Turning a 
 
 There is another pattern in commercial health apps that we refused to copy: **weaponizing a woman's anxiety to sell subscriptions.**
 
-In many trackers, you are allowed to tap "Severe cramps," "Spotting," or "Feeling overwhelmed" for free. The moment you save that log, the app displays a blurred card saying: *"We noticed a pattern in your symptoms! Unlock Premium for $\$59.99/\text{year}$ to see what your body is telling you and get self care tips."*
+In many trackers, you are allowed to tap "Severe cramps," "Spotting," or "Feeling overwhelmed" for free. The moment you save that log, the app displays a blurred card saying: *"We noticed a pattern in your symptoms! Unlock Premium for $59.99\text{ USD/year}$ to see what your body is telling you and get self care tips."*
 
 Think about how cruel that design is. When someone is in physical pain or feeling emotionally vulnerable, withholding basic comfort advice and cycle education behind a credit card screen is wrong.
 
@@ -239,10 +247,11 @@ Because a regular, healthy menstrual cycle is not just about your uterus. It is 
 Behind every calendar date in MoonDay is a continuous conversation between your brain and your ovaries called the **Hypothalamic Pituitary Ovarian ($\text{HPO}$) Axis**:
 
 $$
-\text{Hypothalamus (GnRH Pulses)} \longrightarrow \text{Anterior Pituitary (FSH \& LH)} \longrightarrow \text{Ovaries (Estradiol } E_2 \text{ \& Progesterone } P_4\text{)} \longrightarrow \text{Endometrium}
+\text{Hypothalamus (GnRH Pulses)} \longrightarrow \text{Anterior Pituitary (FSH and LH)} \longrightarrow \text{Ovaries (Estradiol } E_2 \text{ and Progesterone } P_4\text{)} \longrightarrow \text{Endometrium}
 $$
 
 Here is how that conversation works in plain language:
+
 1. Deep in your brain, the **hypothalamus** acts like an air traffic controller. It constantly monitors your stress levels (cortisol), sleep, nutrition, and energy reserves. When it senses that your body is safe and well nourished, it sends out tiny rhythmic pulses of Gonadotropin Releasing Hormone ($\text{GnRH}$).
 2. Those pulses tell the **pituitary gland** to release Follicle Stimulating Hormone ($\text{FSH}$), which travels through your bloodstream to your ovaries and wakes up a group of follicles containing eggs.
 3. As the leading follicle grows, it releases **estradiol ($E_2$)**. Once estradiol reaches a high threshold, it signals the brain to release a surge of Luteinizing Hormone ($\text{LH}$), which causes the ovary to release the egg (**ovulation**).
@@ -286,6 +295,7 @@ Why do the first two days of your period often bring cramps, backaches, and sudd
 As progesterone drops at the end of your previous cycle, the cells of your uterine lining release lipid compounds called **prostaglandins** (primarily $\text{PGF}_{2\alpha}$ and $\text{PGE}_2$). Prostaglandins have a specific job: they trigger the smooth muscle wall of the uterus (the myometrium) to contract so it can shed the old lining and pinch off tiny blood vessels.
 
 When prostaglandin levels are high:
+
 1. Strong uterine contractions temporarily squeeze the tiny blood vessels supplying oxygen to the uterine muscle. That temporary lack of oxygen (ischemia) is what your nerves register as **menstrual cramping**.
 2. Excess prostaglandins can diffuse into the surrounding pelvic area, irritating the bowel (`Diarrhea`, `Painful bowel movements`, `Stomach cramps`) and referring pain through the sacral nerves into your lower back and thighs (`Lower-back pain`, `Leg cramps`).
 3. Meanwhile, shedding blood reduces your circulating iron stores (`Weakness`, `Dizziness`, `Fatigue`).
@@ -325,7 +335,8 @@ For many women, inner summer brings the highest social and communicative energy 
 ### 21. The Biology of Ovulation: LH Surges, Cervical Fluid, and Peak Confidence
 
 Physiologically, ovulation is the main event of the menstrual cycle:
-1. When estradiol stays above a critical threshold forroughly $48\text{ hours}$, the brain switches from negative feedback to positive feedback, releasing a dramatic surge of **Luteinizing Hormone ($\text{LH}$)**.
+
+1. When estradiol stays above a critical threshold for roughly $48\text{ hours}$, the brain switches from negative feedback to positive feedback, releasing a dramatic surge of **Luteinizing Hormone ($\text{LH}$)**.
 2. About $24$ to $36\text{ hours}$ after the $\text{LH}$ surge begins, the dominant follicle ruptures and releases its egg into the fallopian tube.
 3. Under peak estrogen, the crypts of your cervix produce clear, watery, or stretchy fluid (`Egg-white-like` and `Stretchy` discharge) that alkalinizes the vaginal environment and creates a supportive pathway for sperm.
 4. About $1$ in $5$ women feel a distinct, brief twinge or ache on one side of their lower pelvis when the follicle releases the egg (`Ovary pain` or *mittelschmerz*), sometimes accompanied by a drop of light `Pinkish` or `Spotting` fluid as estrogen briefly dips right after ovulation.
@@ -335,6 +346,7 @@ Physiologically, ovulation is the main event of the menstrual cycle:
 Immediately after ovulation, you enter your **Luteal Phase**, your body's inner autumn, which lasts roughly $12$ to $16\text{ days}$ (averaging $14\text{ days}$) until your next period begins.
 
 It helps to think of your luteal phase in two halves:
+
 * **Early Luteal (First 6 to 7 Days)**: The ruptured follicle transforms into the *corpus luteum* and secretes a steady wave of **progesterone ($P_4$)** alongside a secondary rise in estrogen. Energy feels steady, calm, and detail oriented. It is a natural time for finishing tasks, organizing your home, and nesting.
 * **Late Luteal (Final 5 to 7 Days)**: If the egg was not fertilized, the corpus luteum begins to break down. Both progesterone and estrogen drop rapidly toward baseline. This hormonal withdrawal is what triggers premenstrual symptoms (PMS).
 
@@ -403,6 +415,7 @@ When you log into MoonDay, the first thing you see in the header is a warm, pers
 > *Take a deep breath. You're doing great.*
 
 We designed the **Dashboard** to give you clarity in five seconds without overwhelming you with noisy pop ups:
+
 * It shows where you are in your current cycle based on your confirmed start dates and personal averages.
 * It highlights what your body is experiencing in its current phase and gives you one tap access to log today's entry or read your personalized self care suggestions.
 * If **Private Mode** is turned on in Settings, the Dashboard automatically hides sensitive note previews so you can check your cycle status comfortably even when people are sitting nearby.
@@ -418,6 +431,7 @@ The **History & Search** module (`/history`) lets you search across your entire 
 Think about when you actually use a period tracker. Often, you are lying on your side in bed with a heating pad, or sitting in a bathroom stall, holding your phone in one hand while your eyes are tired.
 
 We designed `LogClient.tsx` (`/log`) specifically for those moments:
+
 * Large, comfortable tap targets with rounded edges so you never misclick a tiny checkbox.
 * High contrast rose selection states (`#a55f78`) so you can see what is selected at a glance.
 * A live **SaveStatusBadge** in the top right corner (`Autosave active` $\rightarrow$ `Saving...` $\rightarrow$ `Saved to cloud at HH:MM`) so you have constant peace of mind that your selections are safe.
@@ -427,6 +441,7 @@ We designed `LogClient.tsx` (`/log`) specifically for those moments:
 If an app puts 104 symptoms, 61 moods, 55 colors, 41 cravings, and 33 activities onto one giant uncollapsed screen, logging feels like filling out tax paperwork.
 
 MoonDay uses **Progressive Disclosure** through clean `Accordion` cards:
+
 * When you open `/log`, only **Moonday Details** is expanded by default so you can log your period start, end, or flow in five seconds.
 * Below it sit neatly folded cards for **Mood & Feelings**, **Physical Symptoms**, **Vaginal Discharge**, **Food Cravings**, **Physical Activity**, and **Personal Notes**.
 * Tapping any card header smoothly opens that section. And when you use **Copy Yesterday's Log**, MoonDay intelligently auto opens whichever sections contain copied data so you can review them right away.
@@ -449,6 +464,7 @@ const Chip = ({ label, selected, onClick }: { label: string; selected: boolean; 
 ```
 
 Whenever you tap a chip:
+
 1. `markEdited()` flags that you have made a change (`userEditedRef.current = true`).
 2. A React `useEffect` watching `generatePayload()` triggers `triggerAutosave(generatePayload(), true)`.
 3. Within $1000\text{ ms}$, your updated log is written to `IndexedDB` and synced to Supabase in the background, even before you scroll down to click the main Save button.
@@ -456,6 +472,7 @@ Whenever you tap a chip:
 ### 32. Moving Through Time: The Date Navigator and Backfilling Past Days
 
 At the top of `/log` sits the **Date Navigator** bar:
+
 * **Step Backward or Forward**: Click the left chevron (`<`) or right chevron (`>`) to move one day backward or forward (`handleDateScroll(-1)` and `handleDateScroll(1)`).
 * **Jump to Any Date**: Click the center date heading (for example, `Sunday, November 8th`) to open a native date picker (`<input type="date" />`) and jump directly to any past date.
 * **Automatic Record Hydration**: Changing the date immediately runs `fetchExistingLog(newDate)`, loading that day's saved symptoms, moods, flow, colors, and partner notes. If a record already exists for that date, MoonDay switches the primary button label to **Update MoonDay Log** and displays a **Delete** button so you have full control over past entries.
@@ -465,6 +482,7 @@ At the top of `/log` sits the **Date Navigator** bar:
 During your period or late luteal phase, consecutive days often share $80\%$ of the same symptoms. Re-entering eight symptoms and four moods by hand every morning is unnecessary work.
 
 Clicking **Copy Yesterday's Log** (`handleCopyYesterday`) at the top of the form:
+
 1. Queries `daily_logs` for $\text{selectedDate} - 1\text{ day}$.
 2. Copies yesterday's `symptoms`, `mood`, `flow`, `is_spotting`, and `cravings` into today's state.
 3. Marks today's log as edited so the copied state immediately autosaves as today's draft.
@@ -492,6 +510,7 @@ In MoonDay, selecting the `Spotting` chip records `is_spotting: true` and `flow:
 ### 36. The Six Flow Intensity Levels: From Very Heavy to Spotting
 
 Below the confirmation buttons, you can log your daily **Flow Intensity** across six clear levels:
+
 1. `Very heavy` (Passing clots or needing to change high capacity protection every $1$ to $2\text{ hours}$)
 2. `Heavy` (Steady, heavy bleeding typical of peak Day 1 or Day 2 flow)
 3. `Medium` (Moderate, comfortable flow)
@@ -510,6 +529,7 @@ MoonDay features a curated, scrollable grid of **55 named color swatches** insid
 ### 38. Bright and Fresh Reds: What Crimson and Ruby Flow Tell You
 
 MoonDay includes **16 bright and deep red swatches** to capture fresh arterial and venous menstrual flow:
+
 * **Bright Reds**: `Crimson (#DC143C)`, `Ruby Red (#9B111E)`, `Nationals Red (#AB0003)`, `Cardinal Red (#C41E3A)`, `Firebrick (#B22222)`, `Raspberry (#D21F3C)`, `Rose Red (#C21E56)`, `Indian Red (#CD5C5C)`.
 * **Deep Classic Reds**: `Barn Red (#7C1D2D)`, `Oklahoma Crimson (#841617)`, `Blood Red (#660000)`, `Rose Wood (#65000B)`, `Brick Red (#8B3A3A)`, `Garnet (#733635)`, `Garnet Rose (#9E4244)`, `Claret Rose (#A23B55)`.
 
@@ -518,6 +538,7 @@ Clinically, bright red shades like `Crimson` and `Ruby Red` indicate fresh blood
 ### 39. Deep Wines, Plums, and Berries: Understanding Thick Lining and Oxidation
 
 For heavier days, morning flow, or thicker endometrial shedding, MoonDay provides **13 deep wine, berry, and plum shades**:
+
 * `Burgundy (#800020)`, `Maroon (#800000)`, `Wine (#722F37)`, `Oxblood (#4A0000)`, `Claret (#7F1734)`, `Dark Cherry (#5D001E)`, `Berry (#990F4B)`, `Mulberry (#70193D)`, `Plum (#673147)`, `Aubergine (#580F41)`, `Black Cherry (#3B000B)`, `Deep Wine (#4B001F)`, `Dark Raspberry (#872657)`.
 
 When blood pools briefly in the uterus overnight or flows more slowly during heavy shedding, hemoglobin begins to lose oxygen, shifting its color from bright red toward deep cherry, burgundy, and plum. Tracking whether these deep shades appear only in the morning or persist alongside heavy clots gives your healthcare provider valuable insight into your estrogen to progesterone balance.
@@ -525,6 +546,7 @@ When blood pools briefly in the uterus overnight or flows more slowly during hea
 ### 40. Pale Pinks and Coral Tints: Estrogen, Iron, and Mid Cycle Clues
 
 MoonDay includes **15 soft pink, rose, coral, and mauve shades**:
+
 * `Tea Rose (#F4C2C2)`, `Dusty Rose (#DCAE96)`, `Dusty Pink (#D8A7A7)`, `Light Pink (#FFB6C1)`, `Pale Pink (#FADADD)`, `Blush Pink (#DE5D83)`, `Salmon Pink (#FF9999)`, `Coral Pink (#F88379)`, `Rose Pink (#F7A8B8)`, `Pink Beige (#D8A39D)`, `Light Coral (#F08080)`, `Rose Quartz (#F7CAC9)`, `Muted Rose (#C08081)`, `Mauve (#B784A7)`, `Smoky Rose (#A56B73)`.
 
 Pale pink or coral flow happens when a small amount of red blood mixes with clear or white cervical fluid. Seeing `Tea Rose` or `Light Pink` around mid cycle often points to ovulation spotting, while seeing pale watery pink flow across an entire period can be a helpful prompt to check ferritin (iron storage) or estradiol levels.
@@ -532,6 +554,7 @@ Pale pink or coral flow happens when a small amount of red blood mixes with clea
 ### 41. Rust, Cinnamon, and Coffee Browns: Old Blood Versus Early Luteal Dips
 
 To capture oxidized flow at the beginning or end of your period, MoonDay includes **11 warm rust, terracotta, and brown shades**:
+
 * `Rust Red (#B7410E)`, `Chestnut (#954535)`, `Mahogany (#C04000)`, `Sienna (#A0522D)`, `Burnt Sienna (#E97451)`, `Cinnamon (#D2691E)`, `Copper (#B87333)`, `Terracotta (#E2725B)`, `Cocoa (#875F5A)`, `Coffee Brown (#6F4E37)`, `Brown Red (#8A3324)`.
 
 When blood is exposed to oxygen over hours or days, iron in the hemoglobin oxidizes and turns rust, cinnamon, or coffee brown. On Day 5 or Day 6 of your period, `Cocoa` or `Coffee Brown` simply means your uterus is clearing out the last traces of your period. However, if you log $3$ to $5\text{ days}$ of brown shades *before* your `Confirmed Start Day` every month, that pattern can help your doctor spot a luteal phase progesterone dip.
@@ -551,6 +574,7 @@ When you tap `"No symptoms / Everything is fine"`, MoonDay clears any active sym
 ### 44. Menstrual and Pelvic Pain: Tracking 13 Distinct Local Signals
 
 Category 1 focuses specifically on **Menstrual/Pelvic Pain** with 13 targeted chips:
+
 * `Cramps`, `Mild cramps`, `Severe cramps`, `Abdominal pain`, `Pelvic pain`, `Lower-back pain`, `Backache`, `Heavy-feeling pelvis`, `Painful bowel movements`, `Ovary pain`, `Vulvar pain`, `Uterine spasms`, `Pelvic pressure`.
 
 Having separate chips for `Mild cramps` versus `Severe cramps`, `Ovary pain` (one sided ovulation or cyst twinges), `Heavy-feeling pelvis` (pelvic congestion), and `Painful bowel movements` (a key clinical marker when screening for endometriosis) makes your symptom log genuinely useful for medical evaluation.
@@ -558,9 +582,11 @@ Having separate chips for `Mild cramps` versus `Severe cramps`, `Ovary pain` (on
 ### 45. General Body Pain: Headaches, Migraines, Joints, and Breast Tenderness
 
 Category 2 covers **General Pain** across the rest of your body with 11 chips:
+
 * `Headache`, `Migraine`, `Body aches`, `Muscle pain`, `Joint pain`, `Tender breasts`, `Breast swelling`, `Neck pain`, `Shoulder pain`, `Leg cramps`, `Joint stiffness`.
 
 Hormonal fluctuations affect pain receptors and fluid balance everywhere:
+
 * **Menstrual Migraines (`Migraine`, `Headache`)**: Often triggered by the rapid drop in estradiol ($E_2$) right before menstruation or right after ovulation.
 * **Cyclical Mastalgia (`Tender breasts`, `Breast swelling`)**: Driven by luteal progesterone and estrogen stimulating breast ducts and fluid retention in the week before your period.
 * **Musculoskeletal Aches (`Joint pain`, `Joint stiffness`, `Neck pain`, `Shoulder pain`, `Leg cramps`)**: Systemic prostaglandins and low estrogen days can make joints and muscles feel noticeably stiffer and more achey.
@@ -568,6 +594,7 @@ Hormonal fluctuations affect pain receptors and fluid balance everywhere:
 ### 46. Your Gut and Your Hormones: Why Digestion Changes All Month
 
 Category 3 tracks **Digestive** symptoms across 14 chips:
+
 * `Bloating`, `Gas`, `Nausea`, `Vomiting`, `Diarrhea`, `Constipation`, `Appetite change`, `Increased appetite`, `Reduced appetite`, `Indigestion`, `Heartburn`, `Food aversion`, `Stomach cramps`, `Gurgling stomach`.
 
 Many women spend years thinking they have random food intolerances, only to discover through tracking in MoonDay that their bloating, constipation, or upset stomach happens on the exact same days of their cycle every single month.
@@ -575,12 +602,14 @@ Many women spend years thinking they have random food intolerances, only to disc
 ### 47. From Luteal Bloating to Day One Prostaglandin Stomach Cramps
 
 Why does your stomach behave so differently in Week 3 compared to Day 1?
+
 * **In the Luteal Phase (`Bloating`, `Constipation`, `Gas`, `Heartburn`)**: Progesterone is a smooth muscle relaxant. Its job is to keep the uterus quiet and relaxed in case of pregnancy, but it also relaxes the smooth muscle of your lower esophageal sphincter (causing `Heartburn`) and slows peristalsis in your intestines (causing `Constipation`, `Gas`, and `Bloating`).
 * **On Day 1 and Day 2 (`Diarrhea`, `Stomach cramps`, `Nausea`, `Gurgling stomach`)**: As soon as progesterone drops and uterine prostaglandins ($\text{PGF}_{2\alpha}$) spike to contract the uterus, those same prostaglandins stimulate the smooth muscle of your intestines to contract rapidly, causing "period poops," stomach cramping, and nausea.
 
 ### 48. Energy and Sleep: Why You Can Feel Exhausted Yet Unable to Sleep
 
 Category 4 tracks **Energy/Sleep** across 14 chips:
+
 * `Fatigue`, `Lethargy`, `Low energy`, `Weakness`, `Sleepiness`, `Insomnia`, `Poor sleep`, `Disrupted sleep`, `Restless legs`, `Frequent waking`, `Vivid dreams`, `Nightmares`, `Difficulty falling asleep`, `Oversleeping`.
 
 One of the most frustrating premenstrual paradoxes is feeling completely `Exhausted` and `Low energy` all afternoon, only to lie in bed at night with `Insomnia` or `Difficulty falling asleep`. This happens because progesterone raises your core body temperature during the luteal phase, blunting the natural nighttime temperature drop your brain needs to initiate deep slow wave sleep.
@@ -594,6 +623,7 @@ Because luteal progesterone and its metabolites directly alter sleep architectur
 ### 50. Neurological Shifts: Brain Fog, Dizziness, and Sensory Overload
 
 Category 5 tracks **Neurological** symptoms with 11 chips:
+
 * `Dizziness`, `Light-headedness`, `Brain fog`, `Difficulty concentrating`, `Forgetfulness`, `Sensitivity to light`, `Sensitivity to sound`, `Clumsiness`, `Sluggishness`, `Tingling`, `Numbness`.
 
 When estrogen and progesterone drop before your period, or when fluid and iron shift during heavy bleeding, you may notice `Brain fog`, `Forgetfulness`, or `Clumsiness` (changes in fine motor coordination and proprioception). And when your nervous system is sensitized during the late luteal phase or during a menstrual migraine, ordinary fluorescent lights and background chatter can trigger intense `Sensitivity to light` and `Sensitivity to sound`.
@@ -601,6 +631,7 @@ When estrogen and progesterone drop before your period, or when fluid and iron s
 ### 51. Skin, Hair, and Fluid Retention: Reading Surface Signals
 
 Category 6 tracks **Skin/Body** changes across 16 chips:
+
 * `Acne`, `Oily skin`, `Dry skin`, `Dry eyes`, `Hot flashes`, `Night sweats`, `Sweating`, `Chills`, `Fever`, `Water retention`, `Puffy face`, `Swollen fingers`, `Swollen ankles`, `Hair thinning`, `Brittle nails`, `Body odor changes`.
 
 During the follicular phase, rising estradiol boosts collagen and hyaluronic acid, keeping skin plump. After ovulation, luteal progesterone stimulates the sebaceous (oil) glands, causing `Oily skin` and pre-period jawline `Acne`. Then, as hormones drop and aldosterone shifts fluid balance, you may notice `Water retention`, `Puffy face`, `Swollen fingers`, or `Dry skin`.
@@ -612,6 +643,7 @@ Many young women think `Hot flashes` and `Night sweats` only happen during menop
 ### 53. Urinary and Vaginal Comfort: Catching Imbalances Early
 
 Category 7 tracks **Urinary/Vaginal** health with 8 specific chips:
+
 * `Vaginal itching`, `Vaginal dryness`, `Urinary discomfort`, `Painful urination`, `Urinary frequency`, `Pain during sex`, `Unusual discharge`, `Strong odor`.
 
 Because vaginal pH and natural *Lactobacillus* flora shift alongside estrogen levels (and menstrual blood itself has a higher pH of roughly $7.4$ compared to the normal acidic vaginal pH of $3.8$ to $4.5$), yeast imbalances or urinary tract irritation often flare at specific points in the cycle. Logging these symptoms immediately activates MoonDay's pH and medical screening care reminders.
@@ -619,6 +651,7 @@ Because vaginal pH and natural *Lactobacillus* flora shift alongside estrogen le
 ### 54. Immunity and Period Flu: Why Sore Throats and Congestion Appear Before Bleeding
 
 Category 9 tracks **Immunity & Cold** symptoms with 6 chips:
+
 * `Sore throat`, `Runny nose`, `Cough`, `Congestion`, `Sneezing`, `Swollen lymph nodes`.
 
 After ovulation, progesterone naturally downregulates certain pro-inflammatory immune responses so the body does not reject a potential fertilized egg. Combined with rising prostaglandins right before menstruation, this immune shift causes many women to experience "period flu": a mild `Sore throat`, `Congestion`, `Sneezing`, or `Body aches` that shows up $2\text{ days}$ before bleeding and vanishes once their period gets underway.
@@ -626,6 +659,7 @@ After ovulation, progesterone naturally downregulates certain pro-inflammatory i
 ### 55. The Heavy Mental Days: Intrusive Thoughts, Paranoia, and Rejection Sensitivity
 
 Category 8 inside the symptom matrix is dedicated to **Emotional & Mental** symptoms with 10 chips:
+
 * `Mood swings`, `Irritability`, `Anxiety`, `Sadness`, `Tearfulness`, `Feeling overwhelmed`, `Paranoia`, `Intrusive thoughts`, `Rejection sensitive`, `Apathy`.
 
 Including `Intrusive thoughts`, `Paranoia`, and `Rejection sensitive` here is one of the most important clinical choices in MoonDay. For women who experience severe premenstrual syndrome (PMS) or Premenstrual Dysphoric Disorder (PMDD), the late luteal phase can trigger sudden, terrifying spikes in unwanted thoughts or intense feelings of rejection. Being able to log those exact experiences and see that they strictly occur in the $4$ to $7\text{ days}$ before menses is the single most important piece of diagnostic evidence a doctor needs to identify PMDD.
@@ -633,6 +667,7 @@ Including `Intrusive thoughts`, `Paranoia`, and `Rejection sensitive` here is on
 ### 56. The 61 Mood Spectrum: Room for Every Emotion at Once
 
 In the **Mood & Feelings** accordion, MoonDay provides **61 distinct emotional chips** plus `"Everything is fine"`:
+
 * `Normal`, `Calm`, `Happy`, `Sad`, `Confused`, `Anxious`, `Irritable`, `Hyperactive`, `Tired`, `Emotional`, `Crying`, `Peaceful`, `Content`, `Excited`, `Affectionate`, `Playful`, `Lonely`, `Overwhelmed`, `Stressed`, `Angry`, `Frustrated`, `Restless`, `Sensitive`, `Tearful`, `Hopeful`, `Motivated`, `Unmotivated`, `Insecure`, `Confident`, `Numb`, `Disappointed`, `Grateful`, `Relaxed`, `Bored`, `Joyful`, `Proud`, `Inspired`, `Curious`, `Homesick`, `Rejected`, `Panicky`, `Tense`, `Annoyed`, `Resentful`, `Impatient`, `Indecisive`, `Distracted`, `Forgetful`, `Drained`, `Exhausted`, `Guilty`, `Embarrassed`, `Vulnerable`, `Frisky`, `Flirty`, `Sensual`, `Optimistic`, `Pessimistic`, `Apathetic`, `Nostalgic`.
 
 Because human emotions are layered, you can select as many moods as you want on the same day, such as `Tired`, `Vulnerable`, and `Grateful`, and receive a personalized comfort card for each one.
@@ -642,6 +677,7 @@ Because human emotions are layered, you can select as many moods as you want on 
 ### 57. Tracking Cervical Fluid: Reading Your Body's Own Fertility Signals
 
 Inside the **Vaginal Discharge** accordion, MoonDay gives you **24 observation chips**:
+
 * `No discharge`, `Creamy`, `Watery`, `Yellow-Bright`, `Sticky`, `Egg-white-like`, `Spotting`, `Unusual`, `Clumpy white`, `Gray`, `Milky`, `Clumpy`, `Quick-drying`, `Thick`, `Lotion-like`, `Clear`, `Cloudy`, `Yellowish`, `Brownish`, `Pinkish`, `Blood-tinged`, `Jelly-like`, `Stretchy`, `Dry`.
 
 By observing how your cervical fluid changes from `Dry` or `Sticky` after your period, to `Creamy` and `Lotion-like`, to `Watery`, `Clear`, `Stretchy`, and `Egg-white-like` at peak ovulation, you learn to read your body's real time estrogen levels without needing expensive test strips.
@@ -649,6 +685,7 @@ By observing how your cervical fluid changes from `Dry` or `Sticky` after your p
 ### 58. Understanding Consistency, Amount, and Odor Without Shame
 
 Below the 24 observation chips sit three structured dropdowns for clinical precision:
+
 1. **Consistency (`discharge_consistency`)**: `Not noted`, `Thick`, `Thin`, `Stretchy`, `Sticky`, `Watery`, `Jelly-like`.
 2. **Amount (`discharge_amount`)**: `Not noted`, `Light`, `Moderate`, `Heavy`, `Excessive`.
 3. **Odor (`discharge_odor`)**: `None / Normal`, `Unusual odor`, `Strong odor`, `Fishy`, `Metallic`, `Sweet`.
@@ -658,6 +695,7 @@ Every healthy vagina has a natural scent that shifts across the month (for examp
 ### 59. Food Cravings: Why Your Body Asks for Chocolate, Salt, and Carbs
 
 Food cravings across your cycle are not character flaws. They are biochemical signals:
+
 * **Magnesium and Cocoa (`Chocolate`)**: Magnesium levels dip in the late luteal phase. Dark chocolate is one of the richest dietary sources of magnesium, which helps relax uterine smooth muscle and support dopamine.
 * **Serotonin and Complex Carbohydrates (`Carbs`, `Breads`, `Pasta`, `Sweet`)**: When estrogen dips before your period, brain serotonin dips too. Eating carbohydrates triggers a small insulin release that helps the amino acid tryptophan cross into the brain to synthesize serotonin.
 * **Electrolytes and Iron (`Salty`, `Meat`, `Savory`, `warm soups`)**: Fluid shifts and menstrual blood loss increase your body's demand for sodium, potassium, protein, and heme iron.
@@ -665,6 +703,7 @@ Food cravings across your cycle are not character flaws. They are biochemical si
 ### 60. The 41 Craving Presets and Mindful Nourishment
 
 In the **Food Cravings** accordion, MoonDay provides **41 one tap preset buttons** with a `+` icon:
+
 * `Sweet`, `Chocolate`, `Salty`, `Spicy`, `Sour`, `Crunchy snacks`, `Savory snacks`, `Dairy`, `Beverages`, `Energy drinks`, `Caffeinated drinks`, `indulgent desserts`, `warm soups`, `light salads`, `rich sauces`, `baked goods`, `Savory`, `Fast food`, `Comfort food`, `Fruit`, `Cold drinks`, `Hot drinks`, `Tea`, `Coffee`, `Carbs`, `Ice cream`, `Pastries`, `Cheese`, `Meat`, `Fried food`, `Vegetables`, `Juice`, `Water`, `Crunchy`, `Chewy`, `Breads`, `Pasta`, `Chips`, `Candy`, `Noodles`, `Hydra`.
 
 Tapping any button appends that item cleanly to your cravings text box (`appendCraving`), where you can also type custom cravings of your own.
@@ -672,6 +711,7 @@ Tapping any button appends that item cleanly to your cravings text box (`appendC
 ### 61. Movement and Exercise: Matching Your Workouts to Your Energy
 
 In the **Physical Activity** accordion, you can log your daily movement across **33 activity chips**:
+
 * `Didn't exercise`, `Yoga`, `Gym`, `Dance`, `Football`, `Vollyball`, `Tennis`, `Badminton`, `Aerobics & dancing`, `Swimming`, `Team sports`, `Running`, `Cycling`, `Walking`, `Stretching`, `Pilates`, `Strength training`, `Hiking`, `Household activity`, `Rest day`, `Light movement`, `Intense workout`, `HIIT`, `Martial arts`, `Tennis/Racquet`, `Meditation/Breathwork`, `Physical therapy`, `Jogging`, `Elliptical`, `Rowing`, `Dance class`, `Active commute`, `Gardening`.
 
 Below the chips, you can record **Duration (minutes)** and **Intensity** (`Very Low`, `Low`, `Moderate`, `High`, `Maximum Effort`).
@@ -685,6 +725,7 @@ Most fitness apps punish you if you take a rest day during your period by breaki
 ### 63. Personal Notes: Naming What You Need Right Now
 
 Inside the **Personal Notes** accordion, MoonDay gives you three distinct text areas:
+
 1. **What you need right now (`what_you_need_note`)**: Prompted with *"E.g., Reassurance, a heating pad, quiet time, a hug."* Naming your emotional or physical need takes it out of a swirl of vague distress and turns it into something concrete you can give yourself or ask for.
 2. **Notes for Your Partner (`husbandNote`)**: A private, rose bordered box where you can write notes for your partner. When **Private Mode** is enabled in Settings, this box hides automatically.
 3. **General daily note (`note`)**: Your open space for any additional context about your day.
@@ -694,6 +735,7 @@ Inside the **Personal Notes** accordion, MoonDay gives you three distinct text a
 When you visit **Self Care & Comfort** (`/self-care`), `SelfCareClient.tsx` fetches today's log from `daily_logs` and runs it through our **1 to 1 Self Care Engine**.
 
 Instead of giving you three generic tips, MoonDay maps every single item you logged today against five comprehensive care dictionaries:
+
 1. `SYMPTOM_REMINDERS`: **104 individual care guides** (one for every physical and mental symptom in `LogClient.tsx`).
 2. `MOOD_REMINDERS`: **61 individual emotional care guides** (one for every mood in `LogClient.tsx`).
 3. `FLOW_REMINDERS`: **6 flow care guides** tailored to your bleeding intensity.
@@ -705,6 +747,7 @@ Plus, if you wrote a note in **What you need right now**, MoonDay generates a cu
 ### 65. The Real Biology Behind MoonDay's Comfort Suggestions
 
 Every single one of the $230+$ care cards in `SelfCareClient.tsx` is written with warmth and backed by real physiology:
+
 * **Gate Control Pain Relief (`Cramps`, `Severe cramps`, `Lower-back pain`)**: Applying heat at $40^\circ\text{C}$ to $45^\circ\text{C}$ activates thermal $\text{TRPV1}$ receptors that block pain signals from reaching the brain while vasodilating constricted uterine blood vessels.
 * **Vagus Nerve Activation (`Panicky`, `Anxious`, `Stressed`)**: Cold water facial immersion triggers the mammalian dive reflex to slow heart rate immediately, while Box Breathing ($4\text{s}$ inhale, $4\text{s}$ hold, $4\text{s}$ exhale, $4\text{s}$ hold) and the Physiological Sigh shift the autonomic nervous system from sympathetic fight or flight into parasympathetic rest.
 * **Pelvic Venous Decompression (`Heavy-feeling pelvis`, `Swollen ankles`)**: Resting with legs elevated vertically against a wall for $10\text{ minutes}$ uses gravity to assist venous and lymphatic return from the lower extremities and pelvic bowl.
@@ -713,6 +756,7 @@ Every single one of the $230+$ care cards in `SelfCareClient.tsx` is written wit
 ### 66. The Daily Comfort Checklist: Small Wins on Hard Days
 
 Beside your personalized care cards on `/self-care` sits the interactive **Daily Comfort Checklist**:
+
 * **Drank a large glass of water** (`water`)
 * **Did 5 minutes of gentle movement** (`stretch`)
 * **Took a proper break to rest** (`rest`)
@@ -765,6 +809,7 @@ $$
 ### 70. The Interactive MoonDay Calendar: Seeing Your Month Clearly
 
 On the **Calendar** page (`/calendar`), every day of the month is color coded clearly:
+
 * **Confirmed Moonday Start**: Highlighted in soft pink with a bold crimson `START` pill badge.
 * **Moonday Bleeding Days**: Blush pink cells marked with a rose droplet icon.
 * **Ovulation Day**: Sky blue cell with a crisp `OVULATE` badge.
@@ -780,6 +825,7 @@ In **Cycle Insights** (`/insights`) and **Reports** (`/reports`), MoonDay aggreg
 ### 72. The 90 Day Medical Report: Walking Into Your Doctor's Office Prepared
 
 Located at `/medical-report` (`MedicalReportClient.tsx`), MoonDay generates a structured, clinical **Patient Cycle History Report** covering your last $90\text{ days}$ of logs:
+
 * **Header Block**: Displays the report title, generation date, and patient name.
 * **Clinical Scope Banner**: Explains to the reviewing clinician that the report summarizes 90 days of self reported data and calculates cycle lengths strictly from confirmed menstrual start dates.
 * **Summary Metrics**: Displays **Average Cycle Length** (e.g., `28 days`) and **Average Period Duration** (e.g., `5 days`).
@@ -798,9 +844,10 @@ Located at `/education` (`EducationClient.tsx`), MoonDay includes an integrated 
 
 A live search bar at the top filters across all 437 titles, categories, and article bodies in real time, giving you clear, reassuring answers without ever leaving the privacy of the app.
 
-### 75. Three Learning Paths: From First Period to Clinical Health and Relationships.
+### 75. Three Learning Paths: From First Period to Clinical Health and Relationships
 
 The 437 articles in the Education library are organized into three tailored life stage tabs:
+
 1. **Teen & Foundational**: Features a welcoming hero card (*"Your Body, Your Blueprint: Understanding your cycle is a superpower"*) and covers foundational topics like *Menarche (The First Period)*, immature $\text{HPO}$ axis irregularity in the first $2$ to $3\text{ years}$, *Tanner Stages of Development*, *Primary Amenorrhea*, period hygiene, nutrition, and school/sports confidence.
 2. **Adult & Clinical**: Deep dives into hormone mechanics ($\text{FSH}$, $\text{LH}$, estradiol, progesterone, testosterone, prolactin, thyroid hormones), $\text{PCOS}$, endometriosis, adenomyosis, uterine fibroids, luteal phase defect, PMDD, fertility awareness, and perimenopause.
 3. **Adult Relationship**: Thoughtful guides on communicating cycle needs to a partner, navigating emotional sensitivity in the late luteal phase, and building mutual support in marriage and long term relationships.
@@ -808,12 +855,14 @@ The 437 articles in the Education library are organized into three tailored life
 ### 76. The Personal Journal and Private Notes for Your Partner
 
 MoonDay gives your words two dedicated sanctuaries under **Personal Space**:
+
 * **Personal Journal (`/journal`)**: A private diary for your unfiltered daily reflections, completely separate from your symptom charts. Each entry is saved with its date and includes touch friendly Edit (`Pencil`) and Delete (`Trash2`) buttons.
-* **Private Notes (`/notes` — Notes for Your Husband)**: Displays every partner note you have written inside the daily log. Includes a prominent **Privacy Notice** confirming that MoonDay *never* automatically sends, emails, or pushes these notes to your partner. We engineered `NotesClient.tsx` and `LogClient.tsx` with schema resilient queries (supporting `date`, `entry_date`, and `log_date` columns) plus a local storage mirror (`moonday_partner_notes`) so any note you type in `/log` reflects immediately on `/notes` and links back via `/log?date=YYYY-MM-DD`.
+* **Private Notes (`/notes` for Your Partner)**: Displays every partner note you have written inside the daily log. Includes a prominent **Privacy Notice** confirming that MoonDay *never* automatically sends, emails, or pushes these notes to your partner. We engineered `NotesClient.tsx` and `LogClient.tsx` with schema resilient queries (supporting `date`, `entry_date`, and `log_date` columns) plus a local storage mirror (`moonday_partner_notes`) so any note you type in `/log` reflects immediately on `/notes` and links back via `/log?date=YYYY-MM-DD`.
 
 ### 77. Custom Reminders, 4 Digit PIN Lock, Private Mode, and Raw JSON Backups
 
 In `/reminders` and `/settings` (`SettingClient.tsx`), MoonDay puts you in complete control of your routine and your privacy:
+
 * **Custom Reminders (`/reminders`)**: Set gentle notifications for cycle starts, water intake, rest breaks, and vitamins.
 * **4 Digit PIN Lock**: Set a 4 digit numeric PIN in Settings (`pin_code`) to lock the app interface against casual snooping on shared or unlocked devices.
 * **Private Mode Toggle**: One click hides the *Notes for Your Partner* box on `/log` and conceals sensitive summaries on the Dashboard (`private_mode_enabled`).
@@ -826,6 +875,7 @@ In `/reminders` and `/settings` (`SettingClient.tsx`), MoonDay puts you in compl
 Standard health apps use stark `#FFFFFF` backgrounds and `#000000` text that feel cold and clinical.
 
 In `src/app/globals.css`, we crafted a warm, soothing **Daylight Palette** using Tailwind CSS v4 `@theme` variables:
+
 * **Background (`--bg`)**: `#fff9f8` (Warm Ivory Blush)
 * **Surface Cards (`--surface`)**: `#ffffff` with `#f1e6e9` soft rose borders and `0 8px 28px rgba(110, 70, 85, 0.07)` diffused shadows
 * **Primary Ink (`--ink`)**: `#493b43` (Deep Espresso Rose)
@@ -837,6 +887,7 @@ In `src/app/globals.css`, we crafted a warm, soothing **Daylight Palette** using
 When logging cramps or insomnia at 2:00 AM, a bright white screen is painful, while pure `#000000` AMOLED black creates harsh halation (text blurring) for tired eyes.
 
 We engineered a custom **Soft Aubergine Dark Mode** (`html.dark` in `src/app/globals.css`):
+
 * **Deep Aubergine Canvas (`--bg`)**: `#161114`
 * **Elevated Plum Cards (`--surface`)**: `#231a1e` with `#3a2830` borders
 * **Secondary Surface**: `#2c2026`
@@ -848,7 +899,7 @@ We engineered a custom **Soft Aubergine Dark Mode** (`html.dark` in `src/app/glo
 
 MoonDay is built on a modern, type safe, offline resilient architecture:
 
-```
+```text
 +-----------------------------------------------------------------------------+
 |                           CLIENT APPLICATION LAYER                          |
 |  Next.js 16.4.3 (App Router + Turbopack)  |  React 19  |  TypeScript 5      |
@@ -871,6 +922,7 @@ MoonDay is built on a modern, type safe, offline resilient architecture:
 ### 81. Next.js 16 App Router, React 19, and Turbopack Engineering
 
 MoonDay leverages **Next.js 16.4.3** with **Turbopack** and **React 19**:
+
 * **Route Groups (`src/app/(app)/`)**: Authenticated views share a persistent application shell (`layout.tsx`), keeping sidebar navigation instantaneous without full page reloads.
 * **Next.js 16 Experimental Caching Configuration**: In `next.config.ts`, `cacheComponents: true` and `partialPrefetching: true` are placed inside the `experimental` configuration block so route segment configurations (`export const instant = false`) compile cleanly alongside `@vercel/speed-insights` and `@vercel/analytics`.
 
@@ -883,6 +935,7 @@ Whenever `html.dark` is active on the document root, those selectors automatical
 ### 83. Offline First Engineering: How IndexedDB Protects Every Keystroke
 
 In `src/utils/offlineSync.ts` and `src/components/NetworkResilience.tsx`, we built a custom local draft engine using the browser's native **IndexedDB** (`moonday_offline_store`, version $3$):
+
 * **Debounced Autosave (`triggerAutosave`)**: Every chip tap or text change starts a $1000\text{ ms}$ debounce timer.
 * **Local Draft Persistence (`saveLocalDraft`)**: Writes an `OfflineDraft` object to the `drafts` object store before attempting any network request.
 * **Offline Queueing (`offline-queued`)**: If `navigator.onLine` is `false`, MoonDay keeps the draft safely queued on your device and displays a clear amber banner.
@@ -891,36 +944,48 @@ In `src/utils/offlineSync.ts` and `src/components/NetworkResilience.tsx`, we bui
 ### 84. Solving Sync Conflicts, PWA Setup, Local Installation, and Vercel Deployment
 
 #### Self Conflict Prevention in `NetworkResilience.tsx`
+
 When an autosave completes, `syncDraftToSupabase` returns the new `serverUpdatedAt: nowIso` timestamp, which updates `latestBaseUpdatedAtRef.current`. This ensures that clicking the main **Save MoonDay Log** button a few seconds after an autosave never mistakes your own autosave for a conflict from another device.
 
 #### Progressive Web App (PWA) Configuration
+
 In `next.config.ts`, `@ducanh2912/next-pwa` is configured with `reloadOnOnline: false` so reconnecting to Wi-Fi never triggers a forced page reload while you are typing.
 
 #### Local Setup Guide
+
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/srharshitcode/moonday.git
    cd moonday
    ```
+
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
+
 3. **Configure environment variables**
    Create a `.env.local` file in the root directory:
+
    ```env
    NEXT_PUBLIC_SUPABASE_URL=https://your-project-id.supabase.co
    NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
    ```
+
 4. **Start the development server**
+
    ```bash
    npm run dev
    ```
+
    Open `http://localhost:3000` in your browser.
 
 #### Vercel Deployment Checklist
+
 1. Ensure `/node_modules`, `/.next`, and `.env*.local` are listed in `.gitignore`.
-2. Import the repository into **Vercel** and add `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` in **Project Settings $\rightarrow$ Environment Variables**.
+2. Import the repository into **Vercel** and add `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` in **Project Settings** $\rightarrow$ **Environment Variables**.
 3. Deploy.
 
 ### 85. The Story Behind MoonDay: Credits and Ownership by srharshitcode and porcupine
@@ -937,10 +1002,9 @@ MoonDay exists because **srharshitcode** and **porcupine** poured both halves of
 
 * **srharshitcode** (*Creator, Lead Full Stack Engineer, and System Architect*)
   **srharshitcode** took the dream of MoonDay and turned it into a living, resilient software platform. Every architectural layer of this codebase carries **srharshitcode**'s engineering signature: from designing the Next.js 16 App Router and React 19 component hierarchy, to writing the custom IndexedDB offline synchronization engine (`offlineSync.ts`), solving subtle cloud race conditions in `NetworkResilience.tsx`, engineering the global Soft Aubergine dark mode interceptor in `globals.css`, building the 4 Digit PIN lock and JSON data portability tools, and refining every mobile touch gesture. For **srharshitcode**, every technical decision came back to one personal commitment: *when a woman opens MoonDay on a hard night, the technology beneath her fingertips should be fast, unbreakable, private, and completely trustworthy.*
-  * **GitHub**: [https://github.com/srharshitcode](https://github.com/srharshitcode)
-  * **LinkedIn**: [https://linkedin.com/in/srharshitcode](https://linkedin.com/in/srharshitcode)
-  * **Instagram**: [https://instagram.com/sr.harshitcode](https://instagram.com/sr.harshitcode)
-
+  * **GitHub**: <https://github.com/srharshitcode>
+  * **LinkedIn**: <https://linkedin.com/in/srharshitcode>
+  * **Instagram**: <https://instagram.com/sr.harshitcode>
 * **porcupine** (*Co Creator, Product Heart, and Domain Visionary, Anonymous Partner*)
   Choosing to remain anonymous under the name **porcupine**, their voice, intuition, and emotional wisdom are the heartbeat of MoonDay. **porcupine** is the reason MoonDay feels like a trusted friend rather than a clinical chart. It was through **porcupine**'s care and insight that MoonDay grew to recognize 104 specific physical and emotional symptoms, 61 real human moods, 55 flow shades, 437 educational topics across three stages of life, and over 230 individual self care comfort reminders. Every time a young girl or woman opens MoonDay at midnight, sees her exact unspoken feeling given a name, reads a comforting self care card, and feels safe in her own skin, she is experiencing the kindness that **porcupine** built into the soul of this project.
 
@@ -948,7 +1012,7 @@ MoonDay exists because **srharshitcode** and **porcupine** poured both halves of
 
 In the bottom right corner of MoonDay sits a quiet frosted glass badge:
 
-```
+```text
 © Built by srharshitcode & porcupine
 ```
 
@@ -964,6 +1028,6 @@ Take a deep breath. You're doing great.
 
 All source code, user interface designs, visual palettes, self care comfort libraries, educational structures, offline synchronization engines, and written documentation in this repository are the original work and joint intellectual property of **srharshitcode** and **porcupine**.
 
-```
+```text
 © Built by srharshitcode & porcupine. All rights reserved.
 ```
