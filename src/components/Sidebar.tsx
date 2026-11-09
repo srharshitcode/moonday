@@ -23,10 +23,9 @@ import {
 export default function Sidebar() {
   const pathname = usePathname();
 
-  // 1. State for the Sidebar visibility on mobile
   const [isOpen, setIsOpen] = useState(false);
 
-  // 2. State to hold the dynamic daily quote
+  
   const [dailyQuote, setDailyQuote] = useState(
     "Every body is different. Your experience is valid, and your data belongs to you.",
   );
@@ -36,7 +35,7 @@ export default function Sidebar() {
     setIsOpen(false);
   }, [pathname]);
 
-  // 4. Global Swipe-to-Open / Swipe-to-Close Listener (Upgraded for 100% reliability)
+ 
   useEffect(() => {
     let touchStartX = 0;
     let touchStartY = 0;

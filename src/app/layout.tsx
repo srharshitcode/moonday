@@ -11,7 +11,7 @@ export const viewport: Viewport = {
   userScalable: false, // CRITICAL: Prevents the app from zooming in on iOS inputs
 };
 
-// 2. Metadata settings (Controls PWA installation and SEO)
+
 export const metadata: Metadata = {
   title: "MoonDay Your Cycle, Your Space",
   description: "Complete Menstrual Cycle, Period, and Daily Wellness Tracking",

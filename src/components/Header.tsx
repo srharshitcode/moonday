@@ -32,7 +32,7 @@ export default function Header() {
     async function getUser() {
       const {
         data: { user },
-      } = await supabase.auth.getUser();
+      } = await supabase.auth.getUs er();
       if (user) {
         const { data } = await supabase
           .from("profiles")
@@ -42,6 +42,7 @@ export default function Header() {
         if (data?.display_name) setUserName(data.display_name);
       }
     }
+
     getUser();
   }, []);
 
