@@ -73,7 +73,7 @@ const parseClinicalList = (raw: unknown): string[] => {
           return parseClinicalList(parsed);
         }
       } catch {
-        // Fall through to aggressive sanitization if JSON is malformed
+        
       }
     }
 
@@ -867,7 +867,6 @@ export default function MedicalReportPage() {
     [reportEndDate, intake.reportWindowDays],
   );
 
-  // Load saved intake preferences from localStorage
   useEffect(() => {
     try {
       const saved = localStorage.getItem("moonday_clinical_intake_v6");
@@ -1830,9 +1829,7 @@ export default function MedicalReportPage() {
         }
       `}</style>
 
-      {/* =====================================================================
-          SCREEN-ONLY WORKSTATION BAR & 7-SECTION CLINICAL INTAKE STUDIO
-      ===================================================================== */}
+
       <div className="print-hide mb-8 bg-white border-2 border-slate-900 rounded-xl shadow-xs overflow-hidden">
         <div className="p-5 sm:p-6 bg-[#FAF8F5] border-b border-slate-300 flex flex-col xl:flex-row justify-between items-start xl:items-center gap-4">
           <div>
@@ -2037,7 +2034,6 @@ export default function MedicalReportPage() {
               </div>
             </div>
 
-            {/* Right Spacious Form Canvas */}
             <div className="lg:col-span-9 p-6 sm:p-8">
               {/* SECTION 1: IDENTITY, ADDRESS, VITALS & ALLERGIES */}
               {activeStudioSection === "identity" && (
@@ -4964,10 +4960,7 @@ export default function MedicalReportPage() {
               </div>
             </div>
 
-            {/* ===============================================================
-                4. PINNED BOTTOM DUAL SIGNATURE & STAMP SECTION
-                (Locked inside Sheet 03 so it NEVER spills onto a 4th page!)
-            =============================================================== */}
+            
             <div className="px-8 sm:px-10 pb-5 pt-2 shrink-0">
               <div className="pdf-grid-2 grid grid-cols-1 sm:grid-cols-2 gap-10 pt-3 border-t border-slate-300">
                 {/* Left Column: Patient Record Attestation & Signature */}
@@ -5004,7 +4997,7 @@ export default function MedicalReportPage() {
                   </div>
                 </div>
 
-                {/* Right Column: Attending OB-GYN Signature & Official Stamp Box */}
+                {}
                 <div className="flex flex-col justify-between">
                   <div>
                     <div className="text-[10.5px] font-extrabold uppercase tracking-wider text-slate-950">
@@ -5016,7 +5009,7 @@ export default function MedicalReportPage() {
                       discussed with patient.
                     </p>
 
-                    {/* 96px (h-24) Signing Space + Right-Aligned Stamp Box */}
+                  
                     <div className="h-24 w-full flex items-center justify-end pt-1">
                       <div className="h-20 w-40 border-2 border-dashed border-slate-400 rounded flex items-center justify-center text-center p-1.5">
                         <span className="text-[9px] font-bold uppercase tracking-wider text-slate-500 leading-tight">
