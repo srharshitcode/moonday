@@ -12,10 +12,9 @@ const withPWA = withPWAInit({
 });
 
 const nextConfig: NextConfig = {
-  // Added: Catches unsafe lifecycle methods and legacy API usage
+
   reactStrictMode: true,
 
-  // Kept: Safe to leave here as it only runs during local `next dev --turbo`
   turbopack: {
     rules: {
       "*.css": {
