@@ -148,14 +148,22 @@ export async function syncDraftToSupabase<T extends Record<string, unknown>>(
       ? "entry_date"
       : draft.dateColumn || "log_date";
 
-    const nowIso = new Date().toISOString();
+    const nowMs = Date.now();
+    const nowIso = new Date(nowMs).toISOString();
 
     const cleanPayload: Record<string, unknown> = {
       ...(draft.payload as Record<string, unknown>),
     };
     const payloadId =
       typeof cleanPayload.id === "string" ? cleanPayload.id : undefined;
+    const payloadCreatedAt =
+      typeof cleanPayload.created_at === "string"
+        ? cleanPayload.created_at
+        : undefined;
+
     delete cleanPayload.id;
+    delete cleanPayload.created_at;
+    delete cleanPayload.updated_at;
 
     if (isEntryDateTable) {
       delete cleanPayload.log_date;
@@ -163,11 +171,19 @@ export async function syncDraftToSupabase<T extends Record<string, unknown>>(
       delete cleanPayload.entry_date;
     }
 
-    const recordData: Record<string, unknown> = {
+    // Initial creation time for brand-new records (offline draft creation time or now)
+    const initialCreatedAt = payloadCreatedAt || draft.localUpdatedAt || nowIso;
+    const initialCreatedMs = Date.parse(initialCreatedAt);
+    const safeNowIso =
+      !Number.isNaN(initialCreatedMs) && nowMs < initialCreatedMs
+        ? new Date(initialCreatedMs).toISOString()
+        : nowIso;
+
+    const baseRecordData: Record<string, unknown> = {
       ...cleanPayload,
       user_id: effectiveUserId,
       [dateCol]: draft.date,
-      updated_at: nowIso,
+      updated_at: safeNowIso,
     };
 
     // MODE A: Date-keyed table (e.g. daily_logs)
@@ -185,7 +201,11 @@ export async function syncDraftToSupabase<T extends Record<string, unknown>>(
       }
 
       const existingRecord =
-        (existingRows?.[0] as T & { id?: string; updated_at?: string }) || null;
+        (existingRows?.[0] as T & {
+          id?: string;
+          created_at?: string;
+          updated_at?: string;
+        }) || null;
 
       // Only trigger conflict if not forcing overwrite, a base timestamp exists,
       // and the server record is strictly newer by more than 2 seconds
@@ -208,9 +228,18 @@ export async function syncDraftToSupabase<T extends Record<string, unknown>>(
       }
 
       if (existingRecord) {
+        // Guard against client clock drift vs existing server created_at
+        const serverCreatedMs = existingRecord.created_at
+          ? Date.parse(existingRecord.created_at)
+          : NaN;
+        const clampedUpdatedIso =
+          !Number.isNaN(serverCreatedMs) && nowMs < serverCreatedMs
+            ? new Date(serverCreatedMs + 1).toISOString()
+            : safeNowIso;
+
         const updateQuery = supabase
           .from(draft.table)
-          .update(recordData)
+          .update({ ...baseRecordData, updated_at: clampedUpdatedIso })
           .eq("user_id", effectiveUserId)
           .eq(dateCol, draft.date);
 
@@ -219,9 +248,14 @@ export async function syncDraftToSupabase<T extends Record<string, unknown>>(
           return { status: "error", errorMessage: updateError.message };
         }
       } else {
-        const { error: insertError } = await supabase
-          .from(draft.table)
-          .insert([recordData]);
+        // Brand-new insert: set BOTH created_at and updated_at so Postgres doesn't use a different clock
+        const { error: insertError } = await supabase.from(draft.table).insert([
+          {
+            ...baseRecordData,
+            created_at: initialCreatedAt,
+            updated_at: safeNowIso,
+          },
+        ]);
 
         if (insertError) {
           return { status: "error", errorMessage: insertError.message };
@@ -232,9 +266,10 @@ export async function syncDraftToSupabase<T extends Record<string, unknown>>(
       const targetId = draft.recordId || payloadId;
 
       if (targetId) {
+        // Updating existing note: do NOT overwrite created_at
         const { error: updateError } = await supabase
           .from(draft.table)
-          .update(recordData)
+          .update(baseRecordData)
           .eq("id", targetId)
           .eq("user_id", effectiveUserId);
 
@@ -242,9 +277,14 @@ export async function syncDraftToSupabase<T extends Record<string, unknown>>(
           return { status: "error", errorMessage: updateError.message };
         }
       } else {
-        const { error: insertError } = await supabase
-          .from(draft.table)
-          .insert([recordData]);
+        // Brand-new note insert: set BOTH created_at and updated_at from the same clock
+        const { error: insertError } = await supabase.from(draft.table).insert([
+          {
+            ...baseRecordData,
+            created_at: initialCreatedAt,
+            updated_at: safeNowIso,
+          },
+        ]);
 
         if (insertError) {
           return { status: "error", errorMessage: insertError.message };
@@ -253,7 +293,7 @@ export async function syncDraftToSupabase<T extends Record<string, unknown>>(
     }
 
     await removeLocalDraft(draft.id);
-    return { status: "synced", serverUpdatedAt: nowIso };
+    return { status: "synced", serverUpdatedAt: safeNowIso };
   } catch (err: unknown) {
     const message = err instanceof Error ? err.message : "Network error";
     return { status: "error", errorMessage: message };

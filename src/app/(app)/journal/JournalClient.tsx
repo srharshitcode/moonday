@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { createClient } from "@/utils/supabase/client";
 import { format, parseISO } from "date-fns";
 import { Search, Plus, Save, Trash2, Tag, BookOpen } from "lucide-react";
@@ -10,6 +10,7 @@ import {
   SaveStatusBadge,
   NetworkStatusBanner,
 } from "@/components/NetworkResilience";
+import { buildSyncTimestamps } from "@/utils/offlineTimestamps";
 
 export default function JournalPage() {
   const router = useRouter();
@@ -26,7 +27,9 @@ export default function JournalPage() {
   const [tagInput, setTagInput] = useState("");
   const [tags, setTags] = useState<string[]>([]);
   const [editingId, setEditingId] = useState<string | null>(null);
+  const [currentCreatedAt, setCurrentCreatedAt] = useState<string | null>(null);
   const [currentUpdatedAt, setCurrentUpdatedAt] = useState<string | null>(null);
+  const draftCreatedAtRef = useRef<string | null>(null);
 
   const supabase = createClient();
 
@@ -54,7 +57,9 @@ export default function JournalPage() {
       setTitle(serverData.title || "");
       setContent(serverData.content || "");
       setTags(serverData.tags || []);
-      setCurrentUpdatedAt(serverData.updated_at);
+      setCurrentCreatedAt(serverData.created_at || null);
+      setCurrentUpdatedAt(serverData.updated_at || null);
+      draftCreatedAtRef.current = serverData.created_at || null;
     },
   });
 
@@ -94,6 +99,13 @@ export default function JournalPage() {
           setContent(p.content || "");
           setTags(Array.isArray(p.tags) ? p.tags : []);
           setEditingId(existing.recordId || null);
+          if (p.created_at) {
+            setCurrentCreatedAt(p.created_at);
+            draftCreatedAtRef.current = p.created_at;
+          }
+          if (p.updated_at) {
+            setCurrentUpdatedAt(p.updated_at);
+          }
           setIsComposing(true);
         }
       }
@@ -102,13 +114,27 @@ export default function JournalPage() {
   }, [fetchNotes, checkExistingDraft]);
 
   const generatePayload = useCallback(
-    (currentTitle: string, currentContent: string, currentTags: string[]) => ({
-      id: editingId || undefined,
-      title: currentTitle || "Untitled Entry",
-      content: currentContent,
-      tags: currentTags,
-    }),
-    [editingId],
+    (currentTitle: string, currentContent: string, currentTags: string[]) => {
+      const timestamps = buildSyncTimestamps({
+        created_at: currentCreatedAt || draftCreatedAtRef.current,
+        updated_at: currentUpdatedAt,
+      });
+
+      // Lock the creation timestamp on the first keystroke of a new draft
+      if (!draftCreatedAtRef.current) {
+        draftCreatedAtRef.current = timestamps.created_at;
+      }
+
+      return {
+        id: editingId || undefined,
+        title: currentTitle || "Untitled Entry",
+        content: currentContent,
+        tags: currentTags,
+        created_at: timestamps.created_at,
+        updated_at: timestamps.updated_at,
+      };
+    },
+    [editingId, currentCreatedAt, currentUpdatedAt],
   );
 
   const handleAddTag = (e: React.KeyboardEvent) => {
@@ -118,7 +144,6 @@ export default function JournalPage() {
       if (!tags.includes(newTag)) {
         const newTags = [...tags, newTag];
         setTags(newTags);
-        // Save draft locally on keystroke (syncToCloud = false until Save button is clicked)
         triggerAutosave(generatePayload(title, content, newTags), false);
       }
       setTagInput("");
@@ -144,7 +169,6 @@ export default function JournalPage() {
       await fetchNotes();
       router.refresh();
     } else if (!isOnline) {
-      // Optimistically show the offline-queued entry in the list
       setNotes((prev) => [
         {
           id: editingId || `offline-${Date.now()}`,
@@ -152,6 +176,8 @@ export default function JournalPage() {
           title: payload.title,
           content: payload.content,
           tags: payload.tags,
+          created_at: payload.created_at,
+          updated_at: payload.updated_at,
         },
         ...prev,
       ]);
@@ -183,7 +209,9 @@ export default function JournalPage() {
     setContent("");
     setTags([]);
     setEditingId(null);
+    setCurrentCreatedAt(null);
     setCurrentUpdatedAt(null);
+    draftCreatedAtRef.current = null;
   };
 
   const handleCancel = async () => {
@@ -198,7 +226,10 @@ export default function JournalPage() {
     setContent(note.content);
     setTags(note.tags || []);
     setEditingId(note.id);
-    setCurrentUpdatedAt(note.updated_at);
+    const initialCreated = note.created_at || note.updated_at || null;
+    setCurrentCreatedAt(initialCreated);
+    setCurrentUpdatedAt(note.updated_at || null);
+    draftCreatedAtRef.current = initialCreated;
     setIsComposing(true);
   };
 
@@ -383,7 +414,6 @@ export default function JournalPage() {
                         {format(parseISO(note.entry_date), "MMMM d, yyyy")}
                       </p>
                     </div>
-                    {/* FIXED: Buttons now always visible on mobile, hover-only on desktop */}
                     <div className="flex gap-3 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity items-center">
                       <button
                         onClick={() => openEditor(note)}

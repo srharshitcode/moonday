@@ -6,6 +6,7 @@ import {
   NetworkStatusBanner,
 } from "@/components/NetworkResilience";
 import { getLocalDraft } from "@/utils/offlineSync";
+import { buildSyncTimestamps } from "@/utils/offlineTimestamps";
 import { useRouter } from "next/navigation";
 import { useState, useEffect, useCallback, useRef } from "react";
 import { format, subDays, addDays, parseISO } from "date-fns";
@@ -509,9 +510,13 @@ export default function LogPage() {
   const [isExistingLog, setIsExistingLog] = useState(false);
 
   const [activeUserId, setActiveUserId] = useState("local-user");
+  const [currentRecordCreatedAt, setCurrentRecordCreatedAt] = useState<
+    string | null
+  >(null);
   const [currentRecordUpdatedAt, setCurrentRecordUpdatedAt] = useState<
     string | null
   >(null);
+  const draftCreatedAtRef = useRef<string | null>(null);
   const userEditedRef = useRef(false);
   const partnerNoteTimerRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -555,7 +560,7 @@ export default function LogPage() {
   const [whatYouNeed, setWhatYouNeed] = useState("");
   const [generalNote, setGeneralNote] = useState("");
 
-  // Save partner note to both localStorage and Supabase (supporting either 'date' or 'entry_date' schema)
+  // Save partner note to both localStorage and Supabase with synchronized timestamps
   const syncPartnerNoteToDb = useCallback(
     async (dateStr: string, noteContent: string) => {
       if (!dateStr) return;
@@ -578,23 +583,40 @@ export default function LogPage() {
       );
 
       if (trimmed) {
+        const timestamps = buildSyncTimestamps(existingRow);
+
         if (existingRow?.id) {
           await supabase
             .from("husband_notes")
-            .update({ content: trimmed })
+            .update({
+              content: trimmed,
+              created_at: timestamps.created_at,
+              updated_at: timestamps.updated_at,
+            })
             .eq("id", existingRow.id);
         } else {
-          // Try 'date' column first (matches NotesClient), then fallback to 'entry_date'
           const { error: errDate } = await supabase
             .from("husband_notes")
-            .insert([{ user_id: user.id, date: dateStr, content: trimmed }]);
+            .insert([
+              {
+                user_id: user.id,
+                date: dateStr,
+                content: trimmed,
+                created_at: timestamps.created_at,
+                updated_at: timestamps.updated_at,
+              },
+            ]);
 
           if (errDate) {
-            await supabase
-              .from("husband_notes")
-              .insert([
-                { user_id: user.id, entry_date: dateStr, content: trimmed },
-              ]);
+            await supabase.from("husband_notes").insert([
+              {
+                user_id: user.id,
+                entry_date: dateStr,
+                content: trimmed,
+                created_at: timestamps.created_at,
+                updated_at: timestamps.updated_at,
+              },
+            ]);
           }
         }
       } else if (existingRow?.id) {
@@ -631,6 +653,10 @@ export default function LogPage() {
     if (typeof record.husband_note === "string") {
       setHusbandNote(record.husband_note);
     }
+    if (record.created_at) {
+      setCurrentRecordCreatedAt(record.created_at);
+      draftCreatedAtRef.current = record.created_at;
+    }
     if (record.updated_at) {
       setCurrentRecordUpdatedAt(record.updated_at);
     }
@@ -662,6 +688,16 @@ export default function LogPage() {
   });
 
   const generatePayload = useCallback(() => {
+    const timestamps = buildSyncTimestamps({
+      created_at: currentRecordCreatedAt || draftCreatedAtRef.current,
+      updated_at: currentRecordUpdatedAt,
+    });
+
+    // Lock the initial creation timestamp for new logs so keystrokes don't shift created_at
+    if (!draftCreatedAtRef.current) {
+      draftCreatedAtRef.current = timestamps.created_at;
+    }
+
     return {
       is_period_start: isPeriodStart,
       is_period_end: isPeriodEnd,
@@ -678,6 +714,8 @@ export default function LogPage() {
       cravings: cravingText || null,
       what_you_need_note: whatYouNeed || null,
       note: generalNote || null,
+      created_at: timestamps.created_at,
+      updated_at: timestamps.updated_at,
     };
   }, [
     isPeriodStart,
@@ -694,6 +732,8 @@ export default function LogPage() {
     cravingText,
     whatYouNeed,
     generalNote,
+    currentRecordCreatedAt,
+    currentRecordUpdatedAt,
   ]);
 
   useEffect(() => {
@@ -741,12 +781,15 @@ export default function LogPage() {
     setHusbandNote("");
     setWhatYouNeed("");
     setGeneralNote("");
+    setCurrentRecordCreatedAt(null);
     setCurrentRecordUpdatedAt(null);
+    draftCreatedAtRef.current = null;
   };
 
   const fetchExistingLog = async (dateToFetch: string) => {
     setLoading(true);
     userEditedRef.current = false;
+    draftCreatedAtRef.current = null;
 
     const {
       data: { user },
@@ -757,7 +800,6 @@ export default function LogPage() {
     if (user) {
       setActiveUserId(user.id);
 
-      // Load intimacy_entries and husband_notes FIRST so local drafts never block them
       const { data: allIntimacy } = await supabase
         .from("intimacy_entries")
         .select("*")
@@ -1018,12 +1060,16 @@ export default function LogPage() {
           (row: any) => (row.entry_date || row.date) === selectedDate,
         );
 
+        const intimacyTimestamps = buildSyncTimestamps(existingIntimacy);
+
         const intimacyPayload = {
           user_id: user.id,
           entry_date: selectedDate,
           activities: intimacyActs,
           libido_level: libido || null,
           orgasm_reached: orgasm,
+          created_at: intimacyTimestamps.created_at,
+          updated_at: intimacyTimestamps.updated_at,
         };
 
         if (existingIntimacy?.id) {
