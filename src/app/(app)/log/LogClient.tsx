@@ -44,7 +44,9 @@ import {
   RemoveFormatting,
 } from "lucide-react";
 
+
 const LOCAL_NOTES_KEY = "moonday_partner_notes";
+
 
 function saveLocalPartnerNote(
   userId: string,
@@ -220,6 +222,7 @@ const SYMPTOMS = {
     "Uterine spasms",
     "Pelvic pressure",
   ],
+
   "General Pain": [
     "Headache",
     "Migraine",
@@ -233,6 +236,7 @@ const SYMPTOMS = {
     "Leg cramps",
     "Joint stiffness",
   ],
+
   Digestive: [
     "Bloating",
     "Gas",
@@ -249,6 +253,7 @@ const SYMPTOMS = {
     "Stomach cramps",
     "Gurgling stomach",
   ],
+
   "Energy/Sleep": [
     "Fatigue",
     "Lethargy",
@@ -265,6 +270,7 @@ const SYMPTOMS = {
     "Difficulty falling asleep",
     "Oversleeping",
   ],
+
   Neurological: [
     "Dizziness",
     "Light-headedness",
@@ -278,6 +284,7 @@ const SYMPTOMS = {
     "Tingling",
     "Numbness",
   ],
+
   "Skin/Body": [
     "Acne",
     "Oily skin",
@@ -296,6 +303,7 @@ const SYMPTOMS = {
     "Brittle nails",
     "Body odor changes",
   ],
+
   "Urinary/Vaginal": [
     "Vaginal itching",
     "Vaginal dryness",
@@ -306,6 +314,7 @@ const SYMPTOMS = {
     "Unusual discharge",
     "Strong odor",
   ],
+
   "Emotional & Mental": [
     "Mood swings",
     "Irritability",
@@ -318,6 +327,7 @@ const SYMPTOMS = {
     "Rejection sensitive",
     "Apathy",
   ],
+
   "Immunity & Cold": [
     "Sore throat",
     "Runny nose",
@@ -399,6 +409,7 @@ const DISCHARGE_TYPES = [
   "Jelly-like",
   "Stretchy",
   "Dry",
+  
 ];
 
 
@@ -473,6 +484,7 @@ const ACTIVITIES = [
   "Active commute",
   "Gardening",
 ];
+
 
 const FONT_SIZES = [
   { label: "Very Tiny", size: "10px" },
@@ -603,6 +615,7 @@ const RichTextEditor = ({
   placeholder?: string;
 }) => {
   const editorRef = useRef<HTMLDivElement>(null);
+  const savedRangeRef = useRef<Range | null>(null);
   const [showLinkInput, setShowLinkInput] = useState(false);
   const [linkUrl, setLinkUrl] = useState("");
   const [activeFormats, setActiveFormats] = useState({
@@ -610,7 +623,6 @@ const RichTextEditor = ({
     italic: false,
     underline: false,
   });
-
   const [selectedFontSizeLabel, setSelectedFontSizeLabel] =
     useState("Normal (Default)");
 
@@ -631,6 +643,17 @@ const RichTextEditor = ({
     });
   };
 
+  const saveCurrentSelection = () => {
+    const sel = window.getSelection();
+    if (
+      sel &&
+      sel.rangeCount > 0 &&
+      editorRef.current?.contains(sel.anchorNode)
+    ) {
+      savedRangeRef.current = sel.getRangeAt(0);
+    }
+  };
+
   const executeCommand = (command: string, arg: string = "") => {
     editorRef.current?.focus();
     document.execCommand(command, false, arg);
@@ -644,15 +667,20 @@ const RichTextEditor = ({
     setSelectedFontSizeLabel(label);
     editorRef.current?.focus();
 
-    const selection = window.getSelection();
-    if (selection && !selection.isCollapsed && selection.rangeCount > 0) {
-      const range = selection.getRangeAt(0);
+    const sel = window.getSelection();
+    if (sel && savedRangeRef.current) {
+      sel.removeAllRanges();
+      sel.addRange(savedRangeRef.current);
+    }
+
+    if (sel && !sel.isCollapsed && sel.rangeCount > 0) {
+      const range = sel.getRangeAt(0);
       const span = document.createElement("span");
       span.style.fontSize = sizeValue;
       try {
         span.appendChild(range.extractContents());
         range.insertNode(span);
-        selection.removeAllRanges();
+        sel.removeAllRanges();
       } catch {
         document.execCommand("styleWithCSS", false, "true");
         document.execCommand("fontSize", false, "7");
@@ -665,14 +693,13 @@ const RichTextEditor = ({
       const span = document.createElement("span");
       span.style.fontSize = sizeValue;
       span.innerHTML = "&#8203;";
-
-      if (selection && selection.rangeCount > 0) {
-        const range = selection.getRangeAt(0);
+      if (sel && sel.rangeCount > 0) {
+        const range = sel.getRangeAt(0);
         range.insertNode(span);
         range.setStart(span.firstChild!, 1);
         range.setEnd(span.firstChild!, 1);
-        selection.removeAllRanges();
-        selection.addRange(range);
+        sel.removeAllRanges();
+        sel.addRange(range);
       } else if (editorRef.current) {
         editorRef.current.appendChild(span);
       }
@@ -686,8 +713,13 @@ const RichTextEditor = ({
 
   const handleClearFormatting = () => {
     editorRef.current?.focus();
-    const selection = window.getSelection();
-    if (selection && !selection.isCollapsed && selection.rangeCount > 0) {
+    const sel = window.getSelection();
+    if (sel && savedRangeRef.current) {
+      sel.removeAllRanges();
+      sel.addRange(savedRangeRef.current);
+    }
+
+    if (sel && !sel.isCollapsed && sel.rangeCount > 0) {
       document.execCommand("removeFormat", false);
     } else if (editorRef.current) {
       const plainText = editorRef.current.innerText;
@@ -705,27 +737,14 @@ const RichTextEditor = ({
     color: string,
   ) => {
     editorRef.current?.focus();
-    const selection = window.getSelection();
-    if (selection && !selection.isCollapsed && selection.rangeCount > 0) {
-      const range = selection.getRangeAt(0);
-      const span = document.createElement("span");
-      if (command === "foreColor") {
-        span.style.color = color;
-      } else {
-        span.style.backgroundColor = color;
-      }
-      try {
-        span.appendChild(range.extractContents());
-        range.insertNode(span);
-        selection.removeAllRanges();
-      } catch {
-        document.execCommand("styleWithCSS", false, "true");
-        document.execCommand(command, false, color);
-      }
-    } else {
-      document.execCommand("styleWithCSS", false, "true");
-      document.execCommand(command, false, color);
+    const sel = window.getSelection();
+    if (sel && savedRangeRef.current) {
+      sel.removeAllRanges();
+      sel.addRange(savedRangeRef.current);
     }
+
+    document.execCommand("styleWithCSS", false, "true");
+    document.execCommand(command, false, color);
 
     if (editorRef.current) {
       onChange(editorRef.current.innerHTML);
@@ -740,9 +759,12 @@ const RichTextEditor = ({
       if (!url.startsWith("http://") && !url.startsWith("https://")) {
         url = `https://${url}`;
       }
-
       editorRef.current?.focus();
       const sel = window.getSelection();
+      if (sel && savedRangeRef.current) {
+        sel.removeAllRanges();
+        sel.addRange(savedRangeRef.current);
+      }
       const selectedText =
         sel && !sel.isCollapsed && sel.toString().trim() ? sel.toString() : url;
 
@@ -755,6 +777,7 @@ const RichTextEditor = ({
       updateActiveStates();
       setLinkUrl("");
       setShowLinkInput(false);
+      savedRangeRef.current = null;
     }
   };
 
@@ -830,13 +853,12 @@ const RichTextEditor = ({
 
         <span className="w-px h-4 bg-line mx-0.5" />
 
-        {/* Font Size Dropdown */}
-
         <div className="flex items-center gap-1 bg-white border border-line rounded px-2 py-1 text-xs font-semibold text-ink">
           <Type className="w-3 h-3 text-muted shrink-0" />
           <select
             aria-label="Font Size Selector"
             value={selectedFontSizeLabel}
+            onMouseDown={saveCurrentSelection}
             onChange={(e) => {
               const found = FONT_SIZES.find((f) => f.label === e.target.value);
               if (found) handleFontSizeSelect(found.label, found.size);
@@ -851,10 +873,9 @@ const RichTextEditor = ({
           </select>
         </div>
 
-        {/* Clear Formatting Button */}
-
         <button
           type="button"
+          onMouseDown={saveCurrentSelection}
           onClick={handleClearFormatting}
           title="Clear formatting (selection or whole paragraph)"
           className="p-1.5 rounded hover:bg-slate-200 text-slate-700 font-bold text-xs cursor-pointer flex items-center gap-1"
@@ -864,12 +885,11 @@ const RichTextEditor = ({
 
         <span className="w-px h-4 bg-line mx-0.5" />
 
-        {/* Text Color Picker */}
-
         <div className="flex items-center gap-1 ml-0.5" title="Text Color">
           <input
             type="color"
             aria-label="Text Color"
+            onMouseDown={saveCurrentSelection}
             onInput={(e) =>
               handleColorChange(
                 "foreColor",
@@ -881,13 +901,12 @@ const RichTextEditor = ({
           />
         </div>
 
-        {/* Highlight Color Picker */}
-
         <div className="flex items-center gap-1 ml-0.5" title="Highlight Color">
           <Highlighter className="w-3.5 h-3.5 text-muted" />
           <input
             type="color"
             aria-label="Highlight Color"
+            onMouseDown={saveCurrentSelection}
             onInput={(e) =>
               handleColorChange(
                 "hiliteColor",
@@ -903,7 +922,10 @@ const RichTextEditor = ({
 
         <button
           type="button"
-          onClick={() => setShowLinkInput((prev) => !prev)}
+          onClick={() => {
+            if (!showLinkInput) saveCurrentSelection();
+            setShowLinkInput((prev) => !prev);
+          }}
           title="Insert Link"
           className="p-1.5 rounded hover:bg-slate-200 font-bold text-xs cursor-pointer text-slate-700"
         >
@@ -944,7 +966,10 @@ const RichTextEditor = ({
           </button>
           <button
             type="button"
-            onClick={() => setShowLinkInput(false)}
+            onClick={() => {
+              setShowLinkInput(false);
+              savedRangeRef.current = null;
+            }}
             className="px-2.5 py-1.5 bg-slate-200 text-slate-700 rounded-lg font-bold text-xs cursor-pointer"
           >
             Cancel
@@ -952,16 +977,19 @@ const RichTextEditor = ({
         </div>
       )}
 
-      {/* Editable Content Area - spellCheck={false} removes red squiggly lines */}
-
-
       <div
         ref={editorRef}
         contentEditable
         spellCheck={false}
         onClick={handleEditorClick}
-        onMouseUp={updateActiveStates}
-        onKeyUp={updateActiveStates}
+        onMouseUp={() => {
+          saveCurrentSelection();
+          updateActiveStates();
+        }}
+        onKeyUp={() => {
+          saveCurrentSelection();
+          updateActiveStates();
+        }}
         onInput={(e) => {
           onChange(e.currentTarget.innerHTML);
           updateActiveStates();
@@ -980,7 +1008,6 @@ const RichTextEditor = ({
     </div>
   );
 };
-
 
 
 export default function LogPage() {
@@ -2415,6 +2442,7 @@ export default function LogPage() {
               </div>
             </div>
           </Accordion>
+          
 
           {/* PERSONAL NOTES SECTION */}
 

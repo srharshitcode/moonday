@@ -11,6 +11,12 @@ const withPWA = withPWAInit({
   reloadOnOnline: false,
 });
 
+// next.config.js
+module.exports = {
+  allowedDevOrigins: ['169.254.83.107'],
+}
+
+
 const nextConfig: NextConfig = {
 
   reactStrictMode: true,

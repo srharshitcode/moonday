@@ -13,6 +13,7 @@ export default async function InsightsPage() {
   if (!user) return null;
 
   // Fetch all logs ordered by date
+
   const { data: logs } = await supabase
     .from("daily_logs")
     .select("*")
@@ -21,31 +22,39 @@ export default async function InsightsPage() {
 
   const allLogs = logs || [];
 
+
   // STRICT RULE: Only use explicitly confirmed period start dates for cycle tracking
+
   const periodStarts = allLogs
     .filter((l) => l.is_period_start)
     .map((l) => l.log_date);
 
   // --- NEW: Calculate Average Bleeding Days (Period Length) ---
+
   const periodLengths: number[] = [];
   let currentStart: Date | null = null;
 
   allLogs.forEach((log) => {
     // 1. Anchor the start date
+
     if (log.is_period_start) {
       currentStart = parseISO(log.log_date);
     }
     // 2. Look for the next end date. If found, calculate the gap.
+
     if (log.is_period_end && currentStart) {
       const end = parseISO(log.log_date);
       // Add 1 to make it inclusive (e.g. starting and ending on the same day = 1 day of bleeding)
+
       const length = differenceInDays(end, currentStart) + 1;
 
       // Basic sanity check to prevent wild database outliers (e.g. forgetting to log an end date for 45 days)
+
       if (length > 0 && length <= 20) {
         periodLengths.push(length);
       }
       currentStart = null; // Reset the anchor
+
     }
   });
 
@@ -58,6 +67,7 @@ export default async function InsightsPage() {
   // ------------------------------------------------------------
 
   // Calculate average cycle lengths
+
   let cycleLengths: number[] = [];
   if (periodStarts.length >= 2) {
     for (let i = 1; i < periodStarts.length; i++) {
@@ -122,6 +132,9 @@ export default async function InsightsPage() {
         </p>
       </div>
 
+
+
+
       <div className="grid grid-cols-2 md:grid-cols-4 gap-[14px] mb-[18px]">
         <div className="p-[18px] bg-[#fff8fa] rounded-[15px] border border-[#fbeaf0]">
           <div className="text-[11px] text-muted font-bold uppercase tracking-wider">
@@ -157,6 +170,9 @@ export default async function InsightsPage() {
         </div>
       </div>
 
+
+
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-[18px] mb-[27px]">
         <div className="bg-surface border border-line rounded-xl p-[22px] shadow-soft">
           <h3 className="text-[14px] font-bold text-ink mb-3">
@@ -186,6 +202,9 @@ export default async function InsightsPage() {
             confirmation.
           </div>
         </div>
+
+
+
 
         <div className="bg-surface border border-line rounded-xl p-[22px] shadow-soft">
           <h3 className="text-[14px] font-bold text-ink mb-3">

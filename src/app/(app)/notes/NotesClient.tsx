@@ -25,7 +25,9 @@ function removeLocalNote(userId: string, dateStr: string) {
     delete map[dateStr];
     localStorage.setItem(`${LOCAL_NOTES_KEY}_${userId}`, JSON.stringify(map));
   } catch {
+
     // Ignore storage errors
+
   }
 }
 
@@ -46,6 +48,7 @@ export default function HusbandNotesPage() {
     }
 
     // Fetch all rows for user without a fragile column-specific .order()
+
     const { data } = await supabase
       .from("husband_notes")
       .select("*")
@@ -72,7 +75,10 @@ export default function HusbandNotesPage() {
       });
     }
 
+
     // Merge any locally cached notes so autosaved or offline notes always appear
+
+
     Object.entries(localMap).forEach(([dateStr, content]) => {
       const trimmed = (content || "").trim();
       if (trimmed && !mergedByDate.has(dateStr)) {
@@ -114,6 +120,8 @@ export default function HusbandNotesPage() {
     fetchNotes();
   };
 
+
+
   return (
     <div className="animate-in fade-in duration-300 max-w-[800px]">
       <div className="mb-[25px]">
@@ -139,6 +147,8 @@ export default function HusbandNotesPage() {
           </p>
         </div>
       </div>
+
+      
 
       {loading ? (
         <div className="text-center p-8 text-muted text-[13px]">

@@ -17,39 +17,47 @@ import {
   Moon,
 } from "lucide-react";
 
+
 export default function SettingsClient() {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState("");
 
+
   // Profile State
+
   const [displayName, setDisplayName] = useState("");
   const [cycleLength, setCycleLength] = useState(28);
   const [periodLength, setPeriodLength] = useState(5);
   const [lutealLength, setLutealLength] = useState(14);
 
   // Security State
+
+
   const [appPin, setAppPin] = useState("");
   const [privateMode, setPrivateMode] = useState(false);
 
   // Dark Mode State
+
+
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const supabase = createClient();
   const router = useRouter();
 
-  // Load profile and current theme preference
+  // Load profile and strict user theme preference
+
+
   useEffect(() => {
     async function loadProfile() {
-      // Check local storage for dark mode preference
       if (typeof window !== "undefined") {
-        const theme = localStorage.getItem("theme");
-        if (
-          theme === "dark" ||
-          (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches)
-        ) {
-          setIsDarkMode(true);
+        const savedTheme = localStorage.getItem("theme");
+        const darkActive = savedTheme === "dark";
+        setIsDarkMode(darkActive);
+        if (darkActive) {
           document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
         }
       }
 
@@ -78,6 +86,8 @@ export default function SettingsClient() {
   }, [supabase]);
 
   // Handle Dark Mode Toggle
+
+
   const toggleDarkMode = () => {
     const newTheme = !isDarkMode;
     setIsDarkMode(newTheme);
@@ -90,35 +100,60 @@ export default function SettingsClient() {
     }
   };
 
-  const handleSaveProfile = async () => {
-    setSaving(true);
-    setMessage("");
-    const {
-      data: { user },
-    } = await supabase.auth.getUser();
 
-    if (user) {
-      const { error } = await supabase
-        .from("profiles")
-        .update({
-          display_name: displayName,
-          cycle_length: cycleLength,
-          period_length: periodLength,
-          luteal_phase_length: lutealLength,
-          updated_at: new Date().toISOString(),
-        })
-        .eq("id", user.id);
+const handleSaveProfile = async () => {
+  setSaving(true);
+  setMessage("");
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
 
-      if (error) {
-        setMessage("Error saving profile.");
-      } else {
-        setMessage("Profile & Averages saved successfully ✨");
-        setTimeout(() => setMessage(""), 3000);
-        router.refresh();
+  if (user) {
+    const cleanName = displayName.trim();
+    const { error } = await supabase
+      .from("profiles")
+      .upsert({
+        id: user.id,
+        display_name: cleanName,
+        cycle_length: cycleLength,
+        period_length: periodLength,
+        luteal_phase_length: lutealLength,
+        updated_at: new Date().toISOString(),
+      })
+      .eq("id", user.id);
+
+    // Keep Supabase Auth metadata in sync as well
+
+
+    await supabase.auth.updateUser({
+      data: {
+        display_name: cleanName,
+        full_name: cleanName,
+      },
+    });
+
+    if (error) {
+      setMessage("Error saving profile.");
+    } else {
+
+      // Immediately notify AppNavigationShell to update "Hello, <Name>"
+
+      if (typeof window !== "undefined") {
+        window.dispatchEvent(
+          new CustomEvent("moonday:profile-updated", {
+            detail: { displayName: cleanName },
+          }),
+        );
       }
+      setMessage("Profile & Averages saved successfully ✨");
+      setTimeout(() => setMessage(""), 3000);
+      router.refresh();
     }
-    setSaving(false);
-  };
+  }
+  setSaving(false);
+};
+
+
 
   const handleSetPin = async () => {
     if (appPin.length > 0 && appPin.length < 4) {
@@ -148,6 +183,8 @@ export default function SettingsClient() {
     setSaving(false);
   };
 
+
+
   const togglePrivateMode = async () => {
     const newVal = !privateMode;
     setPrivateMode(newVal);
@@ -161,6 +198,8 @@ export default function SettingsClient() {
         .eq("id", user.id);
     }
   };
+
+
 
   const handleExportData = async () => {
     setMessage("Preparing download...");
@@ -182,12 +221,14 @@ export default function SettingsClient() {
       .select("*")
       .eq("user_id", user.id);
 
+
     const backup = {
       export_date: new Date().toISOString(),
       daily_logs: logs,
       intimacy_entries: intimacy,
       husband_notes: notes,
     };
+
 
     const blob = new Blob([JSON.stringify(backup, null, 2)], {
       type: "application/json",
@@ -205,6 +246,7 @@ export default function SettingsClient() {
     setTimeout(() => setMessage(""), 3000);
   };
 
+
   if (loading) {
     return (
       <div className="flex items-center justify-center h-[400px]">
@@ -213,8 +255,9 @@ export default function SettingsClient() {
     );
   }
 
+
   return (
-    <div className="animate-in fade-in duration-300 max-w-[1200px] pb-12">
+    <div className="animate-in fade-in duration-300 max-w-[1200px] mx-auto pb-12">
       <div className="mb-[30px]">
         <h2 className="text-[24px] font-bold text-ink mb-1">
           Settings & Privacy
@@ -231,7 +274,10 @@ export default function SettingsClient() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+
+        
         {/* COLUMN 1: Profile & Averages */}
+
         <div className="bg-white border border-[#fbeaf0] rounded-[24px] p-[24px] shadow-sm flex flex-col h-full">
           <h3 className="text-[16px] font-bold text-ink mb-6">
             Profile & Averages
@@ -301,7 +347,7 @@ export default function SettingsClient() {
             <button
               onClick={handleSaveProfile}
               disabled={saving}
-              className="w-full py-3 bg-ink text-white font-bold text-[13px] rounded-[12px] hover:bg-black transition-all shadow-sm"
+              className="w-full py-3 bg-[#d990a8] text-white font-bold text-[13px] rounded-[12px] hover:brightness-95 transition-all shadow-sm cursor-pointer disabled:opacity-50"
             >
               {saving ? "Saving..." : "Save Profile Changes"}
             </button>
@@ -309,8 +355,10 @@ export default function SettingsClient() {
         </div>
 
         {/* COLUMN 2: Security & Backup */}
+
         <div className="space-y-6">
           {/* Security Card */}
+
           <div className="bg-white border border-[#fbeaf0] rounded-[24px] p-[24px] shadow-sm">
             <h3 className="text-[16px] font-bold text-[#a55f78] flex items-center gap-2 mb-6">
               <ShieldAlert className="w-5 h-5" /> Security & App Lock
@@ -337,7 +385,7 @@ export default function SettingsClient() {
                     disabled={
                       saving || (appPin.length > 0 && appPin.length < 4)
                     }
-                    className="px-6 bg-[#d990a8] text-white font-bold text-[13px] rounded-[12px] hover:brightness-95 transition-all shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="px-6 bg-[#d990a8] text-white font-bold text-[13px] rounded-[12px] hover:brightness-95 transition-all shadow-sm disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
                   >
                     Set PIN
                   </button>
@@ -348,6 +396,7 @@ export default function SettingsClient() {
               </div>
 
               {/* Private Mode Toggle */}
+
               <div className="p-4 border border-[#f4c2c2] bg-[#fff0f3] rounded-[16px] flex items-center justify-between">
                 <div>
                   <h4 className="text-[13px] font-bold text-[#841617] flex items-center gap-1.5">
@@ -358,38 +407,52 @@ export default function SettingsClient() {
                   </p>
                 </div>
                 <button
+                  type="button"
                   onClick={togglePrivateMode}
-                  className={`w-12 h-6 rounded-full transition-colors relative ${privateMode ? "bg-[#d990a8]" : "bg-[#eadfe4]"}`}
+                  aria-label="Toggle Private Mode"
+                  className={`w-12 h-6 rounded-full transition-colors relative cursor-pointer ${
+                    privateMode ? "bg-[#d990a8]" : "bg-[#eadfe4]"
+                  }`}
                 >
                   <span
-                    className={`absolute top-1 w-4 h-4 bg-white rounded-full transition-all ${privateMode ? "left-7" : "left-1"}`}
-                  ></span>
+                    className={`absolute top-1 w-4 h-4 bg-white rounded-full transition-all ${
+                      privateMode ? "left-7" : "left-1"
+                    }`}
+                  />
                 </button>
               </div>
 
-              {/* NEW: Dark Mode Toggle */}
+              {/* Dark Mode Toggle */}
+
               <div className="p-4 border border-slate-200 bg-slate-50 rounded-[16px] flex items-center justify-between">
                 <div>
-                  <h4 className="text-[13px] font-bold text-slate-700 flex items-center gap-1.5">
-                    <Moon className="w-4 h-4 text-indigo-500" /> Dark Mode
+                  <h4 className="text-[13px] font-bold text-ink flex items-center gap-1.5">
+                    <Moon className="w-4 h-4 text-[#a55f78]" /> Dark Mode
                   </h4>
-                  <p className="text-[11px] text-slate-500 mt-1">
+                  <p className="text-[11px] text-muted mt-1">
                     Gentle on the eyes at night
                   </p>
                 </div>
                 <button
+                  type="button"
                   onClick={toggleDarkMode}
-                  className={`w-12 h-6 rounded-full transition-colors relative ${isDarkMode ? "bg-indigo-500" : "bg-[#eadfe4]"}`}
+                  aria-label="Toggle Dark Mode"
+                  className={`w-12 h-6 rounded-full transition-colors relative cursor-pointer ${
+                    isDarkMode ? "bg-[#a55f78]" : "bg-[#eadfe4]"
+                  }`}
                 >
                   <span
-                    className={`absolute top-1 w-4 h-4 bg-white rounded-full transition-all ${isDarkMode ? "left-7" : "left-1"}`}
-                  ></span>
+                    className={`absolute top-1 w-4 h-4 bg-white rounded-full transition-all ${
+                      isDarkMode ? "left-7" : "left-1"
+                    }`}
+                  />
                 </button>
               </div>
             </div>
           </div>
 
           {/* Backup Card */}
+
           <div className="bg-white border border-[#fbeaf0] rounded-[24px] p-[24px] shadow-sm">
             <h3 className="text-[16px] font-bold text-ink mb-3">
               Data & Backup
@@ -400,7 +463,7 @@ export default function SettingsClient() {
             </p>
             <button
               onClick={handleExportData}
-              className="w-full py-3.5 border border-[#eadfe4] bg-slate-50 hover:bg-slate-100 text-ink font-bold text-[13px] rounded-[12px] transition-all flex items-center justify-center gap-2"
+              className="w-full py-3.5 border border-[#eadfe4] bg-slate-50 hover:bg-slate-100 text-ink font-bold text-[13px] rounded-[12px] transition-all flex items-center justify-center gap-2 cursor-pointer"
             >
               <Download className="w-4 h-4 text-muted" /> Export Raw JSON
             </button>
@@ -408,6 +471,7 @@ export default function SettingsClient() {
         </div>
 
         {/* COLUMN 3: Developer Links */}
+
         <div className="bg-white border border-[#fbeaf0] rounded-[24px] p-[24px] shadow-sm">
           <h3 className="text-[16px] font-bold text-ink mb-3">
             Connect with Developer

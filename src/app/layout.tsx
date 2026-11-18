@@ -1,14 +1,13 @@
-
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
-// 1. Viewport settings (Controls scaling and theme color on mobile)
+
 export const viewport: Viewport = {
   themeColor: "#a55f78",
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
-  userScalable: false, // CRITICAL: Prevents the app from zooming in on iOS inputs
+  userScalable: false,
 };
 
 
@@ -26,14 +25,38 @@ export const metadata: Metadata = {
   },
 };
 
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="min-h-screen antialiased bg-background">{children}</body>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var savedTheme = localStorage.getItem('theme');
+                  if (savedTheme === 'dark') {
+                    document.documentElement.classList.add('dark');
+                  } else {
+                    document.documentElement.classList.remove('dark');
+                  }
+                } catch (e) {}
+              })();
+            `,
+          }}
+
+        />
+
+      </head>
+      <body className="min-h-screen antialiased bg-background text-ink">
+        {children}
+      </body>
     </html>
   );
 }

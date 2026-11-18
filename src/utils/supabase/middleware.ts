@@ -2,6 +2,16 @@ import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 
 export async function updateSession(request: NextRequest) {
+  const pathname = request.nextUrl.pathname;
+
+  if (
+    pathname.startsWith("/api/push") ||
+    pathname.startsWith("/moonday-sw.js") ||
+    pathname.startsWith("/sw.js")
+  ) {
+    return NextResponse.next();
+  }
+
   let supabaseResponse = NextResponse.next({
     request,
   });
@@ -15,6 +25,8 @@ export async function updateSession(request: NextRequest) {
           return request.cookies.getAll();
         },
         setAll(cookiesToSet) {
+          const persistentMaxAge = 60 * 60 * 24 * 60;
+
           cookiesToSet.forEach(({ name, value }) =>
             request.cookies.set(name, value),
           );
@@ -22,30 +34,57 @@ export async function updateSession(request: NextRequest) {
             request,
           });
           cookiesToSet.forEach(({ name, value, options }) =>
-            supabaseResponse.cookies.set(name, value, options),
+            supabaseResponse.cookies.set(name, value, {
+              ...options,
+              maxAge: options?.maxAge === 0 ? 0 : persistentMaxAge,
+            }),
           );
         },
       },
     },
   );
 
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const isPublicRoute =
+    pathname.startsWith("/login") ||
+    pathname.startsWith("/signup") ||
+    pathname.startsWith("/auth");
 
-  // Redirect unauthenticated users to the login page
-  if (
-    !user &&
-    !request.nextUrl.pathname.startsWith("/login") &&
-    !request.nextUrl.pathname.startsWith("/auth")
-  ) {
-    const url = request.nextUrl.clone();
-    url.pathname = "/login";
-    return NextResponse.redirect(url);
+  const sbCookies = request.cookies
+    .getAll()
+    .filter((c) => c.name.startsWith("sb-"));
+
+  let user = null;
+
+  if (sbCookies.length > 0) {
+    try {
+      const { data, error } = await supabase.auth.getUser();
+      if (!error && data?.user) {
+        user = data.user;
+      } else {
+        sbCookies.forEach((cookie) => {
+          request.cookies.delete(cookie.name);
+          supabaseResponse.cookies.delete(cookie.name);
+        });
+      }
+    } catch {
+      sbCookies.forEach((cookie) => {
+        request.cookies.delete(cookie.name);
+        supabaseResponse.cookies.delete(cookie.name);
+      });
+    }
   }
 
-  // Redirect logged-in users away from the login page to the dashboard
-  if (user && request.nextUrl.pathname.startsWith("/login")) {
+  if (!user && !isPublicRoute) {
+    const url = request.nextUrl.clone();
+    url.pathname = "/login";
+    const redirectResponse = NextResponse.redirect(url);
+    sbCookies.forEach((cookie) => {
+      redirectResponse.cookies.delete(cookie.name);
+    });
+    return redirectResponse;
+  }
+
+  if (user && (pathname === "/login" || pathname === "/signup")) {
     const url = request.nextUrl.clone();
     url.pathname = "/";
     return NextResponse.redirect(url);

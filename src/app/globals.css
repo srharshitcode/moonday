@@ -13,146 +13,412 @@
   --radius-lg: 16px;
   --radius-md: 12px;
 
-  --shadow-soft: 0 8px 28px rgba(110, 70, 85, 0.07);
-}
-
-@layer base {
-  :root {
-    --bg: #fff9f8;
-    --surface: #ffffff;
-    --ink: #493b43;
-    --muted: #998b93;
-    --pink: #e9a9ba;
-    --pink2: #f8e3e9;
-    --line: #f1e6e9;
-  }
-
-  body {
-    background-color: var(--bg);
-    color: var(--ink);
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-
-  button, input, select, textarea {
-    font: inherit;
-  }
+  --shadow-soft: 0 8px 28px rgba(72, 46, 58, 0.06);
 }
 
 /* =========================================================
-   MAGIC DARK MODE OVERRIDES (MOVED OUTSIDE OF @LAYER)
-   These rules will successfully force the entire app dark
+   BUTTERY-SMOOTH GLOBAL SCROLLING & SILK SCROLLBARS
 ========================================================= */
 
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-padding-top: 24px;
+}
+
+/* =========================================================
+1. EYE-COMFORT LIGHT MODE 
+========================================================= */
+:root,
+html:not(.dark) {
+  --bg: #eae2e6;       /* Warm antique cashmere canvas (zero white glare) */
+  --surface: #f4eef1;  /* Soft silk-parchment card surface */
+  --ink: #2b2126;      /* Deep espresso-plum primary ink */
+  --muted: #68555f;    /* High-legibility warm taupe secondary ink */
+  --pink: #ba748c;     /* Velvet rose accent */
+  --pink2: #ecdbe1;    /* Muted antique blush tint */
+  --line: #d6c8cf;     /* Warm architectural hairline border */
+
+  /* Native Tailwind v4 Token Overrides */
+  --color-white: #f4eef1;
+  --color-slate-50: #e6dde2;
+  --color-slate-100: #dfd4da;
+  --color-slate-200: #d6c8cf;
+  --color-slate-500: #68555f;
+  --color-slate-600: #5a4851;
+  --color-slate-700: #43353c;
+  --color-slate-800: #2b2126;
+  --color-slate-900: #2b2126;
+
+  color-scheme: light;
+}
+
+body {
+  background-color: var(--bg) !important;
+  color: var(--ink) !important;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+::selection {
+  background-color: rgba(217, 144, 168, 0.26);
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+/* Light Mode Surface & Border Interceptors */
+html:not(.dark) [class*="bg-[#FAF7F8]"],
+html:not(.dark) [class*="bg-[#faf7f8]"],
+html:not(.dark) [class*="bg-[#fafafc]"],
+html:not(.dark) .bg-background {
+  background-color: #eae2e6 !important;
+}
+
+html:not(.dark) .bg-white,
+html:not(.dark) .bg-surface {
+  background-color: #f4eef1 !important;
+}
+
+html:not(.dark) [class*="bg-white/"] {
+  background-color: rgba(244, 238, 241, 0.92) !important;
+}
+
+html:not(.dark) [class*="bg-[#fcf9fa]"],
+html:not(.dark) [class*="bg-[#f4eff2]"],
+html:not(.dark) .bg-slate-50,
+html:not(.dark) .bg-slate-100 {
+  background-color: #e6dde2 !important;
+}
+
+html:not(.dark) [class*="bg-[#fff0f3]"],
+html:not(.dark) [class*="bg-[#fbeaf0]"] {
+  background-color: #ecdbe1 !important;
+}
+
+html:not(.dark) [class*="bg-[#fff8fa]"],
+html:not(.dark) [class*="bg-[#FBF3F6]"] {
+  background-color: #efe1e6 !important;
+}
+
+html:not(.dark) [class*="bg-[#d990a8]"] {
+  background-color: #ba748c !important;
+  color: #fdf9fa !important;
+}
+
+html:not(.dark) [class*="border-line"],
+html:not(.dark) [class*="border-[#eadfe4]"],
+html:not(.dark) [class*="border-[#fbeaf0]"],
+html:not(.dark) [class*="border-[#f1e6e9]"],
+html:not(.dark) .border-slate-200 {
+  border-color: #d6c8cf !important;
+}
+
+html:not(.dark) [class*="divide-line"] > :not([hidden]) ~ :not([hidden]) {
+  border-color: #d6c8cf !important;
+}
+
+html:not(.dark) [class*="border-[#f4c2c2]"] {
+  border-color: #dcb9c5 !important;
+}
+
+html:not(.dark) .text-ink,
+html:not(.dark) .text-black {
+  color: #2b2126 !important;
+}
+
+html:not(.dark) .text-muted,
+html:not(.dark) [class*="text-[#826f79]"],
+html:not(.dark) [class*="text-[#765f6b]"],
+html:not(.dark) [class*="text-[#66545f]"],
+html:not(.dark) [class*="text-[#5c4b54]"] {
+  color: #68555f !important;
+}
+
+html:not(.dark) [class*="text-[#a55f78]"],
+html:not(.dark) [class*="text-[#a35f78]"] {
+  color: #8f4c64 !important;
+}
+
+html:not(.dark) input:not([type="color"]):not([type="date"]):not([type="range"]),
+html:not(.dark) textarea,
+html:not(.dark) select:not(.bg-transparent) {
+  background-color: #ece3e8 !important;
+  color: #2b2126 !important;
+  border-color: #d6c8cf !important;
+}
+
+html:not(.dark) input:not([type="color"]):not([type="date"]):not([type="range"]):focus,
+html:not(.dark) textarea:focus,
+html:not(.dark) select:not(.bg-transparent):focus {
+  background-color: #f7f2f4 !important;
+  border-color: #ba748c !important;
+}
+
+/* Light Mode Custom Silk Scrollbars */
+html:not(.dark) ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+html:not(.dark) ::-webkit-scrollbar-track {
+  background: #eae2e6;
+}
+
+html:not(.dark) ::-webkit-scrollbar-thumb {
+  background: #cbbbc3;
+  border-radius: 9999px;
+  border: 2px solid #eae2e6;
+  transition: background-color 0.2s ease;
+}
+
+html:not(.dark) ::-webkit-scrollbar-thumb:hover {
+  background: #ba748c;
+}
+
+
+
 html.dark {
-  --bg: #161114;       /* Deep warm aubergine page background */
-  --surface: #231a1e;  /* Lighter card surface */
-  --ink: #fdfafb;      /* White text */
-  --muted: #a08994;    /* Muted pinkish-grey text */
-  --pink: #d990a8;
-  --pink2: #3a2830;
-  --line: #3a2830;
-  
-  --shadow-soft: 0 8px 28px rgba(0, 0, 0, 0.5);
+  --bg: #1b1518;       /* Deep velvet mulberry-espresso canvas (never pure black) */
+  --surface: #241c20;  /* Warm cocoa-plum primary card surface */
+  --ink: #f6eff2;      /* Soft silk-ivory primary typography */
+  --muted: #b8a3ad;    /* Warm cashmere-mauve secondary typography */
+  --pink: #dfa0b5;     /* Luminous cameo rose accent */
+  --pink2: #39262f;    /* Rich damask rose-plum highlight surface */
+  --line: #3b2e35;     /* Tailored warm plum-taupe hairline border */
+
+  /* Native Tailwind v4 Token Overrides for Dark Mode */
+  --color-white: #241c20;
+  --color-slate-50: #2e2429;
+  --color-slate-100: #34292f;
+  --color-slate-200: #3b2e35;
+  --color-slate-500: #b8a3ad;
+  --color-slate-600: #c7b4bd;
+  --color-slate-700: #d9cad1;
+
+  --color-slate-800: #f6eff2;
+  --color-slate-900: #f6eff2;
+
+  --shadow-soft:
+    inset 0 1px 0 0 rgba(255, 235, 242, 0.06),
+    0 12px 32px -8px rgba(12, 7, 10, 0.38);
   color-scheme: dark;
 }
 
-html.dark body {
-  background-color: #161114 !important;
-  color: #fdfafb !important;
+/* 1. Root Velvet Mulberry Canvas */
+
+html.dark body,
+html.dark .bg-background,
+html.dark [class*="bg-[#FAF7F8]"],
+html.dark [class*="bg-[#faf7f8]"],
+html.dark [class*="bg-[#fafafc]"] {
+  background-color: #1b1518 !important;
+  color: #f6eff2 !important;
 }
 
-/* 1. Force all White, Surface, and Slate backgrounds to Dark Surface */
+/* 2. Primary Cocoa-Plum Cards with Warm Satin Sheen */
+
 html.dark .bg-white,
-html.dark .bg-surface,
+html.dark .bg-surface {
+  background-color: #241c20 !important;
+  box-shadow:
+    inset 0 1px 0 0 rgba(255, 235, 242, 0.06),
+    0 12px 30px -10px rgba(12, 7, 10, 0.36) !important;
+}
+
+/* 3. Frosted Mulberry Glass Navigation & Headers */
+
+html.dark [class*="bg-white/"] {
+  background-color: rgba(36, 28, 32, 0.88) !important;
+  backdrop-filter: blur(16px) saturate(135%) !important;
+  box-shadow: inset 0 1px 0 0 rgba(255, 235, 242, 0.07) !important;
+}
+
+/* 4. Elevated Warm Truffle Inner Wells, Toolbars & Secondary Panels */
+
 html.dark .bg-slate-50,
-html.dark .bg-slate-100 {
-  background-color: #231a1e !important;
+html.dark .bg-slate-100,
+html.dark [class*="bg-[#fcf9fa]"],
+html.dark [class*="bg-[#f4eff2]"] {
+  background-color: #2e2429 !important;
 }
 
-/* 2. Force all Light Pink backgrounds to Deep Aubergine */
-html.dark .bg-\[\#fff0f3\],
-html.dark .bg-\[\#fff8fa\],
-html.dark .bg-\[\#fafafc\] {
-  background-color: #161114 !important;
+html.dark .bg-slate-200 {
+  background-color: #382c32 !important;
 }
 
-/* 3. Force all Pink/Gray Borders to Dark Line */
-html.dark .border-line,
-html.dark .border-\[\#fbeaf0\],
-html.dark .border-\[\#eadfe4\],
-html.dark .border-\[\#f4c2c2\],
-html.dark .border-\[\#f1e6e9\],
+/* 5. Warm Damask Rose Badges, Active Tabs & Whisper Cards */
+
+html.dark [class*="bg-[#fff0f3]"],
+html.dark [class*="bg-[#fbeaf0]"] {
+  background-color: #3b2730 !important;
+}
+
+html.dark [class*="bg-[#fff8fa]"],
+html.dark [class*="bg-[#FBF3F6]"] {
+  background-color: #33222a !important;
+}
+
+/* 6. Login & Hero Gradients in Dark Mode */
+
+html.dark .from-\[\#fff0f3\] {
+  --tw-gradient-from: #35232b !important;
+}
+html.dark .via-\[\#fff8fa\] {
+  --tw-gradient-via: #261d22 !important;
+}
+html.dark .to-\[\#fafafc\] {
+  --tw-gradient-to: #1b1518 !important;
+}
+
+/* 7. Warm Plum-Taupe 1px Hairline Borders & Cockpit Grid Dividers */
+
+html.dark [class*="border-line"],
+html.dark [class*="border-[#fbeaf0]"],
+html.dark [class*="border-[#eadfe4]"],
+html.dark [class*="border-[#f1e6e9]"],
 html.dark .border-slate-200 {
-  border-color: #3a2830 !important;
+  border-color: #3b2e35 !important;
 }
 
-/* 4. Force all Muted Text to a readable gray */
-html.dark .text-muted,
-html.dark .text-\[\#826f79\],
-html.dark .text-\[\#765f6b\],
-html.dark .text-\[\#66545f\],
-html.dark .text-slate-500,
-html.dark .text-slate-600,
-html.dark .text-slate-700 {
-  color: #a08994 !important;
+html.dark [class*="divide-line"] > :not([hidden]) ~ :not([hidden]) {
+  border-color: #3b2e35 !important;
 }
 
-/* 5. Force all Black/Ink text to White */
+/* Rose-Quartz Borders for Active Cards & Callouts */
+
+html.dark [class*="border-[#f4c2c2]"] {
+  border-color: #573a47 !important;
+}
+
+html.dark [class*="border-[#d990a8]"] {
+  border-color: #8c586d !important;
+}
+
+/* 8. Silk-Ivory Primary Ink & Cashmere-Mauve Secondary Ink */
+
 html.dark .text-ink,
 html.dark .text-black,
 html.dark .text-slate-800,
 html.dark .text-slate-900 {
-  color: #fdfafb !important;
+  color: #f6eff2 !important;
 }
 
-/* 6. Tone down bright pink text for dark mode */
-html.dark .text-\[\#a55f78\],
-html.dark .text-\[\#841617\] {
-  color: #d990a8 !important;
+html.dark .text-muted,
+html.dark [class*="text-[#826f79]"],
+html.dark [class*="text-[#765f6b]"],
+html.dark [class*="text-[#66545f]"],
+html.dark [class*="text-[#5c4b54]"],
+html.dark .text-slate-500,
+html.dark .text-slate-600,
+html.dark .text-slate-700 {
+  color: #b8a3ad !important;
 }
 
-/* 7. Force Inputs to be readable */
-html.dark input, 
-html.dark textarea, 
-html.dark select {
-  background-color: #161114 !important;
-  color: #fdfafb !important;
-  border-color: #3a2830 !important;
+/* 9. Cameo Rose Accent Typography */
+
+html.dark [class*="text-[#a55f78]"],
+html.dark [class*="text-[#a35f78]"],
+html.dark [class*="text-[#841617]"] {
+  color: #efb8ca !important;
 }
 
-html.dark input:focus, 
-html.dark textarea:focus, 
-html.dark select:focus {
-  border-color: #d990a8 !important;
+html.dark [class*="text-[#d990a8]"] {
+  color: #e4a1b7 !important;
 }
 
-/* 8. Fix hover states so they remain visible */
+/* 10. Warm Recessed Form Inputs, Textareas & Selects (Never Pitch Black) */
+
+html.dark input:not([type="color"]):not([type="date"]):not([type="range"]),
+html.dark textarea,
+html.dark select:not(.bg-transparent) {
+  background-color: #1e171b !important;
+  color: #f6eff2 !important;
+  border-color: #3e3038 !important;
+}
+
+html.dark input:not([type="color"]):not([type="date"]):not([type="range"]):focus,
+html.dark textarea:focus,
+html.dark select:not(.bg-transparent):focus {
+  background-color: #261e23 !important;
+  border-color: #dfa0b5 !important;
+  box-shadow: 0 0 0 3px rgba(223, 160, 181, 0.15) !important;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #87737d !important;
+}
+
+/* 11. Interactive Hover States */
+
 html.dark .hover\:bg-slate-50:hover,
 html.dark .hover\:bg-slate-100:hover,
 html.dark .hover\:bg-white:hover,
-html.dark .hover\:bg-\[\#fff0f3\]:hover {
-  background-color: #2c1f25 !important;
+html.dark [class*="hover:bg-[#fcf9fa]"]:hover {
+  background-color: #35292f !important;
 }
 
-/* 9. Make sure SVG strokes invert correctly */
-html.dark svg {
-  opacity: 0.9;
+html.dark [class*="hover:bg-[#fff0f3]"]:hover,
+html.dark [class*="hover:bg-[#fff8fa]"]:hover {
+  background-color: #442d38 !important;
 }
 
-/* 10. Fix Primary Buttons (bg-ink / bg-black) to be high-contrast in Dark Mode */
+/* 12. Burnished Rosewood Buttons with Crisp Silk-Ivory Text */
+
+html.dark [class*="bg-[#a55f78]"] {
+  background-color: #9e5871 !important;
+  color: #fdf9fa !important;
+  border-color: #b86e88 !important;
+}
+
+html.dark [class*="bg-[#d990a8]"] {
+  background-color: #b56982 !important;
+  color: #fdf9fa !important;
+  box-shadow: 0 8px 22px -6px rgba(181, 105, 130, 0.45) !important;
+}
+
 html.dark .bg-ink,
 html.dark .bg-black {
-  background-color: #d990a8 !important; /* Soft blush pink background */
-  color: #161114 !important; /* Deep dark text so it's readable */
+  background-color: #b56982 !important;
+  color: #fdf9fa !important;
 }
 
 html.dark .bg-ink.text-white,
 html.dark .bg-black.text-white {
-  color: #161114 !important; /* Overrides the hardcoded text-white */
+  color: #fdf9fa !important;
 }
 
 html.dark .hover\:bg-black:hover {
-  background-color: #e9a9ba !important; /* Lighter pink on hover */
+  background-color: #c47690 !important;
+}
+
+/* Dark Mode Velvet Nocturne Custom Scrollbars */
+
+html.dark ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #1b1518;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: #3e3038;
+  border-radius: 9999px;
+  border: 2px solid #1b1518;
+  transition: background-color 0.2s ease;
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #b56982;
 }

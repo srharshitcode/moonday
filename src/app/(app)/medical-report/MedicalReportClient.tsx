@@ -26,17 +26,15 @@ import {
   ShieldCheck,
 } from "lucide-react";
 
-/**
- * Strictly excludes sexual desire, libido, intimacy, and intercourse-related terms
- * from all clinical outputs, symptom matrices, and diary rows.
- */
+
 const SEXUAL_EXCLUSION_REGEX =
   /sex|libido|intima|orgasm|arousal|desire|intercourse|condom|erotic|sensual|lust|hookup|coit/i;
 
 /**
  * Safely parses any Supabase array, JSON string, or escaped string (e.g. "[\][\]", "[]", "{}")
- * into a clean array of human-readable clinical labels with zero bracket artifacts.
+ * into a clean array of readable labels with zero bracket.
  */
+
 const parseClinicalList = (raw: unknown): string[] => {
   if (raw === null || raw === undefined) return [];
 
@@ -51,6 +49,7 @@ const parseClinicalList = (raw: unknown): string[] => {
       ),
     );
   }
+
 
   if (typeof raw === "string") {
     const trimmed = raw.trim();
@@ -77,6 +76,7 @@ const parseClinicalList = (raw: unknown): string[] => {
       }
     }
 
+
     const cleaned = trimmed
       .replace(/[\[\]{}"'\\]/g, "")
       .split(",")
@@ -97,8 +97,9 @@ const parseClinicalList = (raw: unknown): string[] => {
 };
 
 /**
- * Extracts Flow Intensity, Cycle Color, Discharge, Cravings, and Activity from a daily log row.
+ * Extracts Flow Intensity, Cycle Color, Discharge, Cravings, and Activity from daily log row.
  */
+
 const extractDailyAttributes = (log: Record<string, any>) => {
   const flow = parseClinicalList(
     log.flow ?? log.flow_intensity ?? log.flow_level ?? log.bleeding_flow,
@@ -126,6 +127,7 @@ const extractDailyAttributes = (log: Record<string, any>) => {
 /**
  * Categorizes physical and affective symptoms into 8 OB-GYN Review of Systems (ROS) domains.
  */
+
 const categorizeSymptomROS = (symptom: string): string => {
   const s = symptom.toLowerCase();
   if (
@@ -177,6 +179,8 @@ const categorizeSymptomROS = (symptom: string): string => {
 /**
  * Reusable Caduceus Medical Emblem SVG (Matches 7948684.jpg top-right icon & center watermark)
  */
+
+
 const CaduceusMedicalEmblem = ({
   className = "w-16 h-16",
   color = "#1d6fa5",
@@ -223,7 +227,7 @@ const CaduceusMedicalEmblem = ({
 );
 
 /* ============================================================================
-   EXTENSIVE CLINICAL DROPDOWN CATALOGS (280+ STRUCTURED MEDICAL OPTIONS)
+   CLINICAL DROPDOWN CATALOGS STRUCTURED MEDICAL OPTIONS
 ============================================================================ */
 
 const BLOOD_GROUP_CATEGORIES = [
@@ -240,6 +244,7 @@ const BLOOD_GROUP_CATEGORIES = [
       "AB Negative (AB-)",
     ],
   },
+
   {
     group: "Subgroups & Rare Clinical Phenotypes",
     options: [
@@ -261,6 +266,7 @@ const BLOOD_GROUP_CATEGORIES = [
   },
 ];
 
+
 const CONTRACEPTIVE_CATEGORIES = [
   {
     group: "Non-Hormonal / Natural / Fertility Intent",
@@ -272,6 +278,7 @@ const CONTRACEPTIVE_CATEGORIES = [
       "Lactational Amenorrhea Method (LAM)",
     ],
   },
+
   {
     group: "Combined Oral Contraceptive Pills (COCPs — Estrogen + Progestin)",
     options: [
@@ -284,6 +291,7 @@ const CONTRACEPTIVE_CATEGORIES = [
       "COCP — Extended / Continuous Active Pill Regimen (Amenorrheic Protocol)",
     ],
   },
+
   {
     group: "Progestin-Only Regimens, Endometriosis Therapy & SERMs",
     options: [
@@ -298,6 +306,7 @@ const CONTRACEPTIVE_CATEGORIES = [
       "Non-Steroidal SERM — Centchroman / Ormeloxifene 30 mg (Saheli / Chhaya)",
     ],
   },
+
   {
     group:
       "Long-Acting Reversible Contraception (IUD / IUS / Subdermal Implant)",
@@ -310,6 +319,7 @@ const CONTRACEPTIVE_CATEGORIES = [
       "Subdermal Implant — Etonogestrel 68 mg Rod (Nexplanon / Implanon)",
     ],
   },
+
   {
     group: "Injectables, Rings, Patches & Surgical",
     options: [
@@ -337,6 +347,7 @@ const MENARCHE_OPTIONS = [
   "Not Recalled",
 ];
 
+
 const OBSTETRIC_PARITY_OPTIONS = [
   "G0 P0 (Nulligravida / Nulliparous)",
   "G1 P0 (Primigravida — Currently Pregnant or Prior Loss)",
@@ -353,6 +364,7 @@ const OBSTETRIC_PARITY_OPTIONS = [
   "Prefer Not to Specify",
 ];
 
+
 const DYSMENORRHEA_GRADES = [
   "Grade 0 (VAS 0/10) — Eumenorrhea / No Menstrual Pain",
   "Grade 1 (VAS 1–3/10) — Mild Cramping, No Analgesics Needed, Full Activity",
@@ -362,6 +374,7 @@ const DYSMENORRHEA_GRADES = [
   "Secondary Dysmenorrhea Pattern — Pain Begins 3–5 Days Before Flow & Persists Through Menses",
 ];
 
+
 const ANALGESIC_RELIEF_OPTIONS = [
   "No Analgesics Required — Manageable with Rest / Hydration",
   "Complete Relief (80–100%) within 45 mins of OTC NSAID / Antispasmodic",
@@ -370,6 +383,7 @@ const ANALGESIC_RELIEF_OPTIONS = [
   "Refractory Pain (< 20% Relief) — Unresponsive to OTC Analgesics (Screen Secondary Cause)",
   "Non-Pharmacological Only — Relieved by Local Heat Therapy / TENS / Gentle Yoga",
 ];
+
 
 const PAIN_RADIATION_OPTIONS = [
   "Localized Midline Suprapubic Cramping Only",
@@ -382,6 +396,7 @@ const PAIN_RADIATION_OPTIONS = [
   "Mid-Cycle Unilateral Ovulatory Twinge (Mittelschmerz)",
 ];
 
+
 const FLOW_CLOT_PROFILES = [
   "Normal Volume (~30–50 mL) — Pad/Tampon Every 4–6 Hrs, No Clots",
   "Light / Scanty Flow (Hypomenorrhea < 20 mL) — Minimal Pad Spotting",
@@ -392,6 +407,7 @@ const FLOW_CLOT_PROFILES = [
   "Prolonged Slow Tapering — 3–4 Days Normal Bleed Followed by 4+ Days Brown Spotting",
   "Intermenstrual Spotting / Oxidized Dark Brown Discharge Only",
 ];
+
 
 const SANITARY_PRODUCT_OPTIONS = [
   "Disposable Sanitary Pads — Regular Absorbency (3–4 pads/day on peak flow)",
@@ -404,6 +420,7 @@ const SANITARY_PRODUCT_OPTIONS = [
   "Period Underwear + Backup Sanitary Pad (Double Protection)",
 ];
 
+
 const OVULATORY_MUCUS_OPTIONS = [
   "Clear Biphasic Pattern — Distinct Mid-Cycle Egg-White Cervical Mucus (EWCM)",
   "Mild Mid-Cycle Mucus Shift Observed without Ovulatory Pain",
@@ -413,6 +430,7 @@ const OVULATORY_MUCUS_OPTIONS = [
   "Yellowish / Greyish Malodorous Discharge (Screen BV / Vaginitis)",
   "Pink / Brown Mid-Cycle Periovulatory Spotting",
 ];
+
 
 const HYPERANDROGENISM_OPTIONS = [
   "None — Clear Skin, Normal Terminal Hair Distribution, No Alopecia",
@@ -433,6 +451,7 @@ const THYROID_GALACTORRHEA_OPTIONS = [
   "Known Hypothyroidism — Currently Managed on Oral Levothyroxine",
 ];
 
+
 const GI_URINARY_CORRELATION_OPTIONS = [
   "No Significant Cyclical Bowel or Urinary Changes",
   "Prostaglandin-Mediated Loose Stools / Diarrhea on Cycle Days 1–2",
@@ -442,6 +461,7 @@ const GI_URINARY_CORRELATION_OPTIONS = [
   "Cyclical Urinary Frequency / Urgency or Dysuria During Menses",
 ];
 
+
 const PMS_FUNCTIONAL_IMPACT_OPTIONS = [
   "None / Minimal — Full Occupational, Academic, and Social Functioning",
   "Mild — Noticeable Luteal Fatigue or Irritability (3–4 Days Pre-Menses), Fully Functional",
@@ -449,6 +469,7 @@ const PMS_FUNCTIONAL_IMPACT_OPTIONS = [
   "Severe Affective (PMDD Screen) — Marked Luteal Mood Lability, Anxiety, or Hopelessness",
   "Severe Somatic — Misses 1–3 Days of Work/College Monthly Due to Pain/Fatigue",
 ];
+
 
 const PRIOR_WORKUP_OPTIONS = [
   "None — Initial Gynecological Consultation",
@@ -462,6 +483,7 @@ const PRIOR_WORKUP_OPTIONS = [
   "Endocrine & Hematology Blood Panels Available for Review",
 ];
 
+
 const CERVICAL_SCREENING_OPTIONS = [
   "Not Applicable / Under Routine Cervical Screening Age",
   "Pap Smear / LBC — Normal (NILM) within Last 3 Years",
@@ -471,6 +493,7 @@ const CERVICAL_SCREENING_OPTIONS = [
   "Prior ASC-US / LSIL Under Colposcopic or Repeat Cytology Follow-Up",
 ];
 
+
 const PREVENTIVE_IMMUNIZATION_OPTIONS = [
   "HPV Vaccine (Complete) • Rubella IgG Immune • Up-to-date Tetanus/Tdap",
   "HPV Vaccine Pending / Unvaccinated • Routine Immunizations Complete",
@@ -478,6 +501,7 @@ const PREVENTIVE_IMMUNIZATION_OPTIONS = [
   "Regular Clinical Breast Examination / Sono-Mammography Normal",
   "Immunization & Preventive Screening Status Unverified",
 ];
+
 
 const LIFESTYLE_PROFILES = [
   "Non-Smoker • Restorative Sleep (7–8 hrs) • Moderate Daily Activity",
@@ -489,6 +513,7 @@ const LIFESTYLE_PROFILES = [
   "Recent Significant Weight Change (± 5 kg within Last 6 Months)",
 ];
 
+
 const DIET_HYDRATION_OPTIONS = [
   "Balanced Omnivorous Diet • Adequate Hydration (2–2.5L/day)",
   "Lacto-Vegetarian Diet (Monitor Dietary Heme-Iron & Vitamin B12)",
@@ -497,6 +522,7 @@ const DIET_HYDRATION_OPTIONS = [
   "Anti-Inflammatory / Mediterranean Pattern (Rich in Omega-3 & Greens)",
   "High Caffeine (> 3 cups/day) / Irregular Meal Timing / Low Water Intake",
 ];
+
 
 const CHIEF_COMPLAINT_TEMPLATES = [
   "Comprehensive 90-day menstrual cycle, flow, and multi-system symptom evaluation.",
@@ -511,6 +537,7 @@ const CHIEF_COMPLAINT_TEMPLATES = [
   "Contraceptive initiation, method switching, or hormonal side-effect evaluation.",
   "Follow-up evaluation of ongoing gynecological / endocrine therapeutic regimen.",
 ];
+
 
 const DIAGNOSIS_CATALOG = [
   {
@@ -549,7 +576,9 @@ const DIAGNOSIS_CATALOG = [
       "Von Willebrand Disease / Coagulopathy",
       "Thalassemia Trait (Minor)",
     ],
+
   },
+
   {
     group: "Neurological, GI & Systemic",
     items: [
@@ -563,6 +592,7 @@ const DIAGNOSIS_CATALOG = [
     ],
   },
 ];
+
 
 const MEDICATION_CATALOG = [
   {
@@ -578,6 +608,7 @@ const MEDICATION_CATALOG = [
       "Paracetamol / Acetaminophen 650mg",
     ],
   },
+
   {
     group: "Endocrine, Metabolic & Insulin Sensitizers",
     items: [
@@ -589,6 +620,7 @@ const MEDICATION_CATALOG = [
       "Letrozole 2.5mg / Clomiphene Citrate (Ovulation Induction)",
     ],
   },
+
   {
     group: "Hematinics, Vitamins & Evidence-Based Nutraceuticals",
     items: [
@@ -607,6 +639,7 @@ const MEDICATION_CATALOG = [
   },
 ];
 
+
 const SURGICAL_HISTORY_CATALOG = [
   "No Prior Pelvic or Abdominal Surgery",
   "Diagnostic Laparoscopy (Pelvic Evaluation)",
@@ -622,6 +655,7 @@ const SURGICAL_HISTORY_CATALOG = [
   "Thyroidectomy",
 ];
 
+
 const ALLERGY_CATALOG = [
   "NKDA (No Known Drug or Latex Allergies)",
   "Penicillin / Amoxicillin / Beta-Lactams",
@@ -634,6 +668,7 @@ const ALLERGY_CATALOG = [
   "Adhesive Tape / Sanitary Pad Fragrance Sensitivity",
   "Iodinated Contrast Media",
 ];
+
 
 const FAMILY_HISTORY_CATALOG = [
   "No Significant Hereditary Gynecological or Endocrine History",
@@ -648,6 +683,7 @@ const FAMILY_HISTORY_CATALOG = [
   "Ovarian or Endometrial Malignancy (Family History)",
   "Essential Hypertension / Cardiovascular Disease",
 ];
+
 
 const CLINICAL_THEMES = {
   cerulean: {
@@ -755,6 +791,7 @@ interface PatientIntakeDetails {
   prefillRxPatientLines: boolean;
 }
 
+
 const DEFAULT_INTAKE: PatientIntakeDetails = {
   fullName: "",
   ageOrDob: "",
@@ -834,6 +871,8 @@ const DEFAULT_INTAKE: PatientIntakeDetails = {
   prefillRxPatientLines: true,
 };
 
+
+
 export default function MedicalReportPage() {
   const [loading, setLoading] = useState(true);
   const [showIntakeStudio, setShowIntakeStudio] = useState(false);
@@ -867,6 +906,8 @@ export default function MedicalReportPage() {
     [reportEndDate, intake.reportWindowDays],
   );
 
+
+
   useEffect(() => {
     try {
       const saved = localStorage.getItem("moonday_clinical_intake_v6");
@@ -893,9 +934,11 @@ export default function MedicalReportPage() {
         }));
       }
     } catch {
+
       // Ignore storage errors
     }
   }, []);
+
 
   const updateIntakeField = <K extends keyof PatientIntakeDetails>(
     field: K,
@@ -914,6 +957,7 @@ export default function MedicalReportPage() {
       return updated;
     });
   };
+
 
   const addTagItem = (
     field:
@@ -935,6 +979,7 @@ export default function MedicalReportPage() {
     updateIntakeField(field, [...filtered, trimmed]);
   };
 
+
   const removeTagItem = (
     field:
       | "knownConditions"
@@ -950,6 +995,7 @@ export default function MedicalReportPage() {
       current.filter((i) => i !== item),
     );
   };
+
 
   useEffect(() => {
     async function fetchData() {
@@ -984,6 +1030,7 @@ export default function MedicalReportPage() {
         }));
       }
 
+
       const maxLookback = format(subDays(new Date(), 180), "yyyy-MM-dd");
       const { data: recentLogs } = await supabase
         .from("daily_logs")
@@ -1001,12 +1048,14 @@ export default function MedicalReportPage() {
   }, [supabase]);
 
   // Filter logs to the selected observation window (30, 60, 90, or 180 days)
+
   const logs = useMemo(() => {
     const cutoff = format(reportStartDate, "yyyy-MM-dd");
     return allLogs.filter((l) => l.log_date >= cutoff);
   }, [allLogs, reportStartDate]);
 
   // Compute strict clinical cycle metrics
+
   const stats = useMemo(() => {
     const starts = logs
       .filter((l) => l.is_period_start)
@@ -1121,6 +1170,7 @@ export default function MedicalReportPage() {
   };
 
   // Filtered diary logs for interactive search & filter
+
   const filteredDiaryLogs = useMemo(() => {
     return logs.filter((log) => {
       const { flow, color, discharge } = extractDailyAttributes(log);
@@ -1160,6 +1210,7 @@ export default function MedicalReportPage() {
   }, [logs, diaryFilter, diarySearch]);
 
   // Comprehensive OB-GYN Review of Systems (ROS), Anatomical Pain Map & Top Symptoms
+
   const clinicalAnalysis = useMemo(() => {
     const symptomCounts: Record<string, number> = {};
     const moodCounts: Record<string, number> = {};
@@ -1271,6 +1322,7 @@ export default function MedicalReportPage() {
   }, [logs, stats.sortedStarts, stats.avgDuration]);
 
   // Confirmed Menstrual Episodes Table
+
   const confirmedEpisodes = useMemo(() => {
     const chronological = [...logs].sort((a, b) =>
       a.log_date.localeCompare(b.log_date),
@@ -1333,6 +1385,7 @@ export default function MedicalReportPage() {
   }, [logs]);
 
   // Anthropometrics: BMI, BSA (Mosteller), and Waist-to-Hip Ratio (WHR)
+
   const anthropometrics = useMemo(() => {
     const h = parseFloat(intake.heightCm);
     const w = parseFloat(intake.weightKg);
@@ -1363,7 +1416,8 @@ export default function MedicalReportPage() {
     return { bmiText, bsaText, whrText };
   }, [intake.heightCm, intake.weightKg, intake.waistCm, intake.hipCm]);
 
-  // Automated FIGO / ACOG Clinical Evaluation Matrix
+  // Automated Clinical Evaluation Matrix
+
   const clinicalDecisionSupport = useMemo(() => {
     const flags: {
       parameter: string;
@@ -1471,6 +1525,7 @@ export default function MedicalReportPage() {
   );
 
   // Backup & Restore JSON
+
   const handleExportProfileJson = () => {
     const blob = new Blob([JSON.stringify(intake, null, 2)], {
       type: "application/json",
@@ -1499,13 +1554,16 @@ export default function MedicalReportPage() {
           return merged;
         });
       } catch {
+
         // Ignore invalid JSON
+
       }
     };
     reader.readAsText(file);
   };
 
   // Copy EHR Text Summary
+
   const handleCopyClinicalSummary = () => {
     const topSyms =
       clinicalAnalysis.topSymptoms
@@ -1533,6 +1591,7 @@ export default function MedicalReportPage() {
   };
 
   // Export CSV
+
   const handleExportCsv = () => {
     const headers = [
       "Date",
@@ -1577,6 +1636,7 @@ export default function MedicalReportPage() {
         .join(",");
     });
 
+
     const csvContent = [headers.join(","), ...rows].join("\n");
     const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
     const url = URL.createObjectURL(blob);
@@ -1589,12 +1649,14 @@ export default function MedicalReportPage() {
     URL.revokeObjectURL(url);
   };
 
+
   /**
    * Zero-Gap Calibrated A4 Print Engine:
    * - Sheet 1 flows continuously without giant blank gaps between sections.
    * - Sheet 2 fits Part A + Part B + Part C on a single A4 page.
    * - Sheet 3 locks the 7948684.jpg Rx Pad AND Dual Signatures onto a single A4 page.
    */
+
   const handlePrint = () => {
     const sheet1Node = document.getElementById("moonday-pdf-sheet-1");
     const sheet2Node = document.getElementById("moonday-pdf-sheet-2");
@@ -1760,6 +1822,10 @@ export default function MedicalReportPage() {
     printWindow.document.close();
   };
 
+
+
+
+
   if (loading) {
     return (
       <div className="p-16 text-center text-slate-900 font-semibold text-sm">
@@ -1776,7 +1842,9 @@ export default function MedicalReportPage() {
 
   return (
     <div className="w-full max-w-[1140px] mx-auto my-4 px-3 sm:px-6 print:m-0 print:p-0 print:max-w-none">
+      
       {/* Fallback Print Styles */}
+
       <style jsx global>{`
         @media print {
           @page {
@@ -1830,6 +1898,7 @@ export default function MedicalReportPage() {
       `}</style>
 
 
+
       <div className="print-hide mb-8 bg-white border-2 border-slate-900 rounded-xl shadow-xs overflow-hidden">
         <div className="p-5 sm:p-6 bg-[#FAF8F5] border-b border-slate-300 flex flex-col xl:flex-row justify-between items-start xl:items-center gap-4">
           <div>
@@ -1848,8 +1917,11 @@ export default function MedicalReportPage() {
             </h2>
           </div>
 
+
           <div className="flex flex-wrap items-center gap-2.5">
+
             {/* 3-Sheet View Switcher */}
+
             <div className="inline-flex flex-wrap rounded-lg border border-slate-400 bg-white p-1 text-xs">
               {(
                 [
@@ -1935,9 +2007,14 @@ export default function MedicalReportPage() {
         {/* ===================================================================
             2-PANE CLINICAL INTAKE STUDIO (7 ORGANIZED SECTIONS, ZERO CLUTTER)
         =================================================================== */}
+
+
         {showIntakeStudio && (
           <div className="grid grid-cols-1 lg:grid-cols-12 bg-white">
+
             {/* Left Sidebar Navigation */}
+
+
             <div className="lg:col-span-3 bg-[#F5F3EF] border-b lg:border-b-0 lg:border-r border-slate-300 p-5 flex flex-col justify-between">
               <div className="space-y-1.5">
                 <div className="text-[11px] font-extrabold uppercase tracking-wider text-slate-700 px-3 mb-3">
@@ -1980,6 +2057,7 @@ export default function MedicalReportPage() {
                       label: "7. Doctor Rx Pad & Ink Setup",
                       icon: Layers,
                     },
+
                   ] as const
                 ).map((item) => {
                   const Icon = item.icon;
@@ -2001,6 +2079,7 @@ export default function MedicalReportPage() {
                   );
                 })}
               </div>
+
 
               <div className="pt-6 mt-6 border-t border-slate-300 space-y-2 text-xs">
                 <div className="flex items-center justify-between gap-2">
@@ -2034,9 +2113,13 @@ export default function MedicalReportPage() {
               </div>
             </div>
 
+
             <div className="lg:col-span-9 p-6 sm:p-8">
+              
               {/* SECTION 1: IDENTITY, ADDRESS, VITALS & ALLERGIES */}
+
               {activeStudioSection === "identity" && (
+
                 <div className="space-y-6">
                   <div className="border-b border-slate-300 pb-3">
                     <h3 className="text-base font-extrabold text-slate-950">
@@ -2198,6 +2281,8 @@ export default function MedicalReportPage() {
                   </div>
 
                   {/* Drug & Latex Allergy Dropdown Adder */}
+
+
                   <div className="bg-[#FAF8F5] border border-slate-300 rounded-xl p-5">
                     <label className="block text-xs font-bold text-slate-900 mb-2">
                       Drug, Contrast & Latex Allergies
@@ -2275,6 +2360,8 @@ export default function MedicalReportPage() {
               )}
 
               {/* SECTION 2: MENSTRUAL, FLOW & CONTRACEPTION */}
+
+
               {activeStudioSection === "menstrual" && (
                 <div className="space-y-6">
                   <div className="border-b border-slate-300 pb-3">
@@ -2413,6 +2500,8 @@ export default function MedicalReportPage() {
               )}
 
               {/* SECTION 3: PAIN, ANALGESIC RELIEF, ENDOCRINE & GI CORRELATION */}
+
+
               {activeStudioSection === "endocrine" && (
                 <div className="space-y-6">
                   <div className="border-b border-slate-300 pb-3">
@@ -2572,6 +2661,8 @@ export default function MedicalReportPage() {
               )}
 
               {/* SECTION 4: BASELINE LABS, USG & SURGICAL HISTORY */}
+
+
               {activeStudioSection === "labs" && (
                 <div className="space-y-6">
                   <div className="border-b border-slate-300 pb-3">
@@ -2789,6 +2880,8 @@ export default function MedicalReportPage() {
                   </div>
 
                   {/* Surgical History Dropdown Adder */}
+
+
                   <div className="bg-[#FAF8F5] border border-slate-300 rounded-xl p-5">
                     <label className="block text-xs font-bold text-slate-900 mb-2">
                       Pelvic & Abdominal Surgical / Procedural History
@@ -2866,6 +2959,8 @@ export default function MedicalReportPage() {
               )}
 
               {/* SECTION 5: DIAGNOSES, MEDICATIONS & FAMILY HISTORY */}
+
+
               {activeStudioSection === "meds" && (
                 <div className="space-y-6">
                   <div className="border-b border-slate-300 pb-3">
@@ -2875,6 +2970,8 @@ export default function MedicalReportPage() {
                   </div>
 
                   {/* Known Conditions Dropdown Adder */}
+
+
                   <div className="bg-[#FAF8F5] border border-slate-300 rounded-xl p-5">
                     <label className="block text-xs font-bold text-slate-900 mb-2">
                       Known Gynecological, Endocrine & Systemic Conditions
@@ -2958,6 +3055,8 @@ export default function MedicalReportPage() {
                   </div>
 
                   {/* Active Medications Dropdown Adder */}
+
+
                   <div className="bg-[#FAF8F5] border border-slate-300 rounded-xl p-5">
                     <label className="block text-xs font-bold text-slate-900 mb-2">
                       Current Medications, Hormones & Nutraceutical Supplements
@@ -3044,6 +3143,8 @@ export default function MedicalReportPage() {
                   </div>
 
                   {/* Family History Dropdown Adder */}
+
+
                   <div className="bg-[#FAF8F5] border border-slate-300 rounded-xl p-5">
                     <label className="block text-xs font-bold text-slate-900 mb-2">
                       Family Medical & Gynecological History
@@ -3093,6 +3194,8 @@ export default function MedicalReportPage() {
               )}
 
               {/* SECTION 6: PREVENTIVE SCREENING, VACCINES, DIET & LIFESTYLE */}
+
+
               {activeStudioSection === "preventive" && (
                 <div className="space-y-6">
                   <div className="border-b border-slate-300 pb-3">
@@ -3186,6 +3289,8 @@ export default function MedicalReportPage() {
               )}
 
               {/* SECTION 7: DOCTOR Rx PAD (7948684.jpg STYLE) & INK SETUP */}
+
+
               {activeStudioSection === "doctor" && (
                 <div className="space-y-6">
                   <div className="border-b border-slate-300 pb-3">
@@ -3300,6 +3405,7 @@ export default function MedicalReportPage() {
                       </select>
                     </div>
 
+
                     <div>
                       <label className="block text-xs font-bold text-slate-900 mb-2">
                         Primary Chief Complaint
@@ -3313,6 +3419,7 @@ export default function MedicalReportPage() {
                         className="w-full px-4 py-2.5 bg-white border border-slate-400 rounded-lg text-sm font-semibold text-slate-950"
                       />
                     </div>
+
 
                     <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-3 gap-4 bg-[#FAF8F5] p-4 rounded-xl border border-slate-300">
                       <div>
@@ -3366,6 +3473,7 @@ export default function MedicalReportPage() {
                         </select>
                       </div>
 
+
                       <div>
                         <label className="block text-xs font-bold text-slate-900 mb-1.5">
                           Observation Window
@@ -3398,11 +3506,14 @@ export default function MedicalReportPage() {
       {/* =====================================================================
           3-SHEET CLINICAL FOLIO WORKSPACE (CONTINUOUS ZERO-GAP PAGINATION)
       ===================================================================== */}
+      
       <div className="space-y-12 print:space-y-0">
+
         {/* ===================================================================
             SHEET 01: PATIENT CLINICAL DOSSIER, BIOMETRICS & 90-DAY DIARY
             (Continuous flow: no whole-section avoid-break gaps!)
         =================================================================== */}
+
         {(sheetPreviewMode === "all_sheets" ||
           sheetPreviewMode === "sheet1_patient") && (
           <div
@@ -3410,6 +3521,7 @@ export default function MedicalReportPage() {
             className="bg-white text-slate-950 border-2 border-slate-900 rounded-none sm:rounded-lg p-5 sm:p-8 shadow-sm print:border-0 print:shadow-none print:p-0"
           >
             {/* SHEET 01 MASTHEAD */}
+
             <div
               className={`border-b-4 ${theme.headerBorder} pb-3.5 mb-4 flex flex-col sm:flex-row justify-between items-start gap-4 pdf-unit-card`}
             >
@@ -3473,7 +3585,11 @@ export default function MedicalReportPage() {
               </div>
             </div>
 
+
+
             {/* 01 / PATIENT IDENTIFICATION & GYNECOLOGICAL PROFILE */}
+
+
             <div className="mb-4">
               <div
                 className={`${theme.sectionHeaderBg} px-3 py-1.5 flex flex-wrap items-center justify-between gap-2 pdf-section-header`}
@@ -3487,6 +3603,8 @@ export default function MedicalReportPage() {
                   {intake.physicianRegNo ? `(${intake.physicianRegNo})` : ""}
                 </span>
               </div>
+
+
 
               <div className="border-2 border-t-0 border-slate-900">
                 <div className="pdf-grid-4 grid grid-cols-2 sm:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-slate-400 border-b border-slate-400 bg-slate-50/60 pdf-unit-card">
@@ -3544,6 +3662,8 @@ export default function MedicalReportPage() {
                     </div>
                   </div>
 
+
+
                   <div className="p-2.5">
                     <div className="text-[10px] font-extrabold uppercase tracking-wider text-slate-700">
                       Obstetric Parity & Menarche
@@ -3558,6 +3678,8 @@ export default function MedicalReportPage() {
                 </div>
 
                 {/* Compact Clinical Intake Table */}
+
+
                 <table className="w-full text-left border-collapse text-[11px]">
                   <tbody>
                     <tr className="border-b border-slate-400 compact-row">
@@ -3591,6 +3713,8 @@ export default function MedicalReportPage() {
                       </td>
                     </tr>
 
+
+
                     <tr className="border-b border-slate-400 compact-row">
                       <td className="py-1.5 px-2.5 font-extrabold uppercase text-[10px] text-slate-800 bg-slate-100 border-r border-slate-400">
                         Pelvic Pain Radiation
@@ -3605,6 +3729,8 @@ export default function MedicalReportPage() {
                         {intake.ovulatoryMucusProfile}
                       </td>
                     </tr>
+
+
 
                     <tr className="border-b border-slate-400 compact-row">
                       <td className="py-1.5 px-2.5 font-extrabold uppercase text-[10px] text-slate-800 bg-slate-100 border-r border-slate-400">
@@ -3636,6 +3762,8 @@ export default function MedicalReportPage() {
                       </td>
                     </tr>
 
+
+
                     <tr className="border-b border-slate-400 compact-row">
                       <td className="py-1.5 px-2.5 font-extrabold uppercase text-[10px] text-slate-800 bg-slate-100 border-r border-slate-400">
                         Known Diagnoses
@@ -3655,6 +3783,8 @@ export default function MedicalReportPage() {
                       </td>
                     </tr>
 
+
+
                     <tr className="border-b border-slate-400 compact-row">
                       <td className="py-1.5 px-2.5 font-extrabold uppercase text-[10px] text-slate-800 bg-slate-100 border-r border-slate-400">
                         Surgical / Procedural Hx
@@ -3669,6 +3799,8 @@ export default function MedicalReportPage() {
                         {intake.familyHistory.join(", ") || "None significant"}
                       </td>
                     </tr>
+
+
 
                     <tr className="border-b border-slate-400 compact-row">
                       <td className="py-1.5 px-2.5 font-extrabold uppercase text-[10px] text-slate-800 bg-slate-100 border-r border-slate-400">
@@ -3688,6 +3820,8 @@ export default function MedicalReportPage() {
                         {intake.dietHydration.split("•")[0].trim()}
                       </td>
                     </tr>
+
+
 
                     {hasLabValues && (
                       <tr className="border-b border-slate-400 bg-slate-50 compact-row">
@@ -3754,7 +3888,11 @@ export default function MedicalReportPage() {
               </div>
             </div>
 
+
+
             {/* 02 / FIGO AUB-M BIOMETRICS & ANATOMICAL LOCALIZATION (Flows immediately after Section 01!) */}
+
+
             <div className="mb-4 pdf-unit-card">
               <div
                 className={`${theme.sectionHeaderBg} px-3 py-1.5 flex flex-wrap items-center justify-between gap-2 pdf-section-header`}
@@ -3832,6 +3970,8 @@ export default function MedicalReportPage() {
                   </div>
                 </div>
 
+
+
                 <div className="pdf-grid-12 grid grid-cols-1 lg:grid-cols-12 divide-y lg:divide-y-0 lg:divide-x divide-slate-400">
                   <div className="pdf-col-7 lg:col-span-7 p-2.5">
                     <div className="text-[10px] font-extrabold uppercase tracking-wider text-slate-800 mb-1.5">
@@ -3866,6 +4006,8 @@ export default function MedicalReportPage() {
                       </tbody>
                     </table>
                   </div>
+
+
 
                   <div className="pdf-col-5 lg:col-span-5 p-2.5 bg-slate-50/50 flex flex-col justify-between">
                     <div className="text-[10px] font-extrabold uppercase tracking-wider text-slate-800 mb-1">
@@ -3985,6 +4127,8 @@ export default function MedicalReportPage() {
                         </svg>
                       </div>
 
+
+
                       <div className="col-span-7 space-y-1 text-[10.5px]">
                         <div className="flex justify-between border-b border-slate-300 pb-0.5">
                           <span className="font-bold text-slate-800">
@@ -4062,6 +4206,8 @@ export default function MedicalReportPage() {
             </div>
 
             {/* 03 / CONFIRMED MENSTRUAL EPISODES TABLE */}
+
+
             {confirmedEpisodes.length > 0 && (
               <div className="mb-4 pdf-unit-card">
                 <div
@@ -4134,7 +4280,9 @@ export default function MedicalReportPage() {
               </div>
             )}
 
-            {/* 04 / MULTI-SYSTEM REVIEW OF SYSTEMS (ROS) MATRIX (Flows naturally across page boundary if needed!) */}
+            {/* 04 / MULTI-SYSTEM REVIEW OF SYSTEMS (ROS) MATRIX (Flows naturally across page boundary) */}
+
+
             <div className="mb-4">
               <div
                 className={`${theme.sectionHeaderBg} px-3 py-1.5 flex items-center justify-between pdf-section-header`}
@@ -4206,6 +4354,8 @@ export default function MedicalReportPage() {
             </div>
 
             {/* 05 / CHRONOLOGICAL DAILY CLINICAL DIARY */}
+
+
             <div>
               <div
                 className={`${theme.sectionHeaderBg} px-3 py-1.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 pdf-section-header`}
@@ -4250,6 +4400,8 @@ export default function MedicalReportPage() {
                   </div>
                 </div>
               </div>
+
+
 
               {filteredDiaryLogs.length > 0 ? (
                 <table className="w-full table-fixed text-left border-collapse text-[11px] border-2 border-t-0 border-slate-900">
@@ -4374,6 +4526,7 @@ export default function MedicalReportPage() {
                             )}
                           </td>
 
+
                           <td className="py-2 px-2 border-r border-slate-400 break-words leading-snug">
                             {hasSymptomsMoods ? (
                               <div className="space-y-1 text-slate-900">
@@ -4446,10 +4599,14 @@ export default function MedicalReportPage() {
           </div>
         )}
 
+
+
         {/* ===================================================================
             SHEET 02: 1-PAGE CALIBRATED CLINICAL EXAMINATION, 21-ITEM LAB
             CHECKLIST & SOAP WORKSHEET (FITS 100% ON 1 SINGLE A4 PAGE!)
         =================================================================== */}
+
+
         {(sheetPreviewMode === "all_sheets" ||
           sheetPreviewMode === "sheet2_workup") && (
           <div
@@ -4457,6 +4614,8 @@ export default function MedicalReportPage() {
             className="bg-white text-slate-950 border-2 border-slate-900 rounded-none sm:rounded-lg p-5 sm:p-8 shadow-sm print:border-0 print:shadow-none print:p-0"
           >
             {/* SHEET 02 HEADER */}
+
+
             <div
               className={`border-b-4 ${theme.headerBorder} pb-2.5 mb-3 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-2`}
             >
@@ -4487,6 +4646,8 @@ export default function MedicalReportPage() {
             </div>
 
             {/* PART A: IN-CLINIC VITALS, PELVIC & USG EXAM */}
+
+
             <div className="mb-3">
               <div
                 className={`${theme.sectionHeaderBg} px-3 py-1.5 flex flex-wrap items-center justify-between gap-2`}
@@ -4539,6 +4700,8 @@ export default function MedicalReportPage() {
                     </div>
                   </div>
 
+
+
                   <div className="p-2.5 space-y-1.5">
                     <div className="text-[10px] font-extrabold uppercase tracking-wider text-slate-700">
                       2. General Physical, Thyroid, Breast & Hirsutism Exam
@@ -4557,6 +4720,8 @@ export default function MedicalReportPage() {
                 </div>
 
                 {/* Row 2: Per Abdomen & Per Speculum / Bimanual */}
+
+
                 <div className="pdf-grid-2 grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-slate-400 border-b border-slate-400 text-[11px]">
                   <div className="p-2.5 flex flex-col justify-between space-y-2">
                     <div className="text-[10px] font-extrabold uppercase tracking-wider text-slate-800">
@@ -4592,6 +4757,8 @@ export default function MedicalReportPage() {
                 </div>
 
                 {/* Row 3: Full-Width Bedside Pelvic USG Box */}
+
+
                 <div className="p-2.5 text-[11px] space-y-2 bg-slate-50/40">
                   <div className="flex flex-wrap items-center justify-between gap-2">
                     <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-800">
@@ -4631,6 +4798,8 @@ export default function MedicalReportPage() {
             </div>
 
             {/* PART B: 21-ITEM CATEGORIZED DIAGNOSTIC LABORATORY & IMAGING ORDERS */}
+
+
             <div className="mb-3">
               <div
                 className={`${theme.sectionHeaderBg} px-3 py-1.5 flex flex-wrap items-center justify-between gap-2`}
@@ -4687,6 +4856,8 @@ export default function MedicalReportPage() {
             </div>
 
             {/* PART C: STRUCTURED CLINICAL SOAP NOTES & FIGO PALM-COEIN (Fits on the exact same page!) */}
+
+
             <div>
               <div
                 className={`${theme.sectionHeaderBg} px-3 py-1.5 flex flex-wrap items-center justify-between gap-2`}
@@ -4755,9 +4926,8 @@ export default function MedicalReportPage() {
         )}
 
         {/* ===================================================================
-            SHEET 03: 1-PAGE LOCKED PHYSICIAN PRESCRIPTION PAD (Rx) & DUAL
-            SIGNATURE ATTESTATION (MODELED AFTER 7948684.jpg)
-            (Flex-locked so Rx Pad + Signatures NEVER split across pages!)
+            SHEET 03: 1-PAGE LOCKED PHYSICIAN PRESCRIPTION PAD (Rx) 
+
         =================================================================== */}
         {(sheetPreviewMode === "all_sheets" ||
           sheetPreviewMode === "sheet3_rx") && (
@@ -4766,8 +4936,9 @@ export default function MedicalReportPage() {
             className="bg-white text-slate-950 border-2 border-slate-900 rounded-none sm:rounded-lg shadow-sm overflow-hidden flex flex-col justify-between min-h-[960px] print:min-h-0 print:border-0 print:shadow-none"
           >
             {/* TOP & MIDDLE WRAPPER */}
+
             <div className="flex-1 flex flex-col">
-              {/* 1. TOP PRESCRIPTION HEADER (Modeled directly after 7948684.jpg) */}
+             
               <div className="relative pt-6 pb-4 px-8 sm:px-10 flex flex-col sm:flex-row justify-between items-start gap-4">
                 <div
                   className="absolute top-0 left-0 w-[62%] h-32 rounded-br-[80px] pointer-events-none"
@@ -4803,6 +4974,7 @@ export default function MedicalReportPage() {
               </div>
 
               {/* 2. UNDERLINED PATIENT METADATA LINES (Patient Name, Address, Age, Date, Diagnosis) */}
+
               <div className="px-8 sm:px-10 pt-1 pb-4 space-y-2.5 text-xs">
                 <div className="flex items-baseline gap-3">
                   <span className="font-bold text-slate-900 shrink-0 w-24">
@@ -4837,6 +5009,7 @@ export default function MedicalReportPage() {
                   </div>
                 </div>
 
+
                 <div className="pdf-grid-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="flex items-baseline gap-3">
                     <span className="font-bold text-slate-900 shrink-0 w-24">
@@ -4853,6 +5026,7 @@ export default function MedicalReportPage() {
                         : ""}
                     </div>
                   </div>
+
 
                   <div className="flex items-baseline gap-3">
                     <span className="font-bold text-slate-900 shrink-0 w-14 sm:text-right">
@@ -4883,6 +5057,8 @@ export default function MedicalReportPage() {
               </div>
 
               {/* 3. FLEX-EXPANDING Rx WRITING CANVAS WITH CENTERED CADUCEUS WATERMARK */}
+
+
               <div className="px-8 sm:px-10 py-2 relative flex-1 flex flex-col justify-between min-h-[340px]">
                 <div className="relative z-10 flex items-center justify-between">
                   <div
@@ -4901,6 +5077,8 @@ export default function MedicalReportPage() {
                 </div>
 
                 {/* Centered Caduceus Watermark Behind Writing Space */}
+
+
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                   <CaduceusMedicalEmblem
                     className="w-64 h-64"
@@ -4910,6 +5088,8 @@ export default function MedicalReportPage() {
                 </div>
 
                 {/* Writing Area Body */}
+
+
                 <div className="relative z-10 flex-1 my-2 flex flex-col justify-end">
                   {intake.rxPadStyle === "faint_lines" && (
                     <div className="space-y-6 my-auto">
@@ -4963,7 +5143,9 @@ export default function MedicalReportPage() {
             
             <div className="px-8 sm:px-10 pb-5 pt-2 shrink-0">
               <div className="pdf-grid-2 grid grid-cols-1 sm:grid-cols-2 gap-10 pt-3 border-t border-slate-300">
+
                 {/* Left Column: Patient Record Attestation & Signature */}
+
                 <div className="flex flex-col justify-between">
                   <div>
                     <div className="text-[10.5px] font-extrabold uppercase tracking-wider text-slate-950">
@@ -4976,6 +5158,7 @@ export default function MedicalReportPage() {
                     </p>
 
                     {/* 96px (h-24) Clean Signing Space Above Line */}
+                    
                     <div className="h-24 w-full" />
                   </div>
 
