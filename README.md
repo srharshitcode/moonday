@@ -1,8 +1,10 @@
 # MoonDay: Your Cycle. Your Space. Your Story.
 
-**A private, offline first web application built for menstrual cycle intelligence, daily symptom tracking, doctor ready reporting, and honest self care.**
+**A private, offline first web application built for menstrual cycle intelligence, daily symptom tracking, doctor ready reporting, focused work, and honest self care.**
 
 Created, designed, and engineered by **srharshitcode** and **porcupine**.
+
+---
 
 ## Table of Contents
 
@@ -22,7 +24,7 @@ Created, designed, and engineered by **srharshitcode** and **porcupine**.
 12. [Why Your Cycle Is the Fifth Vital Sign of Your Health](#12-why-your-cycle-is-the-fifth-vital-sign-of-your-health)
 13. [How the Brain and Ovaries Talk: The HPO Axis Explained Simply](#13-how-the-brain-and-ovaries-talk-the-hpo-axis-explained-simply)
 14. [Four Days in Her Life: How MoonDay Actually Helps When It Matters](#14-four-days-in-her-life-how-moonday-actually-helps-when-it-matters)
-
+---
 ### Part II: Your Four Inner Seasons (Living in Harmony With Your Biology)
 
 15. [Your Four Inner Seasons: Learning to Stop Fighting Yourself](#15-your-four-inner-seasons-learning-to-stop-fighting-yourself)
@@ -36,16 +38,17 @@ Created, designed, and engineered by **srharshitcode** and **porcupine**.
 23. [Progesterone, Allopregnanolone, and the Late Luteal Caloric Burn](#23-progesterone-allopregnanolone-and-the-late-luteal-caloric-burn)
 24. [Why Premenstrual Days Demand Extra Kindness and Steady Blood Sugar](#24-why-premenstrual-days-demand-extra-kindness-and-steady-blood-sugar)
 
-### Part III: Inside MoonDay (Navigation, Daily Logging, and Cycle Precision)
+---
+### Part III: Inside MoonDay (Navigation, Dashboard, Daily Logging, and Cycle Precision)
 
 25. [How MoonDay Compares to Ordinary Trackers](#25-how-moonday-compares-to-ordinary-trackers)
-26. [A Tour of the App: How Your Space and Personal Space Work Together](#26-a-tour-of-the-app-how-your-space-and-personal-space-work-together)
-27. [The Dashboard: A Calm Morning Check In Without the Clutter](#27-the-dashboard-a-calm-morning-check-in-without-the-clutter)
+26. [A Tour of the App: Navigation Shell, Your Cycle Space, and Personal Sanctuary](#26-a-tour-of-the-app-navigation-shell-your-cycle-space-and-personal-sanctuary)
+27. [The Dashboard: Editorial Telemetry, Phase Concierge, and Daily Rituals](#27-the-dashboard-editorial-telemetry-phase-concierge-and-daily-rituals)
 28. [History and Search: Finding Patterns You Would Otherwise Forget](#28-history-and-search-finding-patterns-you-would-otherwise-forget)
 29. [The Daily Log: Designed for Tired Eyes and One Handed Use](#29-the-daily-log-designed-for-tired-eyes-and-one-handed-use)
 30. [Progressive Disclosure: Why Collapsible Accordions Beat Endless Forms](#30-progressive-disclosure-why-collapsible-accordions-beat-endless-forms)
 31. [Tactile Pill Chips and Instant Background Saving](#31-tactile-pill-chips-and-instant-background-saving)
-32. [Moving Through Time: The Date Navigator and Backfilling Past Days](#32-moving-through-time-the-date-navigator-and-backfilling-past-days)
+32. [Moving Through Time: The 7 Day Date Strip, Symptom Search, and Backfilling Past Days](#32-moving-through-time-the-7-day-date-strip-symptom-search-and-backfilling-past-days)
 33. [Copy Yesterday's Log: Because Day Two Feels a Lot Like Day One](#33-copy-yesterdays-log-because-day-two-feels-a-lot-like-day-one)
 34. [Confirmed Start Days Versus Spotting: Getting Your Cycle Math Right](#34-confirmed-start-days-versus-spotting-getting-your-cycle-math-right)
 35. [Why Mixing Spotting With Period Starts Ruins Standard App Predictions](#35-why-mixing-spotting-with-period-starts-ruins-standard-app-predictions)
@@ -56,7 +59,7 @@ Created, designed, and engineered by **srharshitcode** and **porcupine**.
 40. [Pale Pinks and Coral Tints: Estrogen, Iron, and Mid Cycle Clues](#40-pale-pinks-and-coral-tints-estrogen-iron-and-mid-cycle-clues)
 41. [Rust, Cinnamon, and Coffee Browns: Old Blood Versus Early Luteal Dips](#41-rust-cinnamon-and-coffee-browns-old-blood-versus-early-luteal-dips)
 42. [Using the Custom Color Wheel for Personal Baseline Tracking](#42-using-the-custom-color-wheel-for-personal-baseline-tracking)
-
+---
 ### Part IV: The 104 Symptom Matrix and 61 Mood Spectrum
 
 43. [The 104 Symptom Matrix: Giving a Name to Everything You Feel](#43-the-104-symptom-matrix-giving-a-name-to-everything-you-feel)
@@ -73,8 +76,8 @@ Created, designed, and engineered by **srharshitcode** and **porcupine**.
 54. [Immunity and Period Flu: Why Sore Throats and Congestion Appear Before Bleeding](#54-immunity-and-period-flu-why-sore-throats-and-congestion-appear-before-bleeding)
 55. [The Heavy Mental Days: Intrusive Thoughts, Paranoia, and Rejection Sensitivity](#55-the-heavy-mental-days-intrusive-thoughts-paranoia-and-rejection-sensitivity)
 56. [The 61 Mood Spectrum: Room for Every Emotion at Once](#56-the-61-mood-spectrum-room-for-every-emotion-at-once)
-
-### Part V: Cervical Fluid, Cravings, Movement, and the 1 to 1 Self Care Engine
+---
+### Part V: Cervical Fluid, Cravings, Movement, and the Self Care Studio
 
 57. [Tracking Cervical Fluid: Reading Your Body's Own Fertility Signals](#57-tracking-cervical-fluid-reading-your-bodys-own-fertility-signals)
 58. [Understanding Consistency, Amount, and Odor Without Shame](#58-understanding-consistency-amount-and-odor-without-shame)
@@ -82,35 +85,41 @@ Created, designed, and engineered by **srharshitcode** and **porcupine**.
 60. [The 41 Craving Presets and Mindful Nourishment](#60-the-41-craving-presets-and-mindful-nourishment)
 61. [Movement and Exercise: Matching Your Workouts to Your Energy](#61-movement-and-exercise-matching-your-workouts-to-your-energy)
 62. [Why Rest Days and Gentle Stretching Count as Real Activity](#62-why-rest-days-and-gentle-stretching-count-as-real-activity)
-63. [Personal Notes: Naming What You Need Right Now](#63-personal-notes-naming-what-you-need-right-now)
-64. [The 1 to 1 Self Care Engine: An App That Actually Answers Back](#64-the-1-to-1-self-care-engine-an-app-that-actually-answers-back)
+63. [Private Intimacy Tracking and Rich Text Personal Notes](#63-private-intimacy-tracking-and-rich-text-personal-notes)
+64. [The 1 to 1 Self Care Engine, Breathwork Pacer, and Somatic Studio](#64-the-1-to-1-self-care-engine-breathwork-pacer-and-somatic-studio)
 65. [The Real Biology Behind MoonDay's Comfort Suggestions](#65-the-real-biology-behind-moondays-comfort-suggestions)
-66. [The Daily Comfort Checklist: Small Wins on Hard Days](#66-the-daily-comfort-checklist-small-wins-on-hard-days)
-67. [The 230 Plus Care Directory: A Pocket Guide for You and Your Friends](#67-the-230-plus-care-directory-a-pocket-guide-for-you-and-your-friends)
-
-### Part VI: Cycle Mathematics, Clinical Reports, Education, and Privacy
+66. [The Daily Comfort Checklist: Small Wins and Custom Habits](#66-the-daily-comfort-checklist-small-wins-and-custom-habits)
+67. [The 685 Guide Continuous Care Directory: Symptom, Mood, and Hormone Library](#67-the-685-guide-continuous-care-directory-symptom-mood-and-hormone-library)
+---
+### Part VI: Cycle Mathematics, Reports, Clinical Dossier, Journal, Reminders, and Pomodoro
 
 68. [How MoonDay Calculates Your Cycle Without Guessing](#68-how-moonday-calculates-your-cycle-without-guessing)
 69. [Why Luteal Phase Math Beats the Old Day 14 Myth](#69-why-luteal-phase-math-beats-the-old-day-14-myth)
 70. [The Interactive MoonDay Calendar: Seeing Your Month Clearly](#70-the-interactive-moonday-calendar-seeing-your-month-clearly)
-71. [Cycle Insights and Visual Reports: Spotting Long Term Shifts](#71-cycle-insights-and-visual-reports-spotting-long-term-shifts)
-72. [The 90 Day Medical Report: Walking Into Your Doctor's Office Prepared](#72-the-90-day-medical-report-walking-into-your-doctors-office-prepared)
+71. [Cycle Insights, Interactive Ruler Analytics, and the Orbital Phase Ring](#71-cycle-insights-interactive-ruler-analytics-and-the-orbital-phase-ring)
+72. [The 3 Sheet OB-GYN Clinical Dossier, Exam Tick-Sheet, and Official Rx Pad](#72-the-3-sheet-ob-gyn-clinical-dossier-exam-tick-sheet-and-official-rx-pad)
 73. [Closing the Gap Between What Women Feel and What Doctors Hear](#73-closing-the-gap-between-what-women-feel-and-what-doctors-hear)
 74. [The 437 Topic Education Library: Answers Without Judgment](#74-the-437-topic-education-library-answers-without-judgment)
-75. [Three Learning Paths: From First Period to Clinical Health and Relationships](#75-three-learning-paths-from-first-period-to-clinical-health-and-relationships)
-76. [The Personal Journal and Private Notes for Your Partner](#76-the-personal-journal-and-private-notes-for-your-partner)
-77. [Custom Reminders, 4 Digit PIN Lock, Private Mode, and Raw JSON Backups](#77-custom-reminders-4-digit-pin-lock-private-mode-and-raw-json-backups)
+75. [Three Learning Paths and Age-Restricted Library Protection](#75-three-learning-paths-and-age-restricted-library-protection)
+76. [The Personal Journal Studio and Private Notes for Your Partner](#76-the-personal-journal-studio-and-private-notes-for-your-partner)
+77. [Reminders, Clinical Health Timers, Alarms, Soft Chimes, and Privacy Controls](#77-reminders-clinical-health-timers-alarms-soft-chimes-and-privacy-controls)
+78. [Pomodoro Focus Sanctuary: Making Space for Deep Work and Gentle Rest](#78-pomodoro-focus-sanctuary-making-space-for-deep-work-and-gentle-rest)
+---
+### Part VII: Visual Craft, Web Push, Auth Resilience, Full Stack Engineering, and Mathematics
 
-### Part VII: Visual Craft, Full Stack Engineering, Offline Sync, and Co Creator Story
+79. [Daylight Design: Eye Comfort Light Mode in Warm Silk and Antique Cashmere](#79-daylight-design-eye-comfort-light-mode-in-warm-silk-and-antique-cashmere)
+80. [Nighttime Design: Velvet Mulberry and Warm Truffle Dark Mode](#80-nighttime-design-velvet-mulberry-and-warm-truffle-dark-mode)
+81. [Global Smooth Scrolling, Silk Scrollbars, and Page Specific UI Craft](#81-global-smooth-scrolling-silk-scrollbars-and-page-specific-ui-craft)
+82. [Under the Hood: Full Stack Architecture Overview](#82-under-the-hood-full-stack-architecture-overview)
+83. [Closed Tab Web Push Engine and Background Service Worker Architecture](#83-closed-tab-web-push-engine-and-background-service-worker-architecture)
+84. [Authentication Studio, Request Proxy, and Self Healing Session Persistence](#84-authentication-studio-request-proxy-and-self-healing-session-persistence)
+85. [Next.js 16 App Router, React 19, Turbopack, and Tailwind CSS v4 Engineering](#85-nextjs-16-app-router-react-19-turbopack-and-tailwind-css-v4-engineering)
+86. [Offline First Engineering, Monotonic Timestamps, and Relational Schema](#86-offline-first-engineering-monotonic-timestamps-and-relational-schema)
+87. [Complete Mathematical Formulas and Computational Reference](#87-complete-mathematical-formulas-and-computational-reference)
+88. [Solving Sync Conflicts, PWA Setup, Local Installation, and Vercel Deployment](#88-solving-sync-conflicts-pwa-setup-local-installation-and-vercel-deployment)
+89. [The Story Behind MoonDay: Credits and Ownership by srharshitcode and porcupine](#89-the-story-behind-moonday-credits-and-ownership-by-srharshitcode-and-porcupine)
 
-78. [Daylight Design: Why We Chose Warm Ivory and Rose Ink Over Hospital White](#78-daylight-design-why-we-chose-warm-ivory-and-rose-ink-over-hospital-white)
-79. [Nighttime Design: Crafting the Soft Aubergine Dark Mode](#79-nighttime-design-crafting-the-soft-aubergine-dark-mode)
-80. [Under the Hood: Full Stack Architecture Overview](#80-under-the-hood-full-stack-architecture-overview)
-81. [Next.js 16 App Router, React 19, and Turbopack Engineering](#81-nextjs-16-app-router-react-19-and-turbopack-engineering)
-82. [Tailwind CSS v4 and the Global Dark Mode CSS Interceptor Trick](#82-tailwind-css-v4-and-the-global-dark-mode-css-interceptor-trick)
-83. [Offline First Engineering: How IndexedDB Protects Every Keystroke](#83-offline-first-engineering-how-indexeddb-protects-every-keystroke)
-84. [Solving Sync Conflicts, PWA Setup, Local Installation, and Vercel Deployment](#84-solving-sync-conflicts-pwa-setup-local-installation-and-vercel-deployment)
-85. [The Story Behind MoonDay: Credits and Ownership by srharshitcode and porcupine](#85-the-story-behind-moonday-credits-and-ownership-by-srharshitcode-and-porcupine)
+***
 
 ## Part I: The Story Every Woman Knows (Vision, Empathy, and Real Life)
 
@@ -219,7 +228,7 @@ In many trackers, you are allowed to tap "Severe cramps," "Spotting," or "Feelin
 
 Think about how cruel that design is. When someone is in physical pain or feeling emotionally vulnerable, withholding basic comfort advice and cycle education behind a credit card screen is wrong.
 
-In MoonDay, every single self care recommendation, every single one of the 437 educational articles, the 90 day printable medical report for your doctor, and the full 104 symptom tracker are completely open and unlocked from day one.
+In MoonDay, every single self care recommendation, every single one of the 437 educational articles, the 3-sheet printable OB-GYN medical dossier for your doctor, and the full 104 symptom tracker are completely open and unlocked from day one.
 
 ### 11. What MoonDay Stands For: Four Promises We Refused to Compromise On
 
@@ -264,14 +273,14 @@ If you experience high stress, travel across time zones, catch a virus, or under
 To see how all of these pieces come together in real life, walk through four ordinary moments in a woman's month with MoonDay:
 
 * **Moment 1: Late Night on Day 1**
-  It is 11:30 PM and her period just started with heavy cramping. She opens MoonDay on her phone in bed. Because **Soft Aubergine Dark Mode** is active, the screen glows in a restful deep plum (`#161114`) that does not hurt her eyes. She taps `Confirmed Start Day`, selects `Heavy` flow, picks `Ruby Red (#9B111E)`, and taps `Severe cramps`, `Lower-back pain`, and `Exhausted`. She switches to the **Self Care** tab, where MoonDay immediately gives her three targeted comfort cards: using a heating pad for $20\text{ minutes}$ to block uterine pain receptors, placing a pillow under her knees to take strain off her lower spine, and giving herself permission to rest tomorrow.
+  It is 11:30 PM and her period just started with heavy cramping. She opens MoonDay on her phone in bed. Because **Velvet Mulberry Dark Mode** is active, the screen glows in a restful deep mulberry (`#1b1518`) that does not hurt her eyes. She taps `Confirmed Start Day`, selects `Heavy` flow, picks `Ruby Red (#9B111E)`, and taps `Severe cramps`, `Lower-back pain`, and `Exhausted`. She switches to the **Self Care** tab, where MoonDay immediately gives her three targeted comfort cards: using a heating pad for $20\text{ minutes}$ to block uterine pain receptors, placing a pillow under her knees to take strain off her lower spine, and giving herself permission to rest tomorrow.
 * **Moment 2: Offline on Day 2**
   The next afternoon, she is commuting home with no mobile data. She opens MoonDay to log Day 2. Instead of tapping all her symptoms again, she clicks **Copy Yesterday's Log**. Her symptoms, mood, and cravings fill in automatically, and she simply updates her flow to `Medium`. An amber banner lets her know she is offline and that her draft is safely stored on her device. When she gets home to Wi-Fi, it syncs to the cloud automatically.
 * **Moment 3: Emotional Heavy Weather on Day 25**
   Three weeks later, she feels overwhelmed, tearful, and craves dark chocolate. Checking her MoonDay Calendar, she sees she is in the late **Luteal Phase**. She logs `Feeling overwhelmed`, `Tearfulness`, and `Chocolate`. In the *What you need right now* note box, she writes `"Quiet time and a hug"`, and writes a private note in *Notes for Your Partner*. Her Self Care page validates her chocolate craving (noting its magnesium content) and walks her through the **Rule of One** to calm her overwhelm.
 * **Moment 4: The Doctor's Appointment**
-  Before her annual gynecology visit, she opens the **Medical Report** tab and clicks **Print / Save as PDF**. She hands her doctor a clean, one page **90 Day Patient Cycle History Report** showing her exact cycle length average, bleed duration, flow colors, and symptom history. Instead of guessing dates from memory, she has clear clinical evidence in her hands.
-
+  Before her annual gynecology visit, she opens the **Medical Report** tab and clicks **Print / Export Zero-Gap PDF**. She hands her doctor a clean **3-Sheet OB-GYN Clinical Dossier** showing her exact cycle length average, bleed duration, anthropometrics, FIGO AUB clinical summary, anatomical pain localization map, symptom incidence, examination tick-sheet, and official prescription pad. Instead of guessing dates from memory, she has clear clinical evidence in her hands.
+---
 ## Part II: Your Four Inner Seasons (Living in Harmony With Your Biology)
 
 ### 15. Your Four Inner Seasons: Learning to Stop Fighting Yourself
@@ -364,7 +373,9 @@ During the late luteal days, your cells also become slightly more insulin resist
 
 That is why MoonDay's luteal care guides encourage eating complex carbohydrates paired with protein every $3$ to $4\text{ hours}$, buffering caffeine with food, turning down harsh lights and noise in the evening, and treating yourself with extra patience.
 
-## Part III: Inside MoonDay (Navigation, Daily Logging, and Cycle Precision)
+---
+
+## Part III: Inside MoonDay (Navigation, Dashboard, Daily Logging, and Cycle Precision)
 
 ### 25. How MoonDay Compares to Ordinary Trackers
 
@@ -372,59 +383,68 @@ Here is how MoonDay compares side by side against mainstream commercial period a
 
 | Feature Area | Mainstream Commercial Period Apps | Manual Phone Notes or Calendars | **MoonDay** |
 | :--- | :--- | :--- | :--- |
-| **Symptom Granularity** | 15 to 25 basic icons | Manual typing from scratch | **104 specific symptoms across 9 clinical categories** |
+| **Symptom Granularity** | 15 to 25 basic icons | Manual typing from scratch | **104 specific symptoms across 9 clinical categories + instant search** |
 | **Mood Tracking** | 5 or 6 basic emoji faces | None | **61 distinct human moods + 1 tap "Everything is fine" chip** |
 | **Flow Color Shades** | 3 or 4 basic colors | None | **55 named color swatches + full Custom Color Picker** |
 | **Vaginal Discharge** | 3 or 4 basic buttons | None | **24 observation types + Consistency, Amount, and Odor selectors** |
 | **Food Cravings** | Generic "Sweet" or "Salty" | Manual typing | **41 one tap craving presets + combinable custom notes** |
-| **Self Care Engine** | Locked behind paid subscriptions | None | **230+ free, instant 1 to 1 care cards matched to your daily log** |
+| **Self Care Engine** | Locked behind paid subscriptions | None | **685 free care guides, 4 breathwork pacers, 4 warmth timers & herbal elixirs** |
 | **Ovulation Calculation** | Rigid Day 14 assumption | Manual counting | **True luteal phase math ($D_{\text{ovulation}} = L_{\text{cycle}} - L_{\text{luteal}}$)** |
-| **Medical Export** | Paid PDF upgrade or cluttered screenshots | Flipping through old notes | **1 Click 90 Day Printable Patient Cycle History Report** |
-| **Health Education** | Short promotional blog posts | Searching random forums | **437 in depth biology and wellness topics across 3 life stages** |
-| **Offline Resilience** | Fails or loses form data when Wi-Fi drops | Local only, no cloud sync | **Instant IndexedDB local drafts + automatic background cloud sync** |
-| **Nighttime Comfort** | Glaring white or harsh pitch black | System default | **Custom Soft Aubergine Dark Mode (`#161114` and `#231a1e`)** |
-| **Privacy Controls** | Ad SDKs and data brokers | Unstructured text | **4 Digit PIN Lock, Private Mode, and 1 Click Raw JSON Backup** |
+| **Medical Export** | Paid PDF upgrade or cluttered screenshots | Flipping through old notes | **3-Sheet OB-GYN Clinical Dossier, Exam Tick-Sheet & Official Rx Pad** |
+| **Health Education** | Short promotional blog posts | Searching random forums | **437 in depth biology and wellness topics across 3 life stages + age lock** |
+| **Focus & Timers** | Not offered | Separate phone apps | **Fullscreen Pomodoro Sanctuary + 10 Clinical Health Timers + Closed-Tab Web Push** |
+| **Offline Resilience** | Fails or loses form data when Wi-Fi drops | Local only, no cloud sync | **Instant IndexedDB local drafts + monotonic clock-drift guards + auto cloud sync** |
+| **Nighttime Comfort** | Glaring white or harsh pitch black | System default | **Eye-Comfort Cashmere Light & Velvet Mulberry Dark Mode (`#1b1518` / `#241c20`)** |
+| **Privacy Controls** | Ad SDKs and data brokers | Unstructured text | **4 Digit PIN Lock, Privacy Blur (`Ctrl+Shift+X`), Private Mode & Raw JSON Backup** |
 
-### 26. A Tour of the App: How Your Space and Personal Space Work Together
+### 26. A Tour of the App: Navigation Shell, Your Cycle Space, and Personal Sanctuary
 
-MoonDay's navigation sidebar (`src/components/Sidebar.tsx`) divides the application into two clear sections so you can move effortlessly between objective health tracking and private personal reflection:
+MoonDay's application shell (`src/components/AppNavigationShell.tsx`, mounted inside `src/app/(app)/layout.tsx` alongside `AppLockWrapper`) organizes the entire experience into three editorial navigation groups on desktop—paired with a frosted-glass five-slot bottom navigation bar (*Home*, *Calendar*, floating *Log* CTA, *Journal*, and *Spaces*) and an expandable **Explore MoonDay Spaces** bottom sheet on mobile:
 
-* **Your Space (Clinical Tracking, Insights, Reports, and Education)**
-  * **Dashboard (`/`)**: Your daily overview showing current cycle status, phase guidance, and quick actions.
-  * **History & Search (`/history`)**: Instant keyword and filter search across all past logs.
+* **Your Cycle Space (Daily Tracking and Chronology)**
+  * **Dashboard (`/`)**: Editorial cycle telemetry, Phase Concierge, inline daily check-in, and sanctuary rituals.
+  * **Log your MoonDay (`/log`)**: Comprehensive daily logging suite with collapsible accordions, rich-text notes, and live autosave.
   * **Calendar (`/calendar`)**: Monthly visual grid mapping confirmed starts, bleeding days, fertile windows, ovulation, and luteal days.
-  * **Log your MoonDay (`/log`)**: The comprehensive daily logging suite with collapsible accordions and live autosave.
-  * **Cycle Insights (`/insights`)**: Analytical breakdowns of cycle regularity and phase lengths.
-  * **Reports (`/reports`)**: Visual frequency charts of your most common physical symptoms and moods.
-  * **Medical Report (`/medical-report`)**: The printable 90 day clinical summary table for your doctor or gynecologist.
+  * **History & Search (`/history`)**: Instant keyword and filter search across all past logs with switchable Card and Table views.
+* **Clinical & Insights (Patterns, Reporting, and Knowledge)**
+  * **Cycle Insights (`/insights`)**: Server-computed cycle length, bleed duration, and phase estimates.
+  * **Reports (`/reports`)**: Interactive crosshair ruler charts, symptom/mood frequency analytics, and the orbital `<CyclePhaseRing />`.
+  * **Medical Report (`/medical-report`)**: Three-sheet OB-GYN Clinical Dossier, Examination Tick-Sheet, and Official Prescription Pad.
   * **Education (`/education`)**: The 437 topic encyclopedia organized into Teen, Adult Clinical, and Relationship tabs.
-* **Personal Space (Journaling, Partner Notes, Self Care, and Security)**
-  * **Personal Journal (`/journal`)**: A private diary for long form thoughts and daily reflections.
-  * **Private Notes (`/notes`)**: Your private collection of dated notes written for your husband or partner.
-  * **Self Care (`/self-care`)**: Your 1 to 1 personalized daily comfort cards, daily checklist, and searchable 230+ care directory.
-  * **Reminders (`/reminders`)**: Custom gentle nudges for cycle preparation, hydration, and medication.
-  * **Settings (`/settings`)**: Cycle length baselines, 4 Digit PIN Lock, Private Mode toggle, Soft Dark Mode toggle, and Raw JSON backup.
+* **Personal Sanctuary (Focus, Reflection, Care, and Security)**
+  * **Personal Journal (`/journal`)**: Literary journaling studio with 54 guided templates, 6 paper canvases, voice dictation, and ambient soundscapes.
+  * **Pomodoro Focus (`/pomodoro`)**: Distraction-free fullscreen focus studio with an orbital pearl timer, `.txt` task queue, 18 illustrated scenes, and 30 preferences.
+  * **Private Notes (`/notes`)**: Private collection of dated notes written for your husband or partner.
+  * **Self-Care (`/self-care`)**: 1 to 1 personalized daily comfort guides, guided breathwork pacer, warmth timers, herbal teas, and a 685-guide searchable library.
+  * **Reminders (`/reminders`)**: 10 clinical health timers, custom countdowns, daily alarms, soft acoustic chimes, and closed-tab Web Push alerts.
+  * **Settings (`/settings`)**: Cycle length baselines, 4 Digit PIN Lock, Private Mode toggle, Velvet Mulberry Dark Mode toggle, and Raw JSON backup.
 
-At the bottom of the sidebar sits a soft blush card titled **A gentle reminder**, offering a quiet, encouraging thought every time you open the app.
+#### Built In Shell Ergonomics and Privacy Tools
 
-### 27. The Dashboard: A Calm Morning Check In Without the Clutter
+* **Live Greeting Synchronization:** Updating your display name in Settings broadcasts a `moonday:profile-updated` custom browser event so the header greeting (*Hello, [Your Name]*) updates immediately across the shell and Dashboard without a hard page reload.
+* **Instant Privacy Screen Blur (`Ctrl+Shift+X`):** Pressing `Ctrl+Shift+X` or clicking the **Privacy Blur** button in the top bar blurs the main viewport (`blur-md opacity-40 pointer-events-none`) to shield personal health logs whenever someone approaches your screen.
+* **Distraction-Free Fullscreen Handover:** Opening `/pomodoro` dynamically conceals global `<aside>`, `<header>`, and `<nav>` elements for a full-bleed canvas and restores the full navigation shell cleanly on exit.
+* **A Gentle Reminder:** Anchored at the bottom of the desktop sidebar and mobile drawer is a warm blush card offering a calm, biology-grounded reassurance every time you open the app.
 
-When you log into MoonDay, the first thing you see in the header is a warm, personal greeting:
+### 27. The Dashboard: Editorial Telemetry, Phase Concierge, and Daily Rituals
 
-> **Hello, [Your Name]**
-> *Take a deep breath. You're doing great.*
+When you open MoonDay (`src/app/(app)/mainpage.tsx`), the Dashboard greets you in editorial serif typography (*Welcome to your sanctuary, [Your Name]*) and brings your biology, daily check-in, and self-care rituals into one calm command center:
 
-We designed the **Dashboard** to give you clarity in five seconds without overwhelming you with noisy pop ups:
-
-* It shows where you are in your current cycle based on your confirmed start dates and personal averages.
-* It highlights what your body is experiencing in its current phase and gives you one tap access to log today's entry or read your personalized self care suggestions.
-* If **Private Mode** is turned on in Settings, the Dashboard automatically hides sensitive note previews so you can check your cycle status comfortably even when people are sitting nearby.
+* **Phase-Synced Sanctuary Whisper:** Pairs your active inner season (*Inner Winter*, *Inner Spring*, *Inner Summer*, or *Inner Autumn*) with rotating affirmations drawn from both phase-specific guidance and the PostgreSQL `daily_quotes` table.
+* **Dual-Mode Cycle Telemetry Instrument:** Switch seamlessly between **Horizon** (a four-segment proportional phase bar showing Menstrual, Follicular, Ovulatory, and Luteal spans with a live cycle-day marker, countdown card, and four metric tiles) and **Orbital Dial** (embedding the interactive $360^\circ$ `<CyclePhaseRing />`). Includes a one-click **Mark Bleed Start** toggle right in the header.
+* **Connected Daily Check-In Ledger:** Log today's affective states (`Calm`, `Grounded`, `Radiant`, `Focused`, `Tired`, `Sensitive`, `Reflective`) and menstrual flow volume (`Light`, `Medium`, `Heavy`, `Spotting`, `No bleeding`) directly from the Dashboard with instant Supabase upsert synchronization and a direct link to the full clinical check-in (`/log`).
+* **Endocrine Care Dossier & Three-Cycle Forward Projection:** Four numbered phase-specific tabs (**01 Nourishment**, **02 Movement**, **03 Dermal Care**, **04 Cognition**) adapt dynamically to your current cycle phase, paired below with a **Three-Cycle Forward Projection** forecasting bleed ranges and ovulation windows for the next three cycles.
+* **Sanctuary Rituals & Cellular Hydration Cadence:** Log water intake in 8 tactile $250\text{ ml}$ segments toward a $2{,}000\text{ ml}$ daily target alongside three phase-matched daily practices persisted per date in `localStorage` (`moonday_rituals_YYYY-MM-DD`), plus a quick card displaying your latest Personal Journal Studio entry.
+* **Seven-Day Cycle Ledger & Sanctuary Directory:** Summarizes your last five logged days (excluding today) with flow, mood, and symptom counts alongside direct cards to Calendar, Analytics, Journal Studio, Self-Care (685 guides), and the Clinical Physician Dossier.
 
 ### 28. History and Search: Finding Patterns You Would Otherwise Forget
 
 When a symptom only shows up once or twice a month, it is nearly impossible to remember the exact dates it happened three months ago.
 
-The **History & Search** module (`/history`) lets you search across your entire logging history by symptom name, mood, flow intensity, craving, or note text. If you wake up with a stiff neck, a sudden wave of dizziness, or vivid dreams and type that word into History & Search, MoonDay shows you every past date you logged it. Within seconds, you can see whether a symptom consistently appears two days before your period or right around ovulation.
+The **History & Search** module (`/history`, `src/app/(app)/history/HistoryClient.tsx`) loads your `daily_logs` in reverse chronological order and lets you filter across symptoms, moods, and dates in real time:
+
+* **Dual View Modes:** Switch instantaneously between **Card View** (clean date cards highlighting `Moonday Start` badges, Flow/Color, Moods, and Symptoms) and **Table View** (a compact five-column clinical ledger covering `Date`, `Bleeding`, `Flow / Color`, `Symptoms`, and `Moods`).
+* **Clean Data Formatting (`formatArrayData`):** Automatically parses stored array or JSON-string fields and strips empty-array artifacts so unlogged fields always display cleanly as `—`.
 
 ### 29. The Daily Log: Designed for Tired Eyes and One Handed Use
 
@@ -443,7 +463,7 @@ If an app puts 104 symptoms, 61 moods, 55 colors, 41 cravings, and 33 activities
 MoonDay uses **Progressive Disclosure** through clean `Accordion` cards:
 
 * When you open `/log`, only **Moonday Details** is expanded by default so you can log your period start, end, or flow in five seconds.
-* Below it sit neatly folded cards for **Mood & Feelings**, **Physical Symptoms**, **Vaginal Discharge**, **Food Cravings**, **Physical Activity**, and **Personal Notes**.
+* Below it sit neatly folded cards for **Mood & Feelings**, **Physical Symptoms**, **Vaginal Discharge**, **Food Cravings**, **Physical Activity**, **Sex & Sex Drive**, and **Personal Notes**.
 * Tapping any card header smoothly opens that section. And when you use **Copy Yesterday's Log**, MoonDay intelligently auto opens whichever sections contain copied data so you can review them right away.
 
 ### 31. Tactile Pill Chips and Instant Background Saving
@@ -469,13 +489,15 @@ Whenever you tap a chip:
 2. A React `useEffect` watching `generatePayload()` triggers `triggerAutosave(generatePayload(), true)`.
 3. Within $1000\text{ ms}$, your updated log is written to `IndexedDB` and synced to Supabase in the background, even before you scroll down to click the main Save button.
 
-### 32. Moving Through Time: The Date Navigator and Backfilling Past Days
+### 32. Moving Through Time: The 7 Day Date Strip, Symptom Search, and Backfilling Past Days
 
-At the top of `/log` sits the **Date Navigator** bar:
+At the top of `/log` (`src/app/(app)/log/LogClient.tsx`) sits the **Date Navigator** card:
 
-* **Step Backward or Forward**: Click the left chevron (`<`) or right chevron (`>`) to move one day backward or forward (`handleDateScroll(-1)` and `handleDateScroll(1)`).
-* **Jump to Any Date**: Click the center date heading (for example, `Sunday, November 8th`) to open a native date picker (`<input type="date" />`) and jump directly to any past date.
-* **Automatic Record Hydration**: Changing the date immediately runs `fetchExistingLog(newDate)`, loading that day's saved symptoms, moods, flow, colors, and partner notes. If a record already exists for that date, MoonDay switches the primary button label to **Update MoonDay Log** and displays a **Delete** button so you have full control over past entries.
+* **Step Backward or Forward:** Click the left (`<`) or right (`>`) chevrons to step one day backward or forward (`handleDateScroll(-1)` / `handleDateScroll(1)`).
+* **7-Day Interactive Date Strip:** Displays seven tappable day pills centered on the active date ($-3$ through $+3\text{ days}$) with a **Return to Today** shortcut whenever you are backfilling a past entry, plus an **Expand All / Collapse All Sections** toggle.
+* **Direct Calendar Jump:** Clicking the center date header opens `/calendar` so you can jump directly to any month in your cycle history.
+* **Instant Symptom Filtering:** Inside the **Physical Symptoms** accordion, a live **Quick search 104 symptoms** input filters across all 9 clinical categories while displaying per-category active symptom counters.
+* **Automatic Record Hydration:** Changing the date immediately runs `fetchExistingLog(newDate)`, hydrating `daily_logs`, `intimacy_entries`, `husband_notes`, local partner-note backups, and any unsynced IndexedDB draft. Existing records switch the submit button to **Update MoonDay Log** and reveal a **Delete Log** action.
 
 ### 33. Copy Yesterday's Log: Because Day Two Feels a Lot Like Day One
 
@@ -524,7 +546,7 @@ When you log `Very heavy` or `Heavy`, MoonDay's Self Care page automatically add
 
 Every woman notices variations in the color of her menstrual flow, yet most trackers only offer "Red," "Brown," or "Pink."
 
-MoonDay features a curated, scrollable grid of **55 named color swatches** inside **Moonday Details**, storing both the human readable shade name (`period_color`) and the exact hexadecimal color value (`period_color_hex`). Having 55 shades means you never have to guess how to describe what you see, and your 90 day medical report displays the exact shade name for your doctor.
+MoonDay features a curated, scrollable grid of **55 named color swatches** inside **Moonday Details**, storing both the human readable shade name (`period_color`) and the exact hexadecimal color value (`period_color_hex`). Having 55 shades means you never have to guess how to describe what you see, and your clinical medical dossier displays the exact shade name for your doctor.
 
 ### 38. Bright and Fresh Reds: What Crimson and Ruby Flow Tell You
 
@@ -563,6 +585,7 @@ When blood is exposed to oxygen over hours or days, iron in the hemoglobin oxidi
 
 If you ever want to record a shade outside the 55 presets, clicking **Custom Picker** at the top right of the color section reveals a native HTML5 color input (`<input type="color" />`). Choosing any color on the wheel saves `name: "Custom"` along with your exact hex code (`period_color_hex`), which renders as a live color dot on your calendar and reports.
 
+---
 ## Part IV: The 104 Symptom Matrix and 61 Mood Spectrum
 
 ### 43. The 104 Symptom Matrix: Giving a Name to Everything You Feel
@@ -672,7 +695,9 @@ In the **Mood & Feelings** accordion, MoonDay provides **61 distinct emotional c
 
 Because human emotions are layered, you can select as many moods as you want on the same day, such as `Tired`, `Vulnerable`, and `Grateful`, and receive a personalized comfort card for each one.
 
-## Part V: Cervical Fluid, Cravings, Movement, and the 1 to 1 Self Care Engine
+---
+
+## Part V: Cervical Fluid, Cravings, Movement, and the Self Care Studio
 
 ### 57. Tracking Cervical Fluid: Reading Your Body's Own Fertility Signals
 
@@ -722,60 +747,58 @@ Notice how MoonDay places `Rest day`, `Stretching`, `Light movement`, `Meditatio
 
 Most fitness apps punish you if you take a rest day during your period by breaking your streak or flashing red rings. MoonDay honours cycle synced movement: pushing for a personal record in `Strength training` during your follicular or ovulatory phase is wonderful, and choosing `Rest day` or `Stretching` on Day 1 of your period is equally wise.
 
-### 63. Personal Notes: Naming What You Need Right Now
+### 63. Private Intimacy Tracking and Rich Text Personal Notes
 
-Inside the **Personal Notes** accordion, MoonDay gives you three distinct text areas:
+Below Physical Activity, MoonDay separates sensitive intimacy records from clinical exports and upgrades daily note-taking with a built-in rich-text editor (`src/app/(app)/log/LogClient.tsx`):
 
-1. **What you need right now (`what_you_need_note`)**: Prompted with *"E.g., Reassurance, a heating pad, quiet time, a hug."* Naming your emotional or physical need takes it out of a swirl of vague distress and turns it into something concrete you can give yourself or ask for.
-2. **Notes for Your Partner (`husbandNote`)**: A private, rose bordered box where you can write notes for your partner. When **Private Mode** is enabled in Settings, this box hides automatically.
-3. **General daily note (`note`)**: Your open space for any additional context about your day.
+#### Sex & Sex Drive (`intimacy_entries` — Strictly Private)
+* Clearly marked with a privacy banner confirming that intimacy logs are **excluded from Dashboard summaries and OB-GYN Medical Reports**.
+* Tracks **32 activity chips** (`INTIMACY_ACTS`), **Libido / Sex Drive** (`Low`, `Neutral`, `High`, `Very High`), and **Orgasm reached?** (`Yes` / `No`), persisted to Supabase's `intimacy_entries` table with monotonic `buildSyncTimestamps`.
 
-### 64. The 1 to 1 Self Care Engine: An App That Actually Answers Back
+#### Personal Notes With Embedded Rich-Text Editor (`RichTextEditor`)
+All three note fields inside the **Personal Notes** accordion—**What you need right now** (`what_you_need_note`), **Notes for Your Partner** (`husband_notes`, hidden automatically when Private Mode is enabled), and **General daily note** (`note`)—use MoonDay's custom `RichTextEditor`:
 
-When you visit **Self Care & Comfort** (`/self-care`), `SelfCareClient.tsx` fetches today's log from `daily_logs` and runs it through our **1 to 1 Self Care Engine**.
+* **Formatting Controls:** Bold, Italic, Underline, an **8-step dynamic Font Size selector** (`10px` Very Tiny through `36px` Huge, applying to either highlighted text or upcoming typing), Clear Formatting, native **Text Color** and **Highlight Color** wheels, clickable **Hyperlink** insertion (`https://` auto-prefix, opening in a new tab), and **Bullet Lists**.
+* **Live Writing Telemetry & Partner Sync:** Displays a real-time word and character counter along the bottom edge of every editor. Edits to **Notes for Your Partner** mirror immediately to `localStorage` (`moonday_partner_notes_<userId>`) and debounce cloud writes to `husband_notes` by $600\text{ ms}$.
 
-Instead of giving you three generic tips, MoonDay maps every single item you logged today against five comprehensive care dictionaries:
+### 64. The 1 to 1 Self Care Engine, Breathwork Pacer, and Somatic Studio
 
-1. `SYMPTOM_REMINDERS`: **104 individual care guides** (one for every physical and mental symptom in `LogClient.tsx`).
-2. `MOOD_REMINDERS`: **61 individual emotional care guides** (one for every mood in `LogClient.tsx`).
-3. `FLOW_REMINDERS`: **6 flow care guides** tailored to your bleeding intensity.
-4. `DISCHARGE_REMINDERS`: **24 vaginal health guides** tailored to your cervical fluid observation.
-5. `CRAVING_REMINDERS`: **41 nutrition and craving guides** explaining how to satisfy and balance each craving.
+When you visit the **Self-Care & Body Comfort Studio** (`/self-care`, `src/app/(app)/self-care/SelfCareClient.tsx`), MoonDay fetches today's entry from `daily_logs` alongside your current cycle phase and runs your observations through the **1 to 1 Self-Care Engine**:
 
-Plus, if you wrote a note in **What you need right now**, MoonDay generates a custom **Personal Need** card highlighting your exact words back to you.
+* **Automatic Log Matching:** Maps every symptom, mood, flow level, cervical fluid observation, craving, and *What you need right now* note logged today against five structured core dictionaries (**104 symptoms**, **61 moods**, **41 cravings**, **24 discharge types**, and **6 flow levels** — 236 core triggers in total). Each card explains **Why this happens** (physiology), **What helps right now** (actionable relief), and **Helpful support** (nutritional and somatic cofactors).
+* **Symptom Preview Simulator:** Even before logging today's entry, tap quick preview pills in the masthead (*Cramps*, *Bloating*, *Fatigue*, *Headache*, *Anxiety*, *Insomnia*) to inspect tailored care cards immediately.
+* **Calming Breathwork Pacer (4 Guided Protocols):** An animated expanding/contracting visual breathing sphere supporting **Box Breathing (4-4-4-4)**, **Sleep & Calm Breath (4-7-8)**, **Physiological Sigh (2+1-6)**, and **Balanced Wave Breath (5-5)**, tracking completed cycles live in the masthead telemetry strip.
+* **Heating Pad & Relaxation Somatic Timer (4 Therapies):** Built-in countdown sessions for **Lower-Belly Heating Pad (20 min)**, **Legs-Up-The-Wall Rest (10 min)**, **Inner-Ankle SP-6 Acupressure (5 min)**, and **Warm Epsom Salt Bath / Foot Soak (15 min)**, concluding with a gentle synthesized Web Audio completion chime ($528\text{ Hz} \rightarrow 660\text{ Hz}$).
+* **Cycle-Soothing Herbal Teas (4 Botanical Elixirs):** Concise preparation and steeping guides for *Red Raspberry Leaf & Nettle*, *Fresh Ginger & Cinnamon*, *Peppermint & Fennel Seed*, and *Chamomile & Lavender* teas matched to specific cycle windows.
 
 ### 65. The Real Biology Behind MoonDay's Comfort Suggestions
 
-Every single one of the $230+$ care cards in `SelfCareClient.tsx` is written with warmth and backed by real physiology:
+Every single one of the care cards in `SelfCareClient.tsx` is written with warmth and backed by real physiology:
 
 * **Gate Control Pain Relief (`Cramps`, `Severe cramps`, `Lower-back pain`)**: Applying heat at $40^\circ\text{C}$ to $45^\circ\text{C}$ activates thermal $\text{TRPV1}$ receptors that block pain signals from reaching the brain while vasodilating constricted uterine blood vessels.
 * **Vagus Nerve Activation (`Panicky`, `Anxious`, `Stressed`)**: Cold water facial immersion triggers the mammalian dive reflex to slow heart rate immediately, while Box Breathing ($4\text{s}$ inhale, $4\text{s}$ hold, $4\text{s}$ exhale, $4\text{s}$ hold) and the Physiological Sigh shift the autonomic nervous system from sympathetic fight or flight into parasympathetic rest.
 * **Pelvic Venous Decompression (`Heavy-feeling pelvis`, `Swollen ankles`)**: Resting with legs elevated vertically against a wall for $10\text{ minutes}$ uses gravity to assist venous and lymphatic return from the lower extremities and pelvic bowl.
 * **Luteal Blood Sugar Stabilization (`Frequent waking`, `Light-headedness`, `Sweet`, `Carbs`)**: Pairing carbohydrates with protein or healthy fats slows gastric emptying and prevents reactive hypoglycemia and nighttime cortisol wake ups.
 
-### 66. The Daily Comfort Checklist: Small Wins on Hard Days
+### 66. The Daily Comfort Checklist: Small Wins and Custom Habits
 
-Beside your personalized care cards on `/self-care` sits the interactive **Daily Comfort Checklist**:
+Beside your personalized care cards on `/self-care` sits the interactive **Daily Comfort Checklist**, tracking five foundational comfort actions (*Drink $500\text{ ml}$ of water or warm herbal tea*, *Do 5 minutes of gentle hip or lower-back stretching*, *Take a 15-minute phone-free rest break*, *Practice 5 slow, deep belly breaths*, and *Take daily vitamins, iron, or magnesium support*).
 
-* **Drank a large glass of water** (`water`)
-* **Did 5 minutes of gentle movement** (`stretch`)
-* **Took a proper break to rest** (`rest`)
-* **Practiced deep breathing** (`breathe`)
-* **Took necessary vitamins/medication** (`medication`)
+You can also add unlimited personal comfort habits (persisted in `localStorage` under `moonday_custom_selfcare_rituals`) and check off completed items each day (`moonday_selfcare_checks_YYYY-MM-DD`). A live completion percentage updates in the top telemetry strip so small wins remain visible without guilt or streak pressure.
 
-Checking off these five small, achievable actions gives you a gentle sense of accomplishment on low energy days without any pressure.
+### 67. The 685 Guide Continuous Care Directory: Symptom, Mood, and Hormone Library
 
-### 67. The 230 Plus Care Directory: A Pocket Guide for You and Your Friends
+Beneath the somatic tools sits MoonDay's **685-Guide Continuous Scroll Care Directory** (`buildAll685Protocols()`), combining the core 1-to-1 symptom, mood, flow, discharge, and craving cards with **450 extended everyday protocols** across 9 specialized domains (*Hormone & Cycle Balance*, *Pelvic, Back & Muscle Relief*, *Mood, Calm & Nervous System*, *Nutrition, Blood Sugar & Minerals*, *Digestion, De-Bloating & Gut Flora*, *Skin Glow, Hair & Lymphatic Care*, *Sleep, Body Temperature & Energy Rhythm*, *Intimate Health, Flow & pH Care*, and *Herbal Teas & Natural Remedies* — 50 guides per domain).
 
-At the top right of the **Self Care & Comfort** page sits the **Browse All (230+) Reminders** toggle button (`showAllLibrary`).
+* **Instant Search, Filtering, and Bookmarks:** Filter by category (*All Guides*, *Physical Symptoms & Body*, *Moods, Calm & Sleep*, *Cravings, Nutrition & Teas*, *Flow & Intimate Care*, *Hormone Balance*, or *Bookmarked*), search across codes, titles, mechanisms, and cofactors, and bookmark favorite cards (`moonday_selfcare_bookmarks`).
+* **Switchable 3-Column Infinite-Scroll Feed:** Switch between 3-column, 2-column, and 1-column layouts; cards load progressively in batches of 24 as you scroll down ($420\text{ px}$ bottom threshold) to keep rendering fast and responsive.
+---
 
-Clicking it opens the **Complete Symptom & Mood Care Directory** with a live instant search bar (`Search any symptom or mood...`). Even on a day when you have not logged anything, you can search across all 104 symptoms, 61 moods, 6 flow levels, 24 discharge types, and 41 cravings to read MoonDay's comfort advice or look up a tip to help a friend or sister.
-
-## Part VI: Cycle Mathematics, Clinical Reports, Education, and Privacy
+## Part VI: Cycle Mathematics, Reports, Clinical Dossier, Journal, Reminders, and Pomodoro
 
 ### 68. How MoonDay Calculates Your Cycle Without Guessing
 
-MoonDay combines your personal baseline settings with a dynamic historical averaging algorithm (`CalendarClient.tsx` and `MedicalReportClient.tsx`):
+MoonDay combines your personal baseline settings with a dynamic historical averaging algorithm (`CalendarClient.tsx`, `ReportsClient.tsx`, `mainpage.tsx`, and `MedicalReportClient.tsx`):
 
 1. When you first join, MoonDay uses your configured baseline **Cycle length** (default $28\text{ days}$) and **Moonday length** (default $5\text{ days}$).
 2. As you log `Confirmed Start Day` entries ($s_1, s_2, \dots, s_n$ sorted chronologically), MoonDay computes the inter-menstrual interval $\Delta_i$ between each pair of consecutive starts:
@@ -784,7 +807,7 @@ $$
 \Delta_i = \text{differenceInDays}(s_{i+1}, s_i)
 $$
 
-3. To prevent an unlogged gap or outlier from skewing your predictions, MoonDay filters for physiologically valid intervals ($15 \le \Delta_i \le 60\text{ days}$) and calculates your rounded dynamic average:
+3. To prevent an unlogged gap or outlier from skewing your predictions, MoonDay filters for physiologically valid intervals ($15 \le \Delta_i \le 60\text{ days}$ in Reports; $15 \le \Delta_i \le 55\text{ days}$ on the Dashboard) and calculates your rounded dynamic average:
 
 $$
 L_{\text{dynamic}} = \text{round}\left( \frac{1}{k} \sum_{j=1}^{k} \Delta_j \right)
@@ -813,143 +836,480 @@ On the **Calendar** page (`/calendar`), every day of the month is color coded cl
 * **Confirmed Moonday Start**: Highlighted in soft pink with a bold crimson `START` pill badge.
 * **Moonday Bleeding Days**: Blush pink cells marked with a rose droplet icon.
 * **Ovulation Day**: Sky blue cell with a crisp `OVULATE` badge.
-* **Fertile Window**: Soft blue tinted cells across the 5 days preceding ovulation.
-* **Luteal Phase**: Warm rose bordered cells from the day after ovulation until your next expected period.
+* **Fertile Window**: Soft blue tinted cells around predicted ovulation.
+* **Luteal Phase**: Warm rose bordered cells from the post-ovulatory transition until your next expected period.
 
 Clicking any date cell on the calendar opens `/log?date=YYYY-MM-DD` so you can inspect or edit that day's log immediately.
 
-### 71. Cycle Insights and Visual Reports: Spotting Long Term Shifts
+### 71. Cycle Insights, Interactive Ruler Analytics, and the Orbital Phase Ring
 
-In **Cycle Insights** (`/insights`) and **Reports** (`/reports`), MoonDay aggregates your historical logs into clear visual summaries. You can track how consistent your cycle lengths have been over time and see ranked frequency bars of your most common physical symptoms and moods, making it easy to see whether lifestyle changes or medical treatments are reducing your symptoms month over month.
+Understanding your body over months requires turning scattered daily entries into clear visual patterns. MoonDay provides two complementary analytical views—**Cycle Insights** (`/insights`) and **Reports & Analytics** (`/reports`)—anchored by the interactive `<CyclePhaseRing />` (`src/components/CyclePhaseRing.tsx`).
 
-### 72. The 90 Day Medical Report: Walking Into Your Doctor's Office Prepared
+#### Cycle Insights (`/insights`, `src/app/(app)/insights/InsightsClient.tsx`)
+* Server-rendered overview using Next.js `connection()` to compute live **Average Cycle Length**, **Average Bleeding Duration** (measured inclusively from `is_period_start` to `is_period_end` within a $1\text{–}20\text{ day}$ clinical sanity window), **Shortest Cycle**, **Longest Cycle**, current cycle day progress bar, estimated phase, estimated ovulation day, and a chronological list of confirmed start dates.
 
-Located at `/medical-report` (`MedicalReportClient.tsx`), MoonDay generates a structured, clinical **Patient Cycle History Report** covering your last $90\text{ days}$ of logs:
+#### Reports & Analytics (`/reports`, `src/app/(app)/reports/ReportsClient.tsx`)
+* **Time-Window Filtering & Data Export:** Filter analytics across **All Time**, **6M (180D)**, **90D**, or **30D**, and export complete logs via **Export CSV** (`moonday_analytics_YYYY-MM-DD.csv`), **Export JSON**, or **Print**.
+* **Clinical KPI Bento Strip:** Displays *Average Cycle Length* with a *Regular / Variable* clinical badge, *Cycle Regularity* ($\pm\sigma$ in days with shortest/longest range), *Average Moonday Bleed*, and *Logged Check-Ins*.
+* **Interactive Crosshair & Measurement Ruler Chart (`TradingViewCycleChart`):**
+  * Toggle between **Cycle Length** and **Bleed Days**, overlay a **3-Cycle Simple Moving Average (`SMA(3)`)** dashed curve and average baseline, or activate **8-Cycle Demo Mode** to explore the tool before logging multiple cycles.
+  * Moving the pointer tracks continuous interpolated values along the curve with live crosshair axis badges; clicking and dragging activates the **Measurement Ruler**, highlighting the selected interval and displaying exact day delta ($\Delta$), percentage change ($\%$), and cycle span.
+* **Symptom, Mood, Flow & Phase Correlation Panels:** Displays ranked **Top Physical Symptoms** (top 6), **Top Moods & Feelings** (top 6), **Flow Volume Distribution** across five bleeding intensities, and a **Phase-Symptom Correlation** matrix identifying the dominant physical symptom logged in each of the four cycle phases.
 
-* **Header Block**: Displays the report title, generation date, and patient name.
-* **Clinical Scope Banner**: Explains to the reviewing clinician that the report summarizes 90 days of self reported data and calculates cycle lengths strictly from confirmed menstrual start dates.
-* **Summary Metrics**: Displays **Average Cycle Length** (e.g., `28 days`) and **Average Period Duration** (e.g., `5 days`).
-* **Chronological Clinical Table**: Lists every logged date over the past 90 days with columns for `Date`, `Bleeding` (`Start` / `End`), `Flow/Color` (e.g., `Heavy (Ruby Red)`), `Symptoms`, and `Notes`.
-* **Print / Save as PDF Button**: Triggers `window.print()` with `@media print` CSS rules that strip away the app navigation and buttons, producing a clean medical document ready to hand to your doctor.
+#### Interactive $360^\circ$ Orbital Phase Ring (`src/components/CyclePhaseRing.tsx`)
+* Shared across both the Dashboard (*Orbital Dial* view) and Reports (sticky right-hand panel), `<CyclePhaseRing />` renders four color-coded SVG phase arcs (*Menstrual*, *Follicular*, *Ovulatory*, *Luteal*) with per-day markers and a highlighted ovulation peak dot.
+* **Four Ways to Scrub Any Cycle Day:** Hold and drag the numbered puck $360^\circ$ around the ring, scroll the mouse wheel over the dial, drag the linear range slider underneath, or click directly along the **Ovarian Hormone Curve ($E_2$ & $P_4$)** SVG chart—updating phase physiology, energy/movement guidance, and nutrition focus in real time.
+
+### 72. The 3 Sheet OB-GYN Clinical Dossier, Exam Tick-Sheet, and Official Rx Pad
+
+Located at `/medical-report` (`src/app/(app)/medical-report/MedicalReportClient.tsx`), MoonDay generates a printable, three-sheet **Obstetrics & Gynecology Outpatient Clinical Dossier** calibrated for zero-gap A4 pagination—designed so you can walk into any consultation prepared and hand your physician a familiar, structured medical chart.
+
+* **7-Step Clinical Intake Studio (`localStorage`: `moonday_clinical_intake_v6`):** Organize optional patient context across seven structured tabs (*1. Identity, Address & Vitals*, *2. Menstrual, Flow & Contraception*, *3. Pain Relief, Endocrine & GI*, *4. Baseline Labs, USG & Surgery*, *5. Diagnoses, Meds & Family Hx*, *6. Preventive, Vaccines & Diet*, and *7. Doctor Rx Pad & Ink Setup*), complete with curated clinical dropdown catalogs (ABO/Rh blood groups, contraceptive regimens, VAS dysmenorrhea grades, flow/clot profiles, 35+ diagnoses, medications, surgical history, and allergies), selectable **30 / 60 / 90 / 180-day** windows, 4 print ink themes (*Clinical Cerulean*, *Obsidian*, *Bordeaux*, *Pure Archival Monochrome*), and intake JSON save/load.
+* **Sheet 01 — Patient Clinical Dossier & Chronological Diary:**
+  * Displays patient identification, auto-calculated **Anthropometrics** (**BMI**, **Mosteller BSA**, and **Waist-to-Hip Ratio**), LMP, parity, contraception, baseline labs, and chief complaint.
+  * Computes **FIGO AUB System 1** clinical evaluation flags (*Cycle Frequency* $24\text{–}38\text{ days}$, *Cycle Regularity* $\Delta \le 7\text{ days}$, *Menses Duration* $\le 8\text{ days}$, *Dysmenorrhea*), renders an **Anatomical Symptom & Pain Localization SVG Map** across 6 anatomical zones (*Uterine/Pelvic*, *Adnexal/Ovarian*, *Lumbosacral Back*, *Abdominal/GI*, *Mammary/Breast*, *Cranial/Neuro*), lists a **Confirmed Menstrual Bleed Episodes** table, groups symptoms into an **8-Domain OB-GYN Review of Systems (ROS)** matrix with incidence percentages, and appends a searchable/filterable **Chronological Daily Diary** (*All*, *Bleeding*, *3+ Symptoms*).
+  * Applies a strict privacy filter (`SEXUAL_EXCLUSION_REGEX`) so intimate/sexual tags are automatically omitted from outward-facing clinical reports.
+* **Sheet 02 — 1-Page Locked In-Clinic Examination & Diagnostic Workup Sheet:** Formats in-clinic vitals, general/thyroid/breast exam checkboxes, Per Abdomen (`P/A`), Per Speculum (`P/S`) & Bimanual (`P/V`) fields, bedside pelvic ultrasound (`TAS`/`TVS` & `AFC`/`POD`), a **21-item categorized laboratory and imaging tick-sheet**, and an 8-row **SOAP Notes & FIGO PALM-COEIN** grid calibrated to fit on one single A4 page.
+* **Sheet 03 — 1-Page Locked Official Prescription Pad (`Rx`):** Modeled as a clean physician prescription sheet with a custom **Caduceus Medical Emblem** header and subtle center watermark, pre-fillable patient lines, selectable writing canvas (*Open Canvas*, *Faint Ruled Lines*, or *4-Row Medication Table*), and a dual **Patient Attestation & Attending OB-GYN Signature/Seal** block locked onto one A4 page.
+* **Exports:** One-click **Print / Export Zero-Gap PDF**, **Copy EHR** plain-text clinical summary, and **CSV** diary download (`MoonDay_Clinical_Diary_<reportId>.csv`).
 
 ### 73. Closing the Gap Between What Women Feel and What Doctors Hear
 
 Medical appointments are often rushed, lasting only $10$ to $15\text{ minutes}$. When a patient says *"My periods have been really painful and heavy lately,"* it is easy for a busy provider to underestimate the severity.
 
-When a woman hands her doctor MoonDay's **90 Day Patient Cycle History Report**, the dynamic in the exam room changes immediately. The clinician can see objective dates, exact bleed durations, specific pelvic and digestive symptoms (`Severe cramps`, `Painful bowel movements`, `Heavy-feeling pelvis`), and recurring luteal mood shifts laid out in a familiar clinical table. It empowers women to advocate for themselves and shortens the path to accurate care.
+When a woman hands her doctor MoonDay's **3-Sheet OB-GYN Clinical Dossier**, the dynamic in the exam room changes immediately. The clinician can see objective dates, exact bleed durations, specific pelvic and digestive symptoms (`Severe cramps`, `Painful bowel movements`, `Heavy-feeling pelvis`), and recurring luteal mood shifts laid out in a familiar clinical table. It empowers women to advocate for themselves and shortens the path to accurate care.
 
 ### 74. The 437 Topic Education Library: Answers Without Judgment
 
 Located at `/education` (`EducationClient.tsx`), MoonDay includes an integrated **Education & Wellness** encyclopedia containing **437 comprehensive topics** on female biology, endocrinology, cycle phases, reproductive conditions, and wellness.
 
-A live search bar at the top filters across all 437 titles, categories, and article bodies in real time, giving you clear, reassuring answers without ever leaving the privacy of the app.
+A live search bar at the top filters across titles, categories, and article bodies in real time, giving you clear, reassuring answers without ever leaving the privacy of the app.
 
-### 75. Three Learning Paths: From First Period to Clinical Health and Relationships
+### 75. Three Learning Paths and Age-Restricted Library Protection
 
-The 437 articles in the Education library are organized into three tailored life stage tabs:
+The Education encyclopedia (`src/app/(app)/education/EducationClient.tsx`) organizes all dynamically counted topics (`TEEN_DATA`, `ADULT_DATA`, and `ADULT_INTIMACY_MASTERCLASS`) behind a three-way segmented switch:
 
-1. **Teen & Foundational**: Features a welcoming hero card (*"Your Body, Your Blueprint: Understanding your cycle is a superpower"*) and covers foundational topics like *Menarche (The First Period)*, immature $\text{HPO}$ axis irregularity in the first $2$ to $3\text{ years}$, *Tanner Stages of Development*, *Primary Amenorrhea*, period hygiene, nutrition, and school/sports confidence.
-2. **Adult & Clinical**: Deep dives into hormone mechanics ($\text{FSH}$, $\text{LH}$, estradiol, progesterone, testosterone, prolactin, thyroid hormones), $\text{PCOS}$, endometriosis, adenomyosis, uterine fibroids, luteal phase defect, PMDD, fertility awareness, and perimenopause.
-3. **Adult Relationship**: Thoughtful guides on communicating cycle needs to a partner, navigating emotional sensitivity in the late luteal phase, and building mutual support in marriage and long term relationships.
+1. **Teen & Foundational (Always Open):** Features the *"Your Body, Your Blueprint"* banner and covers foundational topics across *Puberty & Early Menstruation*, *Anatomy & The Reproductive System*, *The Biological Blueprint (Cycle Phases)*, *The Master Hormones*, *Physical Symptoms Deep Dive*, *Neurobiology & Mental Health*, and *Biomechanics & Exercise Physiology*.
+2. **Adult & Clinical (Password Protected):** Covers advanced clinical topics across *Pathology & Conditions* (Endometriosis, PCOS, Adenomyosis, Fibroids, PMDD, PID, BV vs. Yeast, HA, Vaginismus, Vulvodynia, IC, Asherman's), *Nutrition & The Microbiome*, *Fertility Awareness & Biomarkers*, *Contraception & Interventions*, *Holistic Modalities & Naturopathy*, *Pregnancy & Postpartum Endocrinology*, and *Perimenopause & Menopause*.
+3. **Adult Relationship (Password Protected):** Loads the *Marital Intimacy & Education* masterclass (`src/data/AdultIntimacyMasterclass.ts`).
 
-### 76. The Personal Journal and Private Notes for Your Partner
+#### Age-Restricted Security Gate & Safe Search Isolation
+* Accessing either the **Adult & Clinical** or **Adult Relationship** tab displays an **Age Restricted Content** lock screen that validates input against three configurable admin password slots (`admin_password`, `secondary_password`, `tertiary_password`) in Supabase's `app_settings` table.
+* **Search Leak Prevention:** While adult content is locked, typing in the search input automatically switches back to **Teen & Foundational** and restricts search filtering strictly to `TEEN_DATA` so age-restricted articles never appear in search results.
 
-MoonDay gives your words two dedicated sanctuaries under **Personal Space**:
+### 76. The Personal Journal Studio and Private Notes for Your Partner
 
-* **Personal Journal (`/journal`)**: A private diary for your unfiltered daily reflections, completely separate from your symptom charts. Each entry is saved with its date and includes touch friendly Edit (`Pencil`) and Delete (`Trash2`) buttons.
-* **Private Notes (`/notes` for Your Partner)**: Displays every partner note you have written inside the daily log. Includes a prominent **Privacy Notice** confirming that MoonDay *never* automatically sends, emails, or pushes these notes to your partner. We engineered `NotesClient.tsx` and `LogClient.tsx` with schema resilient queries (supporting `date`, `entry_date`, and `log_date` columns) plus a local storage mirror (`moonday_partner_notes`) so any note you type in `/log` reflects immediately on `/notes` and links back via `/log?date=YYYY-MM-DD`.
+Some feelings do not fit inside checkboxes. There are nights when you need a quiet page where your thoughts do not have to be summarized, justified, or polished for anyone else. Under **Personal Sanctuary**, MoonDay gives your words two protected spaces:
 
-### 77. Custom Reminders, 4 Digit PIN Lock, Private Mode, and Raw JSON Backups
+#### Personal Journal Studio (`/journal`, `src/app/(app)/journal/JournalClient.tsx`)
+* **Luxury Stationery Rich-Text Editor:** Write on **6 switchable paper canvases** (*Alabaster Blank*, *Ruled Stationery*, *Dot Matrix*, *Square Graph*, *Cornell Margin*, and *Botanical Linen*) using **6 font families** (*Literary Serif*, *Editorial Sans*, *Book Baskerville*, *Humanist Optima*, *Typewriter Mono*, *Poetic Script*), **8 font sizes** ($11\text{ px}$ to $36\text{ px}$), text and highlight color wheels, title-case transform, Find & Replace, headings, callouts, 2-column split reflection blocks, monospace/verse blocks, timestamps, hyperlinks, and interactive checklists that automatically strike through completed items.
+* **54 Guided Journaling Templates & Soul Prompts:** Browse and search **54 structured templates** across 6 categories (*Gratitude & Daily*, *Cycle & Somatic*, *Emotional & Shadow*, *CBT & Clarity*, *Goals & Vision*, and *Letters & Creative* — 9 templates each) or shuffle 12 deep reflection prompts into your page.
+* **Voice Dictation, Read Aloud, Ambient Audio & Flow Timer:** Speak entries hands-free via the Web Speech API (`SpeechRecognition`), listen back with browser `speechSynthesis`, layer procedural Web Audio soundscapes (*Soft Rain*, *Pink Noise*, *432Hz Zen Drone*) or upload a personal local MP3 loop, and run a customizable $1\text{–}240\text{ minute}$ Mindful Flow Timer with a $528\text{ Hz} \rightarrow 660\text{ Hz}$ completion chime and fullscreen **Zen Mode**.
+* **Context Stamps, Writing Telemetry & 84-Day Heatmap:** Stamp reflections with **Mood Auras** (8), **Cycle Seasons** (4), **Weather** (5), **Energy Levels** (3), and custom `#tags`. Track live word/sentence/paragraph/character counts, estimated reading time, customizable daily word targets ($100\text{–}750\text{ words}$), **Mindful Streak**, and an **84-Day Writing Consistency Heatmap**.
+* **Archive Organization, Sanctuary Reader & Anthology Backup:** Pin and star favorite entries, filter by keyword, month, mood aura, or word length, switch across **4 archive views** (*Editorial Timeline*, *2-Column Bento*, *3-Column Gallery*, *Compact Index*), rediscover a past note via **Memory Lane**, read comfortably in the **Book-Style Sanctuary Reader**, and export single entries (`.md`) or complete anthologies (`.md` / `.json`). Every keystroke autosaves offline via `useOfflineResilience` and `buildSyncTimestamps`.
 
-In `/reminders` and `/settings` (`SettingClient.tsx`), MoonDay puts you in complete control of your routine and your privacy:
+#### Private Notes for Your Partner (`/notes`, `src/app/(app)/notes/NotesClient.tsx`)
+* Displays every dated partner note written in `/log` beneath an explicit **Privacy Notice** affirming that MoonDay never automatically emails, texts, or pushes these notes to your partner.
+* Uses schema-resilient querying across `husband_notes` (supporting `date`, `entry_date`, `log_date`, and `created_at` fallback) merged cleanly with a per-user `localStorage` mirror (`moonday_partner_notes_<userId>`) so offline or autosaved partner notes always appear immediately and link directly back to `/log?date=YYYY-MM-DD` for editing.
 
-* **Custom Reminders (`/reminders`)**: Set gentle notifications for cycle starts, water intake, rest breaks, and vitamins.
-* **4 Digit PIN Lock**: Set a 4 digit numeric PIN in Settings (`pin_code`) to lock the app interface against casual snooping on shared or unlocked devices.
-* **Private Mode Toggle**: One click hides the *Notes for Your Partner* box on `/log` and conceals sensitive summaries on the Dashboard (`private_mode_enabled`).
-* **1 Click Raw JSON Backup**: Clicking **Export Raw JSON** downloads a complete, portable backup (`moonday_backup_YYYY-MM-DD.json`) of your `daily_logs`, `intimacy_entries`, and `husband_notes`.
+### 77. Reminders, Clinical Health Timers, Alarms, Soft Chimes, and Privacy Controls
 
-## Part VII: Visual Craft, Full Stack Engineering, Offline Sync, and Co Creator Story
+A health reminder should feel like a calm check-in rather than a startling alarm. In MoonDay's **Sanctuary Timers, Alarms & Chimes Studio** (`/reminders`, `src/app/(app)/reminders/RemindersClient.tsx`) and **Settings & Privacy** (`/settings`, `src/app/(app)/settings/SettingClient.tsx`), every alert is soft, configurable, and built to work reliably even when your browser tab is closed.
 
-### 78. Daylight Design: Why We Chose Warm Ivory and Rose Ink Over Hospital White
+#### Timers, Alarms, and Soft Acoustic Studio (`/reminders`)
+* **Masthead & 4-Column Live Telemetry Bar:** Displays real-time status for the **Web Push Engine**, **Active Health Timer**, **Next Water Nudge**, and **Live Clock**, alongside controls to enable background push, arm a **10-Second Closed-Tab Push Test**, run an instant **Test Now** check, or save all preferences. A floating **Live In-App Alert Toast** ensures immediate visual confirmation even if OS Focus Assist or Do Not Disturb suppresses system banners.
+* **10 Pre-Defined Clinical Health & Comfort Timers (1-Click Launch):**
 
-Standard health apps use stark `#FFFFFF` backgrounds and `#000000` text that feel cold and clinical.
+| Code | Preset Timer | Duration | Biological & Self-Care Purpose |
+| :---: | :--- | :---: | :--- |
+| `T-01` | Heating Pad Cramp Relief | 20 mins | Relaxes uterine contractions and boosts pelvic blood flow |
+| `T-02` | Herbal Tea Covered Steep | 8 mins | Optimal extraction window for raspberry leaf and ginger oils |
+| `T-03` | Legs-Up-The-Wall De-Bloat | 10 mins | Drains pooled fluid from ankles/pelvis and calms heart rate |
+| `T-04` | Luteal Power Nap | 20 mins | Restores alertness without entering groggy deep sleep |
+| `T-05` | Post-Meal Blood-Sugar Walk | 12 mins | Smooths glucose uptake to prevent luteal mood crashes |
+| `T-06` | Nervous System Breath Reset | 5 mins | Slow diaphragmatic vagal breathing to lower cortisol |
+| `T-07` | Warm Epsom Magnesium Soak | 15 mins | Relieves full-body aches and warms extremities before sleep |
+| `T-08` | Pelvic Floor & Hip Unwind | 7 mins | Child's pose and gentle hip stretches for lower-back release |
+| `T-09` | Eye & Migraine Screen Break | 20 mins | Visual rest to ease hormone-drop headaches and dry eyes |
+| `T-10` | Pad / Cup Hygiene Check | 3 hours | Gentle menstrual protection refresh cadence |
 
-In `src/app/globals.css`, we crafted a warm, soothing **Daylight Palette** using Tailwind CSS v4 `@theme` variables:
+* **Active Timer Console, Custom Countdown & Daily Alarm Clock:** Live countdown bar with *Start/Pause*, *Reset*, and `+1m / +5m / +10m` quick extensions; a custom `Hours : Minutes : Seconds` labeled timer builder (`moonday_active_health_timer`); and a **Custom Health Alarms** manager with category tags (*Self-Care*, *Hydration*, *Medication*, *Movement*, *Sleep Routine*), per-alarm toggles, and instant test triggers.
+* **8 Cycle & Daily Care Channels + Vitamins Checklist:** Organizes 8 configurable channels across *Cycle & Moonday Alerts*, *Daily Self-Care* (including repeating hydration intervals of $30\text{–}180\text{ minutes}$), and *Body & Sleep Rhythm*, plus an unclipped **Vitamins & Supplements** daily checklist (`moonday_supp_taken_YYYY-MM-DD`) and **Quiet Hours** sleep protection (default `22:30` to `07:00`).
+* **Soft Acoustic Chime Synthesizer:** Generates 8 low-pass filtered ($2200\text{ Hz}$), click-free ($45\text{ ms}$ attack) Web Audio chimes (*Velvet Harp*, *Singing Bowl*, *Rosewood Kalimba*, *Morning Raindrop*, *Music Box Lullaby*, *528Hz Soft Bloom*, *Silk Whisper Bell*, and *Silent Visual*) with a $10\%\text{–}100\%$ softness slider.
+* **Lightweight Cookie Hygiene:** Stores reminder settings in `localStorage` (`moonday_reminders_cockpit_v3`) and synchronizes active schedules directly to `/api/push`, automatically clearing any legacy `reminder_preferences` key from Supabase JWT `user_metadata` so auth cookies stay compact.
 
-* **Background (`--bg`)**: `#fff9f8` (Warm Ivory Blush)
-* **Surface Cards (`--surface`)**: `#ffffff` with `#f1e6e9` soft rose borders and `0 8px 28px rgba(110, 70, 85, 0.07)` diffused shadows
-* **Primary Ink (`--ink`)**: `#493b43` (Deep Espresso Rose)
-* **Muted Text (`--muted`)**: `#998b93` (Warm Dusty Mauve)
-* **Brand Accent**: `#d990a8` (Soft Rose) and `#a55f78` (Deep Berry Rose)
+#### Settings, Security, and Data Ownership (`/settings`)
+* **Profile & Cycle Averages:** Configures `display_name`, `cycle_length`, `period_length`, and `luteal_phase_length` in Supabase `profiles` and auth metadata, broadcasting `moonday:profile-updated` immediately upon save.
+* **4-Digit PIN Lock (`app_lock_pin`):** Accepts strictly 4 numeric digits (or blank to disable) to protect MoonDay on shared devices via `AppLockWrapper`.
+* **Private Mode & Dark Mode:** Toggles `private_mode_enabled` in Supabase (concealing intimacy and partner notes) and switches instantaneously between Eye-Comfort Light Mode and Velvet Mulberry Dark Mode (`localStorage` key `theme`).
+* **1-Click Raw JSON Backup:** Exports `moonday_backup_YYYY-MM-DD.json` containing your complete `daily_logs`, `intimacy_entries`, and `husband_notes`.
 
-### 79. Nighttime Design: Crafting the Soft Aubergine Dark Mode
+### 78. Pomodoro Focus Sanctuary: Making Space for Deep Work and Gentle Rest
 
-When logging cramps or insomnia at 2:00 AM, a bright white screen is painful, while pure `#000000` AMOLED black creates harsh halation (text blurring) for tired eyes.
+Focus looks different across the four seasons of a menstrual cycle. On a follicular morning, a 50-minute deep-architecture block feels effortless; on a late luteal afternoon, a 20-minute focus wave paired with slow vagal breathing during breaks protects your nervous system from burnout.
 
-We engineered a custom **Soft Aubergine Dark Mode** (`html.dark` in `src/app/globals.css`):
+MoonDay's **Pomodoro Focus Sanctuary** (`/pomodoro`, `src/app/(app)/pomodoro/page.tsx` and `src/app/(app)/pomodoro/PomodoroClient.tsx`) is a distraction-free fullscreen workspace designed to support deep concentration while honoring the rhythm of rest.
 
-* **Deep Aubergine Canvas (`--bg`)**: `#161114`
-* **Elevated Plum Cards (`--surface`)**: `#231a1e` with `#3a2830` borders
-* **Secondary Surface**: `#2c2026`
-* **Soft Alabaster Ink (`--ink`)**: `#fdfafb`
-* **Muted Rose Grey (`--muted`)**: `#a08994`
-* **Inverted High Contrast Primary Buttons**: Primary `.bg-ink.text-white` buttons automatically invert in dark mode to a warm blush background (`#d990a8`) with dark aubergine text (`#161114`) so action buttons are always clear and readable at night.
+* **Zen Fullscreen Isolation:** On mount, attaches `body.moonday-pomodoro-zen` and temporarily hides global `<aside>`, `<header>`, and `<nav>` chrome so the illustrated sanctuary fills the viewport ($100\text{vw}$ by $100\text{vh}$). A subtle top-left **Sanctuary** pill returns you to `/` and restores the full navigation shell cleanly.
+* **Sculpted Orbital Pearl Dial & Control Dock:** A frosted-glass centerpiece displays the phase switcher (*Focus*, *Short Break*, *Long Break*), pinned active task badge (`Target`), an animated $340\text{ px}$ by $340\text{ px}$ SVG progress arc with a **travelling luminous progress pearl**, daily session goal pearls, and a floating capsule dock (*Reset* `R`, *Start/Pause* `Space`, *+5m Boost*, *Skip Phase*).
+* **Top-Right Editorial Live Clock:** Displays live time with a pulsing accent indicator, toggleable 12h/24h formatting, toggleable live seconds, and an `EEEE • MMMM d` date subtitle.
+* **Minimalist Task Queue & `.txt` Bulk Sync:** Located cleanly below the timer card; supports Enter-to-add tasks, circular checkboxes with strikethrough completion, active task pinning, per-task Pomodoro progress counters (`completedPomodoros / estPomodoros`), plain-text **Import `.txt`** parsing (`[x]`, `[X]`, `[ ]`, bullets, numbered lists), and dated **Export `.txt`** downloads.
+* **18 Soft Illustrated Sanctuary Scenes & Custom Media Uploaders:** Ships with **18 multi-layered SVG mountain and botanical landscapes** grouped into **11 Eye-Comfort Light & Color Themes** (*Rosewater Valley*, *Honey E-Ink Paper*, *Warm Chai & Oat*, *Kyoto Matcha Mist*, *Eucalyptus Grove*, *Lavender Meadow*, *Cashmere & Apricot*, *Golden Hour Glow*, *Nordic Fjord Dawn*, *Periwinkle Sea Glass*, *Sakura Cloud Blossom*) and **7 Velvet Nocturne Dark Themes** (*Velvet Mulberry Night*, *Bordeaux Black Cherry*, *Espresso & Amber*, *Emerald Pine Nocturne*, *Midnight Ocean Cove*, *Kyoto Dusk Violet*, *Starlight Astral Velvet*), alongside local file uploaders for custom JPG/PNG/GIF/MP4 wallpapers (with $0\%\text{–}75\%$ **Dimming Veil** and $0\text{–}20\text{ px}$ **Blur** sliders), custom ambient MP3/WAV/OGG tracks, and custom alarm chimes.
+* **Procedural Web Audio Soundscapes & 30-Feature Two-Pane Settings Studio:** All 30 preferences live inside a lower-right floating Settings modal (`S`) organized into 6 clean sidebar tabs:
+  1. **Focus & Pacing:** Focus/Short/Long steppers, Long Break Interval, Daily Goal, Auto-Start Breaks/Focus, 6 one-click Workflow Presets (*Classic 25/5/15*, *Deep Architecture 50/10/25*, *90m Ultradian 90/20/30*, *Gentle Luteal 20/8/20*, *Micro-Step 15/3/10*, *Exam & Pitch 45/15/25*), and Cycle-Phase Smart Pacing (20m/7m).
+  2. **Scenes & Wallpaper:** Categorized 11 Light + 7 Dark illustrated scenes, custom wallpaper uploader, dimming veil, and blur sliders.
+  3. **Dial & Clock Style:** Dial architecture (*Orbital Pearl Ring*, *Pure Typography*, *Horizon Line*), numeral font suite (*Editorial Serif*, *Modern Sans*, *Tabular Mono*), 24-hour clock, live seconds, and date subtitle toggles.
+  4. **Ambient Soundscapes:** 6 procedural soundscapes (*Quiet*, *Soft Rain*, *Warm Pink Noise*, *Forest Wind*, *432Hz Alpha Drone*, *Tibetan Bowl Hum*), custom audio uploader, ambient volume slider, and auto-silence during breaks.
+  5. **Chimes & Web Push:** 8 soft acoustic chimes + silent visual mode, custom chime uploader, volume slider, closed-tab Web Push sync (`/api/push`), and optional soft mechanical second tick.
+  6. **Tasks, Zen & Stats:** `.txt` import/export, 4s/6s vagal breathing cue on breaks, auto-fade controls after $4.5\text{ s}$ mouse idle, Strict Focus Lock, task Pomodoro counters, live browser-tab title countdown, Fullscreen toggle (`F`), keyboard shortcuts (`Space`, `R`, `S`, `F`), and Today's Focus Telemetry. All state persists to `localStorage` (`moonday_pomodoro_sanctuary_v1`).
 
-### 80. Under the Hood: Full Stack Architecture Overview
+---
+## Part VII: Visual Craft, Web Push, Auth Resilience, Full Stack Engineering, and Mathematics
 
-MoonDay is built on a modern, type safe, offline resilient architecture:
+### 79. Daylight Design: Eye Comfort Light Mode in Warm Silk and Antique Cashmere
+
+Standard health applications use harsh `#FFFFFF` backgrounds that induce glare during prolonged journaling, study, or logging sessions. In `src/app/globals.css`, MoonDay implements an **Eye-Comfort Light Mode** (`:root, html:not(.dark)`) calibrated around warm silk parchment and antique cashmere tokens:
+
+| Design Token | Value | Visual Role |
+| :--- | :---: | :--- |
+| `--bg` | `#eae2e6` | Warm antique cashmere root canvas (zero pure-white glare) |
+| `--surface` | `#f4eef1` | Soft silk-parchment primary card surface |
+| `--ink` | `#2b2126` | Deep espresso-plum primary ink |
+| `--muted` | `#68555f` | High-legibility warm taupe secondary ink |
+| `--pink` | `#ba748c` | Velvet rose primary accent |
+| `--pink2` | `#ecdbe1` | Muted antique blush tint |
+| `--line` | `#d6c8cf` | Warm architectural 1px hairline border |
+| Form Inputs (Rest / Focus) | `#ece3e8` to `#f7f2f4` | Warm recessed controls lifting gently on `#ba748c` focus |
+
+### 80. Nighttime Design: Velvet Mulberry and Warm Truffle Dark Mode
+
+When logging cramps, migraines, or late-night journal entries, glaring light screens strain tired eyes while pure `#000000` creates harsh text halation. MoonDay's **Velvet Mulberry & Warm Truffle Dark Mode** (`html.dark` in `src/app/globals.css`) provides tactile low-luminance depth with zero pure black:
+
+| Design Token | Value | Visual Role |
+| :--- | :---: | :--- |
+| `--bg` | `#1b1518` | Deep velvet mulberry-espresso canvas |
+| `--surface` | `#241c20` | Warm cocoa-plum cards with satin top-edge inset (`rgba(255, 235, 242, 0.06)`) |
+| Elevated Inner Wells | `#2e2429` / `#382c32` | Recessed toolbars, secondary panels, and telemetry strips |
+| Frosted Glass Headers | `rgba(36, 28, 32, 0.88)` | Paired with `backdrop-filter: blur(16px) saturate(135%)` |
+| `--ink` | `#f6eff2` | Soft silk-ivory primary typography |
+| `--muted` | `#b8a3ad` | Warm cashmere-mauve secondary typography |
+| `--pink` / `--pink2` | `#dfa0b5` / `#39262f` | Luminous cameo rose accent and damask rose-plum highlights |
+| `--line` | `#3b2e35` | Tailored warm plum-taupe hairline borders |
+| Primary Buttons | `#9e5871` / `#b56982` | Burnished rosewood CTAs with `#fdf9fa` labels |
+
+A pre-paint inline script in `src/app/layout.tsx` reads `localStorage.getItem("theme")` before hydration (`suppressHydrationWarning`) to prevent light-to-dark theme flicker on initial load.
+
+### 81. Global Smooth Scrolling, Silk Scrollbars, and Page Specific UI Craft
+
+* **Hardware-Accelerated Smooth Scrolling (`src/app/globals.css`):** Root `html` rules set `scroll-behavior: smooth`, `scroll-padding-top: 24px`, and antialiased font rendering for fluid native scrolling without JavaScript scroll hijacking.
+* **Dual-Mode Custom Silk Scrollbars:** Styled 8px pill-shaped `::-webkit-scrollbar` tracks and thumbs with 2px inset borders and rosewood hover states for both Light Mode (`#eae2e6` / `#cbbbc3`, hovering to `#ba748c`) and Dark Mode (`#1b1518` / `#3e3038`, hovering to `#b56982`).
+* **Page-Specific UI Refinements:**
+  * **Settings (`SettingClient.tsx`):** High-contrast burnished rosewood primary action buttons (`bg-[#a55f78] text-white`) ensure **Save Profile Changes** and **Set PIN** remain clearly visible across both themes.
+  * **Authentication (`login/page.tsx`):** Split 12-column editorial studio pairing the *Four Inner Seasons* visual overview and custom `MoonDayCrest` SVG on the left with a segmented 4-mode auth form (*Sign In*, *Create Account* with 3-tier password strength meter, *Magic Link*, and *Password Reset*) on the right.
+  * **Reports (`ReportsClient.tsx`):** Theme-adaptive SVG chart canvas referencing CSS custom properties (`var(--line)`, `var(--surface)`, `var(--ink)`, `var(--muted)`) so crosshair labels, node badges, and grids remain legible in both modes.
+  * **Co-Creator Attribution (`src/app/(app)/layout.tsx`):** Fixed frosted-glass badge (`© Built by srharshitcode & porcupine`) hidden automatically during print exports (`print:hidden`).
+
+### 82. Under the Hood: Full Stack Architecture Overview
 
 ```text
-+-----------------------------------------------------------------------------+
-|                           CLIENT APPLICATION LAYER                          |
-|  Next.js 16.4.3 (App Router + Turbopack)  |  React 19  |  TypeScript 5      |
-|  Tailwind CSS v4 (@theme tokens + Global Dark Mode CSS Interceptors)        |
-|  Lucide React Iconography                 |  date-fns Chronological Math    |
-+--------------------------------------+--------------------------------------+
-                                       |
-                     +-----------------+-----------------+
-                     |                                   |
-                     v                                   v
-+--------------------------------------+   +----------------------------------+
-|     LOCAL RESILIENCE & PWA LAYER     |   |     CLOUD PERSISTENCE LAYER      |
-| * IndexedDB (moonday_offline_store)  |   | * Supabase Auth (@supabase/ssr)  |
-| * localStorage (Theme & Partner Note)|   | * PostgreSQL Relational Database |
-| * NetworkResilience Hook & Banner    |   | * Row Level Security (RLS)       |
-| * @ducanh2912/next-pwa ServiceWorker |   | * Vercel Edge & Speed Insights   |
-+--------------------------------------+   +----------------------------------+
++---------------------------------------------------------------------------------+
+|                             CLIENT APPLICATION LAYER                            |
+|  Next.js 16.4.3 (App Router + Turbopack)  |  React 19.3.0  |  TypeScript 5      |
+|  Tailwind CSS v4 (@theme Dual-Mode Palette + Global Smooth Silk Scrollbars)     |
+|  Web Audio API Synthesizer | Web Speech API | Recharts 3.10 | date-fns 4.4      |
++-----------------------+------------------------------+--------------------------+
+                        |                              |
+          +-------------+------------+   +-------------+-------------+
+          |                          |   |                           |
+          v                          v   v                           v
++-------------------------+  +----------------------+  +--------------------------+
+| LOCAL RESILIENCE LAYER  |  | CLOSED-TAB WEB PUSH  |  | CLOUD & AUTH LAYER       |
+| * IndexedDB v3 Drafts   |  | * public/moonday-sw  |  | * src/proxy.ts + SSR     |
+|   (offlineSync.ts)      |  | * /api/push (Node)   |  |   Supabase Middleware    |
+| * Clock-Drift Guards    |  | * web-push 4.0 VAPID |  | * /auth/callback PKCE    |
+|   (offlineTimestamps.ts)|  | * 3s Daemon Ticker   |  | * PostgreSQL + 19 RLS    |
+| * PWA (@ducanh2912)     |  | * .moonday-push-store|  |   Tables + Triggers      |
++-------------------------+  +----------------------+  +--------------------------+
 ```
 
-### 81. Next.js 16 App Router, React 19, and Turbopack Engineering
+#### Core Technology Stack (`package.json`)
 
-MoonDay leverages **Next.js 16.4.3** with **Turbopack** and **React 19**:
+| Layer | Packages & Versions |
+| :--- | :--- |
+| **Framework & Runtime** | `next` (`16.4.3`), `react` (`19.3.0`), `react-dom` (`19.3.0`), `typescript` (`^5`) |
+| **Styling & Iconography** | `tailwindcss` (`^4`), `@tailwindcss/postcss` (`^4.3.5`), `@tailwindcss/turbopack` (`^4`), `lucide-react` (`^1.65.0`) |
+| **Database & Auth** | `@supabase/ssr` (`^0.12.7`), `@supabase/supabase-js` (`^2.118.0`) |
+| **Charts, Forms & Dates** | `recharts` (`^3.10.1`), `react-hook-form` (`^7.91.0`), `zod` (`^4.6.7`), `date-fns` (`^4.4.0`) |
+| **PWA & Background Push** | `@ducanh2912/next-pwa` (`^10.2.9`), `web-push` (`^4.0.0`), `@types/web-push` (`^3.6.4`) |
+| **Observability** | `@vercel/analytics` (`^2.0.1`), `@vercel/speed-insights` (`^2.1.0`) |
 
-* **Route Groups (`src/app/(app)/`)**: Authenticated views share a persistent application shell (`layout.tsx`), keeping sidebar navigation instantaneous without full page reloads.
-* **Next.js 16 Experimental Caching Configuration**: In `next.config.ts`, `cacheComponents: true` and `partialPrefetching: true` are placed inside the `experimental` configuration block so route segment configurations (`export const instant = false`) compile cleanly alongside `@vercel/speed-insights` and `@vercel/analytics`.
+### 83. Closed Tab Web Push Engine and Background Service Worker Architecture
 
-### 82. Tailwind CSS v4 and the Global Dark Mode CSS Interceptor Trick
+Browsers throttle webpage timers and suspend Service Workers within roughly $30\text{ seconds}$ of closing a tab. MoonDay solves this with an encrypted **VAPID Web Push pipeline** so health timers, Pomodoro completions, hydration nudges, daily alarms, and cycle reminders arrive even when MoonDay or the browser window is closed.
 
-In Tailwind CSS v4, utility classes take precedence over rules placed inside `@layer base`. Because many client views use explicit classes like `bg-white`, `bg-slate-50`, `bg-[#fff0f3]`, and `border-[#fbeaf0]`, we placed a **Global Dark Mode CSS Interceptor** at the root level of `src/app/globals.css` (outside `@layer base`).
+#### 1. Backend Push Endpoint & Persistent Daemon (`src/app/api/push/route.ts`)
+* **Runtime & Bundling:** Pinned to `runtime = "nodejs"` and `dynamic = "force-dynamic"`, using `import * as webpush from "web-push"` for clean Next.js 16 Turbopack compilation.
+* **VAPID Key & Store Lifecycle:** Automatically generates or loads a VAPID keypair (`NEXT_PUBLIC_VAPID_PUBLIC_KEY` / `VAPID_PRIVATE_KEY` or persisted locally in git-ignored `.moonday-push-store.json`) alongside active `PushSubscription[]` endpoints, `ScheduledPushItem[]` schedules, quiet hours (`22:30` to `07:00`), and daily deduplication keys (`firedLog`).
+* **Singleton 3-Second Background Ticker (`globalThis.__moondayPushDaemonStarted`):**
+  * `once`: Fires at exact epoch millisecond `fireAt` (intentionally bypasses quiet hours for timers and delayed tests), then removes itself.
+  * `interval`: Repeating hydration nudges rolling forward by `intervalMins * 60_000` while honoring quiet hours.
+  * `daily`: Time-locked `HH:mm` alerts deduplicated per day (`YYYY-MM-DD_id_HH:mm`). Custom alarms (`alm-*`) bypass quiet hours while routine reminders honor sleep protection.
+* **Delivery & Endpoint Hygiene:** Dispatches encrypted packets with VAPID subject `mailto:sanctuary@moonday.local` and `TTL: 3600` seconds via `Promise.allSettled`, automatically pruning expired or revoked endpoints (`404` / `410`).
+* **API Actions:** `GET /api/push` returns `{ publicKey, subscriberCount, activeSchedules }`; `POST /api/push` supports `subscribe`, `sync_schedules`, and immediate or `delaySec`-scheduled `send_test`.
 
-Whenever `html.dark` is active on the document root, those selectors automatically remap light hex backgrounds, borders, and text colors across every component in the app to our Soft Aubergine dark palette without requiring hundreds of manual `dark:` classes in JSX.
+#### 2. Background Service Worker (`public/moonday-sw.js`)
+* Executes `self.skipWaiting()` on `install` and `self.clients.claim()` on `activate`.
+* Intercepts encrypted `push` packets to render native OS notifications (`/icon.png`, badge, unique `tag`, `renotify: true`, `requireInteraction: true`, vibration `[180, 90, 180]`), handles open-tab `DISPATCH_NOW` messages, and routes `notificationclick` events to focus an existing MoonDay window or open `/reminders`.
 
-### 83. Offline First Engineering: How IndexedDB Protects Every Keystroke
+### 84. Authentication Studio, Request Proxy, and Self Healing Session Persistence
 
-In `src/utils/offlineSync.ts` and `src/components/NetworkResilience.tsx`, we built a custom local draft engine using the browser's native **IndexedDB** (`moonday_offline_store`, version $3$):
+MoonDay manages authentication and route access across `src/app/login/page.tsx`, `src/app/auth/callback/route.ts`, `src/proxy.ts`, `src/utils/supabase/middleware.ts`, `src/utils/supabase/server.ts`, `src/utils/supabase/client.ts`, and `src/components/AppLockWrapper.tsx`:
 
-* **Debounced Autosave (`triggerAutosave`)**: Every chip tap or text change starts a $1000\text{ ms}$ debounce timer.
-* **Local Draft Persistence (`saveLocalDraft`)**: Writes an `OfflineDraft` object to the `drafts` object store before attempting any network request.
-* **Offline Queueing (`offline-queued`)**: If `navigator.onLine` is `false`, MoonDay keeps the draft safely queued on your device and displays a clear amber banner.
-* **Automatic Reconnection Sync (`flushPendingDrafts`)**: As soon as the browser fires the `online` event, MoonDay iterates through all unsynced drafts in IndexedDB and syncs them to Supabase automatically.
+* **4-Mode Authentication Studio (`src/app/login/page.tsx`):** Supports email/password **Sign In**, **Create Account** (with automatic `profiles` initialization at `28 / 5 / 14` day baselines), passwordless **Magic Link** (`signInWithOtp`), and **Password Recovery** (`resetPasswordForEmail`).
+* **PKCE Callback Exchange (`src/app/auth/callback/route.ts`):** Exchanges incoming `code` query parameters via `supabase.auth.exchangeCodeForSession(code)` and redirects to `${origin}/`.
+* **Web Push & Service Worker Exemption:** Both `src/proxy.ts` and `src/utils/supabase/middleware.ts` bypass `/api/push`, `/moonday-sw.js`, and `/sw.js`, and `src/proxy.ts`'s `config.matcher` excludes static assets, `manifest.json`, `moonday-sw.js`, `sw.js`, `api/push`, and `workbox-*`.
+* **Self-Healing Refresh-Token Recovery:** Checks `request.cookies.getAll()` for `sb-*` session cookies before invoking `supabase.auth.getUser()`. On any auth error (such as `refresh_token_not_found` from expired or fragmented cookies), every `sb-*` cookie is explicitly deleted on `request`, `supabaseResponse`, and the `NextResponse.redirect("/login")` response so dead tokens clear cleanly on the first hop.
+* **60-Day Persistent Sessions:** Valid session cookies persist with a rolling 60-day `maxAge` unless Supabase explicitly clears a cookie (`options?.maxAge === 0`).
+* **Session-Scoped 4-Digit PIN Gate (`AppLockWrapper.tsx`):** Wraps the authenticated `(app)` layout and checks `profiles.app_lock_pin` on mount, holding access behind a numeric 4-digit PIN gate until unlocked for the active browser tab session (`sessionStorage.getItem("moonday_unlocked") === "true"`).
 
-### 84. Solving Sync Conflicts, PWA Setup, Local Installation, and Vercel Deployment
+### 85. Next.js 16 App Router, React 19, Turbopack, and Tailwind CSS v4 Engineering
 
-#### Self Conflict Prevention in `NetworkResilience.tsx`
+* **Build & PWA Configuration (`next.config.ts`):** Enables `reactStrictMode: true`, configures Turbopack CSS processing via `turbopack.rules["*.css"]` (`@tailwindcss/turbopack`), and wraps the configuration in `@ducanh2912/next-pwa` (`dest: "public"`, `disable: process.env.NODE_ENV === "development"`, `register: true`, `scope: "/"`, `cacheOnFrontEndNav: true`, `aggressiveFrontEndNavCaching: true`, `reloadOnOnline: false`).
+* **Standalone Web App Manifest (`public/manifest.json`):** Configures installable PWA metadata (`MoonDay Tracker`, `display: "standalone"`, `background_color: "#fff8fa"`, `theme_color: "#a55f78"`, `192` by `192` and `512` by `512` icons, and desktop/mobile screenshots).
+* **Root-Level Dual-Theme Interceptors (`src/app/globals.css`):** Placed outside `@layer base` so `html:not(.dark)` and `html.dark` tokens cleanly override Tailwind CSS v4 utility classes globally without requiring per-component `dark:` duplication.
 
-When an autosave completes, `syncDraftToSupabase` returns the new `serverUpdatedAt: nowIso` timestamp, which updates `latestBaseUpdatedAtRef.current`. This ensures that clicking the main **Save MoonDay Log** button a few seconds after an autosave never mistakes your own autosave for a conflict from another device.
+### 86. Offline First Engineering, Monotonic Timestamps, and Relational Schema
 
-#### Progressive Web App (PWA) Configuration
+* **IndexedDB Local Draft Engine (`src/utils/offlineSync.ts` & `src/components/NetworkResilience.tsx`):** Persists drafts inside IndexedDB database `moonday_offline_store` (version `3`, store `drafts`, indexed by `by_user` and `by_synced`). Supports both date-keyed tables (`daily_logs`, queried by `(user_id, log_date)`) and ID-keyed tables (`personal_notes`, `intimacy_entries`, `husband_notes`, routed via `entry_date` and updated by `(id, user_id)`), deleting each local draft automatically upon cloud sync. `NetworkResilience.tsx` debounces autosaves by $1000\text{ ms}$, attaches a `beforeunload` warning while `isDirty` is active, and exposes accessible `SaveStatusBadge` (`role="status"`, `aria-live="polite"`) and `NetworkStatusBanner` conflict prompts (**Keep My Draft** / **Load Server Version**).
+* **Monotonic Timestamp Protection (`src/utils/offlineTimestamps.ts` & `supabase/migrations/20261115_offline_timestamp_sync.sql`):** `buildSyncTimestamps` locks `created_at === updated_at` on new records and clamps `updated_at` forward if a client clock drifts behind `created_at`. Permanently enforced in PostgreSQL via `BEFORE INSERT OR UPDATE` trigger `public.sync_safe_timestamps()` across `personal_notes`, `daily_logs`, `husband_notes`, and `intimacy_entries`.
+* **19-Table Row Level Security Schema (`supabase/migrations/20261030092246_moonday_initial_schema.sql`):** Normalizes profiles, preferences, cycle episodes, predictions, daily logs, moods, symptoms, discharge, activities, cravings, wellness, personal/partner notes, intimacy entries, custom options, favorites, reminders, and audit events—with strict RLS policies (`auth.uid() = id` / `auth.uid() = user_id`) enabled across all 19 tables.
 
-In `next.config.ts`, `@ducanh2912/next-pwa` is configured with `reloadOnOnline: false` so reconnecting to Wi-Fi never triggers a forced page reload while you are typing.
+#### Complete Client & Server Persistence Map
+
+| Storage Key / File | Layer | Responsibility |
+| :--- | :--- | :--- |
+| `moonday_offline_store` (v3) | IndexedDB | Offline drafts and pending cloud sync queue |
+| `.moonday-push-store.json` | Server FS (Git-Ignored) | VAPID keypair, `PushSubscription[]`, scheduled push jobs, quiet hours, `firedLog` |
+| `moonday_unlocked` | `sessionStorage` | Tracks 4-digit AppLock PIN unlock state for the active browser tab session (`AppLockWrapper.tsx`) |
+| `moonday_pomodoro_sanctuary_v1` | `localStorage` | 30 Pomodoro preferences, theme ID, task queue, daily focus telemetry |
+| `moonday_reminders_cockpit_v3` | `localStorage` | 8 reminder channels, quiet hours, soft chime tone/volume, alarms, supplements |
+| `moonday_active_health_timer` | `localStorage` | Zero-drift `endTs`, label, and total duration for active health timer |
+| `moonday_next_hydration_ts` | `localStorage` | Next scheduled hydration nudge epoch timestamp |
+| `moonday_fired_log_YYYY-MM-DD` | `localStorage` | Daily client-side chime deduplication map |
+| `moonday_supp_taken_YYYY-MM-DD` | `localStorage` | Per-date vitamin/supplement completion state |
+| `moonday_rituals_YYYY-MM-DD` | `localStorage` | Dashboard daily water segments and phase rituals |
+| `moonday_selfcare_checks_YYYY-MM-DD` | `localStorage` | Self-Care daily checklist state (paired with `moonday_custom_selfcare_rituals` & `moonday_selfcare_bookmarks`) |
+| `moonday_starred_journals` / `moonday_pinned_journals` | `localStorage` | Starred and pinned Personal Journal Studio entries |
+| `moonday_clinical_intake_v6` | `localStorage` | 7-step OB-GYN clinical dossier and Rx pad intake settings |
+| `moonday_partner_notes_<userId>` | `localStorage` | Local fallback cache for partner notes |
+| `theme` | `localStorage` | Persisted `"light"` or `"dark"` mode preference |
+
+---
+
+### 87. Complete Mathematical Formulas and Computational Reference
+
+Every formula below is extracted directly from MoonDay's verified source code. Each entry specifies whether the value is an **exact calculation**, **historical estimate**, or **physiological prediction**, along with rounding, clamping, and edge cases.
+
+#### A. Menstrual Cycle, Phase & Calendar Mathematics
+
+##### 1. Inter-Menstrual Cycle Interval & Dynamic Average Cycle Length (Exact / Historical Estimate)
+* **Formulas:**
+  $$\Delta_i = \operatorname{diffDays}(s_{i+1}, s_i), \qquad L_{\text{dynamic}} = \operatorname{round}\!\left(\frac{1}{k}\sum_{j=1}^{k} \Delta_j\right)$$
+* **Variables & Outlier Bounds by Module:** $s_i$ are chronologically sorted confirmed starts (`is_period_start = true`).
+  * `mainpage.tsx`: Uses `differenceInCalendarDays`, filtering $15 \le \Delta_i \le 55\text{ days}$.
+  * `ReportsClient.tsx`: Uses `differenceInDays`, filtering $15 \le \Delta_i \le 60\text{ days}$.
+  * `CalendarClient.tsx`, `InsightsClient.tsx`, `MedicalReportClient.tsx`: Uses `differenceInDays` across all valid positive intervals ($\Delta_i > 0$).
+  * When $k = 0$, falls back to `profiles.cycle_length` (default $28$).
+* **Example:** Intervals $[28, 30, 29, 28]$ ($k = 4$) $\implies \frac{115}{4} = 28.75 \implies L_{\text{dynamic}} = 29\text{ days}$.
+* **Code Reference:** `mainpage.tsx`, `ReportsClient.tsx`, `CalendarClient.tsx`, `InsightsClient.tsx`, `MedicalReportClient.tsx`.
+
+##### 2. Inclusive Menstrual Bleed Duration (Exact / Historical Estimate)
+* **Formulas:**
+  $$B_j = \operatorname{differenceInDays}(e_j, s_j) + 1, \qquad \bar{B} = \operatorname{round}\!\left(\frac{1}{m}\sum_{j=1}^{m} B_j\right)$$
+* **Variables & Sanity Bounds:** $s_j$ is an anchored `is_period_start` date and $e_j$ is the subsequent `is_period_end` date; adding $1$ makes start and end dates inclusive. Accepted bounds are $1 \le B_j \le 20$ in `InsightsClient.tsx` and $1 \le B_j \le 15$ in `MedicalReportClient.tsx` (falling back to `profiles.period_length`, default $5$).
+* **Example:** Start `Nov 4`, End `Nov 8` $\implies B = 4 + 1 = 5\text{ days}$.
+* **Code Reference:** `InsightsClient.tsx`, `MedicalReportClient.tsx`.
+
+##### 3. Current Cycle Day, Days Until Next Period & Three-Cycle Projection (Exact / Prediction)
+* **Formulas:**
+  $$D_{\text{curr}} = \max\!\big(1,\; \operatorname{differenceInCalendarDays}(d_{\text{today}}, s_{\text{last}}) + 1\big)$$
+  $$d_{\text{next}} = s_{\text{last}} + L_{\text{dynamic}}, \qquad d_{\text{ovul}} = d_{\text{next}} - L_{\text{luteal}}, \qquad \text{daysUntil} = \operatorname{differenceInCalendarDays}(d_{\text{next}}, d_{\text{today}})$$
+  For horizon projection $n \in \{0, 1, 2\}$:
+  $$s_n = d_{\text{next}} + (n \times L_{\text{dynamic}}), \qquad e_n = s_n + (L_{\text{period}} - 1), \qquad o_n = (s_n + L_{\text{dynamic}}) - L_{\text{luteal}}$$
+* **Variables:** $s_{\text{last}}$ = most recent confirmed start; $L_{\text{luteal}}$ = `luteal_phase_length` (default $14$).
+* **Example:** $s_{\text{last}} = \text{Nov 1}$, $L_{\text{dynamic}} = 28$, $L_{\text{luteal}} = 14$, $d_{\text{today}} = \text{Nov 10} \implies D_{\text{curr}} = 10$, $d_{\text{next}} = \text{Nov 29}$, $d_{\text{ovul}} = \text{Nov 15}$, $\text{daysUntil} = 19\text{ days}$.
+* **Code Reference:** `mainpage.tsx`, `RemindersClient.tsx`, `CalendarClient.tsx`.
+
+##### 4. Ovulation, Fertile Window & Phase Classification Rules (Prediction)
+* **Dashboard (`mainpage.tsx`):** Fertile window $= [d_{\text{ovul}} - 5,\; d_{\text{ovul}}]$ ($6$ inclusive days). Phase: `Menstrual` ($D_{\text{curr}} \le L_{\text{period}}$), `Ovulation Day` ($d_{\text{today}} = d_{\text{ovul}}$), `Fertile Window` ($d_{\text{today}} \in [d_{\text{ovul}} - 5, d_{\text{ovul}}]$), `Luteal` ($d_{\text{today}} > d_{\text{ovul}}$), else `Follicular`.
+* **Calendar (`CalendarClient.tsx`):** Marks ovulation at $d_{\text{ovul}} = s_{\text{next}} - L_{\text{luteal}}$, fertile days across $[d_{\text{ovul}} - 5,\; d_{\text{ovul}} + 2]$ (excluding ovulation day itself, rendered separately), and luteal days across $[d_{\text{ovul}} + 3,\; s_{\text{next}} - 1]$ for both historical cycles and $3$ future projected cycles (`cycleNum = 1..3`).
+* **Self-Care (`SelfCareClient.tsx`) & Insights (`InsightsClient.tsx`):** $D_{\text{ovul}} = L_{\text{cycle}} - L_{\text{luteal}}$ (in Insights, $L_{\text{cycle}} - 14$ when $L_{\text{cycle}} > 14$, else $14$); ovulatory/fertile window spans $[D_{\text{ovul}} - 4,\; D_{\text{ovul}} + 1]$.
+* **Dashboard Horizontal Phase Bar Widths (`mainpage.tsx`):**
+  $$W_{\text{menses}} = \frac{L_{\text{period}}}{L_{\text{dynamic}}} \times 100, \qquad W_{\text{luteal}} = \frac{14}{L_{\text{dynamic}}} \times 100, \qquad W_{\text{fertile}} = \frac{6}{L_{\text{dynamic}}} \times 100$$
+  $$W_{\text{follicular}} = \max\!\big(10,\; 100 - W_{\text{menses}} - W_{\text{luteal}} - W_{\text{fertile}}\big), \qquad P_{\text{marker}} = \min\!\left(98,\; \max\!\left(2,\; \frac{D_{\text{safe}}}{L_{\text{dynamic}}} \times 100\right)\right)$$
+* **Example ($L_{\text{dynamic}} = 28$, $L_{\text{period}} = 5$):** $W_{\text{menses}} = 17.86\%$, $W_{\text{luteal}} = 50.00\%$, $W_{\text{fertile}} = 21.43\%$, $W_{\text{follicular}} = 10.71\%$.
+* **Code Reference:** `mainpage.tsx`, `CalendarClient.tsx`, `SelfCareClient.tsx`, `InsightsClient.tsx`.
+
+##### 5. Cellular Hydration Cadence (`mainpage.tsx`) (Exact Calculation)
+* **Formula:**
+  $$V_{\text{water}} = N_{\text{glasses}} \times 250\text{ ml}, \qquad N_{\text{glasses}} \in \{0, 1, \dots, 8\} \quad (\text{target } 2{,}000\text{ ml})$$
+* **Example:** Selecting segment $6$ logs $6 \times 250 = 1{,}500\text{ ml}$ out of $2{,}000\text{ ml}$.
+* **Code Reference:** `mainpage.tsx`.
+
+---
+
+#### B. Orbital `CyclePhaseRing` Geometry & Interaction (`src/components/CyclePhaseRing.tsx`)
+
+##### 6. Clamped Cycle Bounds & Phase Segment Boundaries (Exact / Prediction)
+* **Formulas:**
+  $$L_{\text{safe}} = \min(45, \max(21, L_{\text{avg}})), \qquad P_{\text{safe}} = \min(10, \max(2, P_{\text{avg}}))$$
+  $$D_{\text{peak}} = \max(P_{\text{safe}} + 4,\; L_{\text{safe}} - 14), \qquad F_{\text{start}} = \max(P_{\text{safe}} + 1,\; D_{\text{peak}} - 3), \qquad F_{\text{end}} = \min(L_{\text{safe}} - 2,\; D_{\text{peak}} + 1)$$
+  $$\text{daysUntilNext} = \max(0,\; L_{\text{safe}} - D_{\text{clamped}} + 1)$$
+* **Example ($L_{\text{avg}} = 28, P_{\text{avg}} = 5$):** Menstrual $1\text{–}5$, Follicular $6\text{–}10$, Ovulatory $11\text{–}15$ (peak $14$), Luteal $16\text{–}28$.
+* **Code Reference:** `CyclePhaseRing.tsx`.
+
+##### 7. Polar-to-Cartesian Arc Projection, Puck Angle & $360^\circ$ Pointer-to-Day Conversion (Exact Trigonometry)
+* **Formulas:** With viewport $300 \times 300$, center $(c_x, c_y) = (150, 150)$, radius $r = 116\text{ px}$, arc gap $\delta = 3.5^\circ$:
+  $$\alpha_{\text{day}}(d) = \frac{d - 1}{L_{\text{safe}}} \times 360^\circ, \qquad \alpha_{\text{puck}}(d) = \frac{d - 0.5}{L_{\text{safe}}} \times 360^\circ$$
+  $$x = c_x + r\cos\!\left(\frac{(\alpha - 90^\circ)\pi}{180^\circ}\right), \qquad y = c_y + r\sin\!\left(\frac{(\alpha - 90^\circ)\pi}{180^\circ}\right)$$
+  For pointer coordinates $(p_x, p_y)$ outside inner dead zone $\sqrt{\Delta x^2 + \Delta y^2} \ge 0.22 \times W_{\text{rect}}$:
+  $$\theta = \left(\frac{\operatorname{atan2}(\Delta y, \Delta x) \times 180^\circ}{\pi} + 90^\circ\right) \bmod 360^\circ, \qquad d_{\text{next}} = \min\!\left(L_{\text{safe}},\; \max\!\left(1,\; \left\lceil\frac{\theta}{360^\circ} \times L_{\text{safe}}\right\rceil\right)\right)$$
+  For clicking along the $280\text{ px}$ wide Hormone Curve SVG:
+  $$x_{\text{curve}} = \frac{d}{L_{\text{safe}}} \times 280, \qquad d_{\text{jump}} = \min\!\left(L_{\text{safe}},\; \max\!\left(1,\; \operatorname{round}\!\left(\frac{p_x - x_{\text{left}}}{W_{\text{box}}} \times L_{\text{safe}}\right)\right)\right)$$
+* **Example ($L_{\text{safe}} = 28, d = 14$):** $\alpha_{\text{puck}} = \frac{13.5}{28} \times 360^\circ \approx 173.57^\circ$; hormone curve line sits at $x_{\text{curve}} = \frac{14}{28} \times 280 = 140\text{ px}$.
+* **Code Reference:** `CyclePhaseRing.tsx` (`polarToCartesian`, `describeSvgArc`, `updateDayFromPointer`).
+
+---
+
+#### C. Longitudinal Analytics & Interactive Ruler (`src/app/(app)/reports/ReportsClient.tsx`)
+
+##### 8. Population Standard Deviation ($\sigma$), Regularity Criterion & 3-Cycle SMA (Exact Statistics)
+* **Formulas:** For $n \ge 2$ cycle lengths $x_1, \dots, x_n$:
+  $$\bar{x} = \frac{1}{n}\sum_{i=1}^{n} x_i, \qquad \sigma = \frac{\operatorname{round}\!\left(\sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_i - \bar{x})^2} \times 10\right)}{10}, \qquad \text{isRegular} \iff (\sigma \le 4)$$
+  $$\text{SMA}_3(i) = \frac{\operatorname{round}\!\left(\frac{1}{|W_i|}\sum_{j \in W_i} x_j \times 10\right)}{10}, \quad W_i = [\max(0, i-2),\; i], \qquad \Delta_i = \begin{cases} x_i - x_{i-1} & i > 0 \\ 0 & i = 0 \end{cases}$$
+* **Example:** Lengths $[27, 29, 28, 26]$ yield $\bar{x} = 27.5$, variance $= \frac{0.25 + 2.25 + 0.25 + 2.25}{4} = 1.25$, $\sigma = \operatorname{round}(\sqrt{1.25} \times 10)/10 = 1.1\text{ days}$ (`Regular`). At $i = 3$, $\text{SMA}_3(3) = \operatorname{round}(\frac{29 + 28 + 26}{3} \times 10)/10 = 27.7\text{ d}$ and $\Delta_3 = 26 - 28 = -2\text{ d}$.
+* **Code Reference:** `ReportsClient.tsx`.
+
+##### 9. TradingView SVG Scaling, Linear Interpolation & Drag Measurement Ruler (Exact Geometry)
+* **Formulas:** With SVG dimensions $W = 760, H = 295$, plot bounds $W_p = 658, H_p = 227$, $y_{\min} = \max(0, \lfloor \min - 3 \rfloor)$, $y_{\max} = \lceil \max + 3 \rceil$:
+  $$x(i) = x_0 + \frac{i}{n - 1} W_p, \qquad y(v) = y_0 + H_p - \frac{v - y_{\min}}{\max(1, y_{\max} - y_{\min})} H_p$$
+  $$f(x) = \frac{x - x_0}{W_p}(n - 1), \qquad v(x) = v_{\lfloor f \rfloor} + (v_{\lceil f \rceil} - v_{\lfloor f \rfloor})\,(f - \lfloor f \rfloor)$$
+  For ruler drag from $x_1$ to $x_2$ (when $|x_2 - x_1| \ge 6\text{ px}$):
+  $$\Delta v = v(x_2) - v(x_1), \qquad \Delta\% = \begin{cases} \frac{\Delta v}{v(x_1)} \times 100 & v(x_1) \ne 0 \\ 0 & v(x_1) = 0 \end{cases}, \qquad \text{span} = |f(x_2) - f(x_1)|$$
+* **Example:** Between $v_1 = 29$ and $v_2 = 28$ at fractional index $f = 1.4$: $v = 29 + (28 - 29)(0.4) = 28.6\text{ d}$. Dragging from $v(x_1) = 27.0$ to $v(x_2) = 30.0$ yields $\Delta v = +3.0\text{ d}$ and $\Delta\% = +11.1\%$.
+* **Code Reference:** `ReportsClient.tsx` (`TradingViewCycleChart`).
+
+##### 10. Symptom, Mood & Flow Share Percentages (Exact Calculation)
+* **Formula:**
+  $$\text{Share}(\%) = \operatorname{round}\!\left(\frac{\text{count}}{\max(1, \sum \text{counts})} \times 100\right)$$
+* **Code Reference:** `ReportsClient.tsx` (`topSymptoms`, `topMoods`, `flowDistribution`).
+
+---
+
+#### D. Clinical Dossier Anthropometrics & FIGO Biometrics (`src/app/(app)/medical-report/MedicalReportClient.tsx`)
+
+##### 11. BMI, Mosteller BSA & Waist-to-Hip Ratio (Exact Clinical Formulas)
+* **Formulas:** Evaluated when height $h > 50\text{ cm}$, weight $w > 20\text{ kg}$, and $\text{waist}, \text{hip} > 30\text{ cm}$:
+  $$\text{BMI} = \frac{w}{(h / 100)^2}\;\text{kg/m}^2, \qquad \text{BSA}_{\text{Mosteller}} = \sqrt{\frac{h \times w}{3600}}\;\text{m}^2, \qquad \text{WHR} = \frac{\text{waist}}{\text{hip}}$$
+* **Classification Thresholds:** BMI: $< 18.5$ Underweight, $18.5\text{–}24.9$ Normal, $25.0\text{–}29.9$ Overweight, $\ge 30.0$ Obese. WHR: $> 0.85$ Central Adiposity, $\le 0.85$ Normal.
+* **Example ($h = 164\text{ cm}, w = 58\text{ kg}, \text{waist} = 72\text{ cm}, \text{hip} = 94\text{ cm}$):** $\text{BMI} = \frac{58}{1.64^2} = 21.6\text{ kg/m}^2$ (*Normal*), $\text{BSA} = \sqrt{\frac{9512}{3600}} = 1.63\text{ m}^2$, $\text{WHR} = \frac{72}{94} = 0.77$ (*Normal*).
+* **Code Reference:** `MedicalReportClient.tsx` (`anthropometrics`).
+
+##### 12. FIGO AUB System 1 Thresholds, Cycle Range Variance & ROS Symptom Incidence (Exact Statistics)
+* **Formulas:**
+  $$\text{cycleVariance} = \max(c) - \min(c), \qquad \sigma_{\text{dossier}} = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(c_i - \bar{c}_{\text{rounded}})^2}$$
+  $$\text{Incidence}(\%) = \operatorname{round}\!\left(\frac{\text{symptomDays}}{\max(1, N_{\text{logs}})} \times 100\right)$$
+* **FIGO Benchmarks:** Frequency $< 24\text{ d}$ Polymenorrhea, $24\text{–}38\text{ d}$ Normal, $> 38\text{ d}$ Oligomenorrhea; Regularity variance $\Delta \le 7\text{ d}$; Bleed Duration $\le 8\text{ d}$.
+* **Code Reference:** `MedicalReportClient.tsx` (`stats`, `clinicalDecisionSupport`, Section 04 ROS).
+
+---
+
+#### E. Self-Care Studio & Personal Journal Metrics (`SelfCareClient.tsx`, `JournalClient.tsx`)
+
+##### 13. Self-Care Adherence, Breath Phase Wrapping & Infinite-Scroll Batching (Exact Calculation)
+* **Formulas:**
+  $$\text{Adherence}(\%) = \operatorname{round}\!\left(\frac{N_{\text{done}}}{\max(1, N_{\text{rituals}})} \times 100\right), \qquad i_{\text{next}} = (i_{\text{curr}} + 1) \bmod |\text{phases}|$$
+  $$\text{loadMore} \iff (\text{scrollTop} + \text{clientHeight} \ge \text{scrollHeight} - 420), \qquad V_{\text{next}} = \min(N_{\text{filtered}}, V_{\text{curr}} + 24)$$
+* **Example:** Completing $4$ of $5$ rituals gives $\operatorname{round}(4/5 \times 100) = 80\%$.
+* **Code Reference:** `SelfCareClient.tsx`.
+
+##### 14. Journal Reading Time, Word Goal Progress, Mindful Streak & Heatmap Tiers (Exact Calculation)
+* **Formulas:**
+  $$T_{\text{read}} = \max\!\left(1,\; \left\lceil\frac{W}{180}\right\rceil\right)\text{ min}, \qquad G(\%) = \min\!\left(100,\; \operatorname{round}\!\left(\frac{W}{W_{\text{goal}}} \times 100\right)\right)$$
+  $$\text{streakContinues} \iff \operatorname{differenceInCalendarDays}(d_{i-1}, d_i) \le 2$$
+  $$M_{\text{timer}} = \min(240,\; \max(1,\; \operatorname{round}(M_{\text{input}})))$$
+* **Heatmap Tiers ($84$ trailing days):** $0$ words (Rest), $1\text{–}79$ words (Light), $80\text{–}199$ words (Medium), $\ge 200$ words (Deep). Journal 432Hz Zen Drone uses $|220\text{ Hz} - 216\text{ Hz}| = 4\text{ Hz}$ theta beat with mode gain multipliers $0.65$ (*Rain*), $0.45$ (*Pink*), and $0.12$ (*Zen 432*).
+* **Example:** $450$ words $\implies T_{\text{read}} = \lceil 450/180 \rceil = 3\text{ min}$; against a $200$-word goal, $G = \min(100, 225) = 100\%$.
+* **Code Reference:** `JournalClient.tsx`.
+
+---
+
+#### F. Pomodoro Timer, Orbital Pearl & Web Audio DSP (`PomodoroClient.tsx`, `RemindersClient.tsx`)
+
+##### 15. Pomodoro Duration, Clamped Progress, `MM:SS` & Orbital Pearl Trigonometry (Exact Geometry)
+* **Formulas:** With $r = 148\text{ px}$, center $(170, 170)$, $C = 2\pi r \approx 929.91\text{ px}$, halo $r_{\text{halo}} = r + 14 = 162\text{ px}$:
+  $$T_{\text{total}} = M_{\text{mode}} \times 60, \qquad p = \min\!\left(1,\; \max\!\left(0,\; \frac{\max(1, T_{\text{total}}) - s_{\text{left}}}{\max(1, T_{\text{total}})}\right)\right)$$
+  $$m = \left\lfloor\frac{s_{\text{left}}}{60}\right\rfloor, \qquad s = s_{\text{left}} \bmod 60, \qquad \text{strokeDashoffset} = C(1 - p)$$
+  $$\theta_{\text{rad}} = (p \times 360^\circ - 90^\circ)\frac{\pi}{180^\circ}, \qquad x_p = 170 + 148\cos(\theta_{\text{rad}}), \qquad y_p = 170 + 148\sin(\theta_{\text{rad}})$$
+  $$\text{isLongBreak} \iff \big((N_{\text{today}} + 1) \bmod \max(1, I_{\text{long}}) = 0\big), \qquad N_{\text{pearls}} = \min(10, G_{\text{daily}})$$
+* **Example:** At $p = 0.25$ ($T_{\text{total}} = 1500\text{ s}, s_{\text{left}} = 1125\text{ s}$): $\theta_{\text{rad}} = 0 \implies (x_p, y_p) = (318, 170)$, $\text{strokeDashoffset} \approx 697.43\text{ px}$.
+* **Code Reference:** `PomodoroClient.tsx`.
+
+##### 16. Web Audio Gain Scaling, Binaural/Harmonic Intervals & Paul Kellet Pink Noise (Exact DSP)
+* **Formulas:**
+  $$G_{\text{chime}} = \min\!\left(1,\; \max\!\left(0.02,\; \frac{V_{\text{chime}}}{100}\right)\right) \times 0.24, \qquad G_{\text{ambient}} = \min\!\left(1,\; \max\!\left(0.01,\; \frac{V_{\text{ambient}}}{100}\right)\right) \times 0.16$$
+  $$f_{\text{alphaBeat}} = |224 - 216| = 8\text{ Hz}, \qquad R_{\text{drone}} = \frac{204.15}{136.1} = \frac{3}{2}$$
+  For white noise $w[n] \sim \mathcal{U}(-1, 1)$ (Paul Kellet 7-pole pink noise filter):
+  $$b_0[n] = 0.99886\,b_0[n-1] + 0.0555179\,w[n], \quad b_1[n] = 0.99332\,b_1[n-1] + 0.0750759\,w[n]$$
+  $$b_2[n] = 0.96900\,b_2[n-1] + 0.1538520\,w[n], \quad b_3[n] = 0.86650\,b_3[n-1] + 0.3104856\,w[n]$$
+  $$b_4[n] = 0.55000\,b_4[n-1] + 0.5329522\,w[n], \quad b_5[n] = -0.76160\,b_5[n-1] - 0.0168980\,w[n]$$
+  $$y[n] = 0.04\left(\sum_{k=0}^{5} b_k[n] + b_6[n-1] + 0.5362\,w[n]\right), \qquad b_6[n] = 0.115926\,w[n]$$
+* **Implementation:** Filtered through a $2200\text{ Hz}$ low-pass filter ($45\text{ ms}$ attack) for chimes and $950\text{ Hz}$ / $650\text{ Hz}$ / $420\text{ Hz}$ biquad filters for *Soft Rain*, *Warm Pink Noise*, and *Forest Wind*.
+* **Code Reference:** `PomodoroClient.tsx`, `RemindersClient.tsx`.
+
+---
+#### G. Web Push Scheduling, Offline Sync, Auth & Editor Bounds
+---
+##### 17. Custom Countdown, Cross-Midnight Quiet Hours & Web Push Timing (Exact Logic & Arithmetic)
+* **Formulas:**
+  $$T_{\text{custom}} = (H \times 3600) + (M \times 60) + S, \qquad P_{\text{timer}}(\%) = \min\!\left(100,\; \max\!\left(0,\; \frac{T_{\text{total}} - T_{\text{rem}}}{\max(1, T_{\text{total}})} \times 100\right)\right)$$
+  $$\text{isQuiet}(t, q_s, q_e) = \begin{cases} q_s \le t \le q_e & \text{if } q_s \le q_e \\ t \ge q_s \lor t \le q_e & \text{if } q_s > q_e \end{cases}$$
+  $$t_{\text{nextInterval}} = t_{\text{now}} + (I_{\text{mins}} \times 60{,}000), \qquad d_{\text{sec}} = \max\!\left(1,\; \operatorname{round}\!\left(\frac{t_{\text{fire}} - t_{\text{now}}}{1000}\right)\right), \qquad n_{\text{pad}} = \big(4 - (L \bmod 4)\big) \bmod 4$$
+* **Example:** $1\text{ h } 15\text{ m } 30\text{ s} = 4530\text{ s}$; with quiet hours `22:30` to `07:00`, `23:15` evaluates `true` (cross-midnight branch). An $87$-character Base64URL VAPID key requires $n_{\text{pad}} = 1$ `"="` character.
+* **Code Reference:** `RemindersClient.tsx`, `src/app/api/push/route.ts`, `PomodoroClient.tsx`.
+
+##### 18. Offline Conflict Grace Window, Monotonic Timestamps, Session Durability & Schema Bounds (Exact Arithmetic)
+* **Formulas:**
+  $$\text{isConflict} \iff (t_{\text{serverUpdated}} - t_{\text{baseUpdated}}) > 2000\text{ ms}$$
+  $$t_{\text{safeUpdated}} = \begin{cases} t_{\text{created}} + 1\text{ ms} & t_{\text{now}} < t_{\text{created}} \\ t_{\text{now}} & \text{otherwise} \end{cases}, \qquad t_{\text{updated, DB}} = \max\!\big(\operatorname{COALESCE}(\text{NEW.updated\_at}, \text{now()}),\; t_{\text{created, DB}}\big)$$
+  $$\text{maxAge}_{\text{cookie}} = 60 \times 60 \times 24 \times 60 = 5{,}184{,}000\text{ s (60 days)}$$
+  $$\text{passwordStrength}(L) = \begin{cases} 0 & L = 0 \\ 1 & 1 \le L < 6 \\ 2 & 6 \le L < 10 \\ 3 & L \ge 10 \end{cases}$$
+  $$\text{pain\_level} \in [0, 10], \qquad \text{mood\_intensity} \in [1, 5], \qquad \text{confidence\_score} \in [0, 100], \qquad \text{start\_date} \le \text{end\_date}$$
+* **Code Reference:** `src/utils/offlineSync.ts`, `src/utils/offlineTimestamps.ts`, `supabase/migrations/20261115_offline_timestamp_sync.sql`, `src/proxy.ts`, `src/utils/supabase/middleware.ts`, `src/app/login/page.tsx`, `supabase/migrations/20261030092246_moonday_initial_schema.sql`.
+
+##### 19. Daily Log 7-Day Strip, Rich-Text Counters, Sync Debounces & App Lock Rules (Exact Arithmetic)
+* **7-Day Date Strip Offsets (`LogClient.tsx`):**
+  $$d_k = \operatorname{addDays}(d_{\text{selected}}, k), \qquad k \in \{-3, -2, -1, 0, +1, +2, +3\}$$
+* **Rich-Text Word & Character Counts (`LogClient.tsx` `RichTextEditor`):** For HTML string $H$:
+  $$T_{\text{clean}} = \operatorname{trim}\!\big(\operatorname{stripHtml}(H, \texttt{" "})\big), \qquad W = \begin{cases} 0 & T_{\text{clean}} = \texttt{""} \\ \left|\operatorname{split}(T_{\text{clean}}, \texttt{/\textbackslash s+/})\right| & \text{otherwise} \end{cases}$$
+  $$C_{\text{chars}} = \operatorname{length}\!\big(\operatorname{stripHtml}(H, \texttt{""})\big)$$
+* **Education Topic Sum & 3-Way Pill Geometry (`EducationClient.tsx`):**
+  $$N_{\text{topics}} = \sum_{c \in \text{Teen}} |c| + \sum_{c \in \text{Adult}} |c| + \sum_{c \in \text{Relationship}} |c|, \qquad W_{\text{pill}} = 33.33\% - 4\text{ px}$$
+* **Debounce, Unload & Security Timings (`NetworkResilience.tsx`, `LogClient.tsx`, `EducationClient.tsx`, `AppLockWrapper.tsx`):**
+  * Offline autosave debounce: $1000\text{ ms}$ (with active `beforeunload` guard while `isDirty === true`).
+  * Partner note cloud-sync debounce: $600\text{ ms}$.
+  * Education admin password verification delay: $500\text{ ms}$.
+  * App PIN validity: $\operatorname{length}(\operatorname{digitsOnly}(\text{pin})) = 4$, with a $2000\text{ ms}$ invalid-PIN error reset timer.
+* **Example:** HTML `"<p>Warm <b>tea</b> &amp; rest</p>"` strips to `"Warm tea & rest"` $\implies W = 4\text{ words}$, $C_{\text{chars}} = 15\text{ characters}$.
+* **Code Reference:** `LogClient.tsx`, `EducationClient.tsx`, `NetworkResilience.tsx`, `AppLockWrapper.tsx`.
+
+---
+
+### 88. Solving Sync Conflicts, PWA Setup, Local Installation, and Vercel Deployment
+
+#### Self Conflict Prevention in `NetworkResilience.tsx` and `offlineSync.ts`
+
+When an autosave completes, `syncDraftToSupabase` returns the synchronized `serverUpdatedAt` timestamp, updating `latestBaseUpdatedAtRef.current`. Combined with the $2000\text{ ms}$ server-ahead grace threshold and PostgreSQL monotonic timestamp triggers (`20261115_offline_timestamp_sync.sql`), clicking the main **Save** button seconds after an autosave never triggers a false merge conflict.
 
 #### Local Setup Guide
 
@@ -967,12 +1327,14 @@ In `next.config.ts`, `@ducanh2912/next-pwa` is configured with `reloadOnOnline: 
    ```
 
 3. **Configure environment variables**
-   Create a `.env.local` file in the root directory:
+   Create a `.env.local` file in the project root:
 
    ```env
    NEXT_PUBLIC_SUPABASE_URL=https://your-project-id.supabase.co
    NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
    ```
+
+   *(Optional for stateless production Web Push hosting: set `NEXT_PUBLIC_VAPID_PUBLIC_KEY` and `VAPID_PRIVATE_KEY` to persist a fixed VAPID keypair across server restarts.)*
 
 4. **Start the development server**
 
@@ -984,11 +1346,23 @@ In `next.config.ts`, `@ducanh2912/next-pwa` is configured with `reloadOnOnline: 
 
 #### Vercel Deployment Checklist
 
-1. Ensure `/node_modules`, `/.next`, and `.env*.local` are listed in `.gitignore`.
-2. Import the repository into **Vercel** and add `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` in **Project Settings** $\rightarrow$ **Environment Variables**.
+1. Confirm `/node_modules`, `/.next`, `.env*`, and `.moonday-push-store.json` remain listed in `.gitignore`.
+2. Import the repository into **Vercel** and configure `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` under **Project Settings** $\rightarrow$ **Environment Variables**.
 3. Deploy.
 
-### 85. The Story Behind MoonDay: Credits and Ownership by srharshitcode and porcupine
+---
+
+<div align="center">
+
+## ✦ THE MINDS BEHIND MOONDAY ✦
+
+*Two Minds. One Vision. A Shared Purpose.*
+
+</div>
+
+---
+
+### 89. The Story Behind MoonDay: Credits and Ownership by srharshitcode and porcupine
 
 Every meaningful project begins with a conversation that refuses to stay just a conversation.
 
@@ -1001,12 +1375,12 @@ If you look closely at why most health apps fail the people who use them, it alm
 MoonDay exists because **srharshitcode** and **porcupine** poured both halves of that equation into a single work of craft:
 
 * **srharshitcode** (*Creator, Lead Full Stack Engineer, and System Architect*)
-  **srharshitcode** took the dream of MoonDay and turned it into a living, resilient software platform. Every architectural layer of this codebase carries **srharshitcode**'s engineering signature: from designing the Next.js 16 App Router and React 19 component hierarchy, to writing the custom IndexedDB offline synchronization engine (`offlineSync.ts`), solving subtle cloud race conditions in `NetworkResilience.tsx`, engineering the global Soft Aubergine dark mode interceptor in `globals.css`, building the 4 Digit PIN lock and JSON data portability tools, and refining every mobile touch gesture. For **srharshitcode**, every technical decision came back to one personal commitment: *when a woman opens MoonDay on a hard night, the technology beneath her fingertips should be fast, unbreakable, private, and completely trustworthy.*
+  **srharshitcode** took the dream of MoonDay and turned it into a living, resilient software platform. Every architectural layer of this codebase carries **srharshitcode**'s engineering signature: from designing the Next.js 16 App Router and React 19 component hierarchy, to writing the custom IndexedDB offline synchronization engine (`offlineSync.ts`), solving subtle cloud race conditions in `NetworkResilience.tsx`, engineering the global dual-theme CSS interceptors in `globals.css`, building the 4 Digit PIN lock and JSON data portability tools, and refining every mobile touch gesture. For **srharshitcode**, every technical decision came back to one personal commitment: *when a woman opens MoonDay on a hard night, the technology beneath her fingertips should be fast, unbreakable, private, and completely trustworthy.*
   * **GitHub**: <https://github.com/srharshitcode>
   * **LinkedIn**: <https://linkedin.com/in/srharshitcode>
   * **Instagram**: <https://instagram.com/sr.harshitcode>
 * **porcupine** (*Co Creator, Product Heart, and Domain Visionary, Anonymous Partner*)
-  Choosing to remain anonymous under the name **porcupine**, their voice, intuition, and emotional wisdom are the heartbeat of MoonDay. **porcupine** is the reason MoonDay feels like a trusted friend rather than a clinical chart. It was through **porcupine**'s care and insight that MoonDay grew to recognize 104 specific physical and emotional symptoms, 61 real human moods, 55 flow shades, 437 educational topics across three stages of life, and over 230 individual self care comfort reminders. Every time a young girl or woman opens MoonDay at midnight, sees her exact unspoken feeling given a name, reads a comforting self care card, and feels safe in her own skin, she is experiencing the kindness that **porcupine** built into the soul of this project.
+  Choosing to remain anonymous under the name **porcupine**, their voice, intuition, and emotional wisdom are the heartbeat of MoonDay. **porcupine** is the reason MoonDay feels like a trusted friend rather than a clinical chart. It was through **porcupine**'s care and insight that MoonDay grew to recognize 104 specific physical and emotional symptoms, 61 real human moods, 55 flow shades, 437 educational topics across three stages of life, and 685 individual self care comfort guides. Every time a young girl or woman opens MoonDay at midnight, sees her exact unspoken feeling given a name, reads a comforting self care card, and feels safe in her own skin, she is experiencing the kindness that **porcupine** built into the soul of this project.
 
 #### The Signature at the Corner of Every Screen
 
@@ -1031,5 +1405,3 @@ All source code, user interface designs, visual palettes, self care comfort libr
 ```text
 © Built by srharshitcode & porcupine. All rights reserved.
 ```
-
-...

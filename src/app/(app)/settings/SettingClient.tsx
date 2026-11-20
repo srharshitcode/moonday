@@ -274,8 +274,6 @@ const handleSaveProfile = async () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
-
-        
         {/* COLUMN 1: Profile & Averages */}
 
         <div className="bg-white border border-[#fbeaf0] rounded-[24px] p-[24px] shadow-sm flex flex-col h-full">
@@ -410,17 +408,22 @@ const handleSaveProfile = async () => {
                   type="button"
                   onClick={togglePrivateMode}
                   aria-label="Toggle Private Mode"
-                  className={`w-12 h-6 rounded-full transition-colors relative cursor-pointer ${
-                    privateMode ? "bg-[#d990a8]" : "bg-[#eadfe4]"
+                  className={`w-12 h-6 shrink-0 rounded-full transition-colors relative cursor-pointer border ${
+                    privateMode
+                      ? "bg-[#a55f78] border-[#8f4c64]"
+                      : isDarkMode
+                        ? "bg-[#4a3942] border-[#6b5360]"
+                        : "bg-[#c6b1bc] border-[#ae95a3]"
                   }`}
                 >
                   <span
-                    className={`absolute top-1 w-4 h-4 bg-white rounded-full transition-all ${
-                      privateMode ? "left-7" : "left-1"
+                    className={`absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-[#ffffff] rounded-full shadow-sm transition-all ${
+                      privateMode ? "left-[27px]" : "left-[3px]"
                     }`}
                   />
                 </button>
               </div>
+
 
               {/* Dark Mode Toggle */}
 
@@ -437,13 +440,16 @@ const handleSaveProfile = async () => {
                   type="button"
                   onClick={toggleDarkMode}
                   aria-label="Toggle Dark Mode"
-                  className={`w-12 h-6 rounded-full transition-colors relative cursor-pointer ${
-                    isDarkMode ? "bg-[#a55f78]" : "bg-[#eadfe4]"
+                  className={`w-12 h-6 shrink-0 rounded-full transition-colors relative cursor-pointer border ${
+                    isDarkMode
+                      ? "bg-[#b56982] border-[#d990a8]"
+                      : "bg-[#c6b1bc] border-[#ae95a3]"
                   }`}
                 >
+
                   <span
-                    className={`absolute top-1 w-4 h-4 bg-white rounded-full transition-all ${
-                      isDarkMode ? "left-7" : "left-1"
+                    className={`absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-[#ffffff] rounded-full shadow-sm transition-all ${
+                      isDarkMode ? "left-[27px]" : "left-[3px]"
                     }`}
                   />
                 </button>
